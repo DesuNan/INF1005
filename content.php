@@ -9,4 +9,5 @@
     <?php
     include "inc/nav.inc.php";
     ?>
+    printf
 </body>
