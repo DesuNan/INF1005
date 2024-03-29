@@ -1,0 +1,8 @@
+# Enable RewriteEngine
+RewriteEngine On
+RewriteBase /
+
+# RewriteRule for JavaScript files
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)\.js$ babel-transpile.php?file=$1 [L,QSA]
