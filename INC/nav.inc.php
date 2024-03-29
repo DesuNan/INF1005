@@ -9,11 +9,11 @@
 <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<link rel="stylesheet" href="css/main.css">
-<script defer src="js/main.js"></script>
+<link rel="stylesheet" href="CSS/main.css">
+<script defer src="JS/main.js"></script>
 
 <div class="topnav" id="myTopnav">
-<a class="navbar-brand"><img class="img-fluid" src="img/pngwing.com.png"></a>
+<a class="navbar-brand"><img class="img-fluid" src="IMG/pngwing.com.png"></a>
     <a href="/index.php" class="active">Home</a>
     <a href="/content.php">Content</a>
     <a href="#contact">Contact</a>
