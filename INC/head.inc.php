@@ -9,6 +9,7 @@ crossorigin="anonymous">
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous">
 </script>
+<script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
 <!--React JS-->
 <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script> -->
 <!-- <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script> -->
