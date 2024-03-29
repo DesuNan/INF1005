@@ -62,7 +62,7 @@
   cursor: pointer;
 }
 .fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover {
-  color: #008000;
+  color: green;
 }
 .fab {
   color: #000000;
@@ -71,4 +71,13 @@
 #footer {
   background-color: #808080;
   text-align: center;
+}
+
+/* spacing on all sections */
+#about, #services, #portfolio, #contact {
+  margin-top: 4rem;
+  padding-top: 4rem;
+}
+#contact {
+  padding-bottom: 4rem;
 }
