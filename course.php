@@ -4,16 +4,16 @@
 <head>
     <title>Courses</title>
     <?php
-        include "inc/head.inc.php";
+        include "INC/head.inc.php";
     ?>
 </head>
 
 <body>
     <?php
-        include "inc/nav.inc.php";
+        include "INC/nav.inc.php";
     ?>
     <?php
-        include "inc/header.inc.php";
+        include "INC/header.inc.php";
     ?>
     <main class="container">
         <section id="languages">
@@ -22,8 +22,8 @@
                 <article class="col-sm">
                     <h3>English</h3>
                     <figure>
-                        <a target="_self" href="images/english.jpg" class="thumbnail">
-                            <img class="img-popup" src="images/english.jpg" alt="English" title="View larger image..." >
+                        <a target="_self" href="IMG/english.jpg" class="thumbnail">
+                            <img class="img-popup" src="IMG/english.jpg" alt="English" title="View larger image..." >
                         </a>
                         <figcaption>English Language</figcaption>
                     </figure>
@@ -41,8 +41,8 @@
                 <article class="col-sm">
                     <h3>Math</h3>
                     <figure>
-                        <a href="images/math.jpg" class="thumbnail">
-                            <img class="img-popup" src="images/math.jpg" alt="Math" title="View larger image..." >
+                        <a href="IMG/math.jpg" class="thumbnail">
+                            <img class="img-popup" src="IMG/math.jpg" alt="Math" title="View larger image..." >
                         </a>
                         <figcaption>Mathematics</figcaption>
                     </figure>
@@ -61,8 +61,8 @@
                 <article class="col-sm">
                     <h3>Chemistry</h3>
                     <figure>
-                        <a href="images/chemistry.jpg" class="thumbnail">
-                            <img class="img-popup" src="images/chemistry.jpg" alt="Chemistry" title="View larger image..." >
+                        <a href="IMG/chemistry.jpg" class="thumbnail">
+                            <img class="img-popup" src="IMG/chemistry.jpg" alt="Chemistry" title="View larger image..." >
                         </a>
                         <figcaption>Chemistry</figcaption>
                     </figure>
@@ -77,8 +77,8 @@
                 <article class="col-sm">
                     <h3>Physics</h3>
                     <figure>
-                        <a href="images/physics.jpg" class="thumbnail">
-                            <img class="img-popup" src="images/physics.jpg" alt="Physics" title="View larger image..." >
+                        <a href="IMG/physics.jpg" class="thumbnail">
+                            <img class="img-popup" src="IMG/physics.jpg" alt="Physics" title="View larger image..." >
                         </a>
                         <figcaption>Physics</figcaption>
                     </figure>
@@ -94,7 +94,7 @@
         </section>
     </main>
     <?php
-        include "inc/footer.inc.php";
+        include "INC/footer.inc.php";
     ?>
 </body>
 </html>
