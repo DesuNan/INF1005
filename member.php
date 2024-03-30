@@ -3,15 +3,15 @@
 <head>
     <title>Login/Register Page</title>
     <?php
-        include "INC/head.inc.php";
+        include "inc/head.inc.php";
     ?>
 </head>
 <body>
     <?php
-        include "INC/nav.inc.php";
+        include "inc/nav.inc.php";
     ?>
     <?php
-        include "INC/header.inc.php";
+        include "inc/header.inc.php";
     ?>
     <main class="container">
         <div id="app" class="login"></div>
