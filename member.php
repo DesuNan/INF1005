@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Login/Register Page</title>
+    <title>Member Page</title>
     <?php
         include "INC/head.inc.php";
     ?>
@@ -17,5 +17,8 @@
         <div id="app" class="login"></div>
         <script src="JSX/login_register.js"></script>
     </main>
+    <?php
+        include "INC/footer.inc.php";
+    ?>
 </body>
 </html>
