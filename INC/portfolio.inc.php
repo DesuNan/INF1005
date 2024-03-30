@@ -2,13 +2,13 @@
     <!-- portfolio section-->
     <section id="portfolio">
         <div class="container mt-3">
-            <h1 class="text-center">Portfolio</h1>
+            <h1 class="text-center">Staff</h1>
             <div class="row">
                 <div class="col-lg-4 mt-4">
                     <div class="card">
-                        <img class="card-img-top" src="images/portfolioImage1.jpg" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="img/teacher.png.webp" alt="Card image" style="width:100%">
                         <div class="card-body">
-                            <h4 class="card-title">YouTube Clone</h4>
+                            <h4 class="card-title">Jordan Lee</h4>
                             <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             <div class="text-center">
                                 <a href="#" class="btn btn-success">Link</a>
@@ -19,9 +19,9 @@
 
                 <div class="col-lg-4 mt-4">
                     <div class="card portfolioContent">
-                        <img class="card-img-top" src="images/portfolioImage4.jpg" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="img/teacher.png.webp" alt="Card image" style="width:100%">
                         <div class="card-body">
-                            <h4 class="card-title">Quiz App</h4>
+                            <h4 class="card-title">Alex Morgan</h4>
                             <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             <div class="text-center">
                                 <a href="#" class="btn btn-success">Link</a>
@@ -32,9 +32,9 @@
 
                 <div class="col-lg-4 mt-4">
                     <div class="card portfolioContent">
-                        <img class="card-img-top" src="images/portfolioImage3.jpg" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="img/teacher.png.webp" alt="Card image" style="width:100%">
                         <div class="card-body">
-                            <h4 class="card-title">Product Landing Page</h4>
+                            <h4 class="card-title">Tayloe Quwwn</h4>
                             <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             <div class="text-center">
                                 <a href="#" class="btn btn-success">Link</a>
@@ -47,9 +47,9 @@
             <div class="row">
                 <div class="col-lg-4 mt-4">
                     <div class="card portfolioContent">
-                        <img class="card-img-top" src="images/portfolioImage4.jpg" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="img/teacher.png.webp" alt="Card image" style="width:100%">
                         <div class="card-body">
-                            <h4 class="card-title">Messaging Service</h4>
+                            <h4 class="card-title">Jamie Parker</h4>
                             <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             <div class="text-center">
                                 <a href="#" class="btn btn-success">Link</a>
@@ -60,9 +60,9 @@
 
                 <div class="col-lg-4 mt-4">
                     <div class="card portfolioContent">
-                        <img class="card-img-top" src="images/portfolioImage1.jpg" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="img/teacher.png.webp" alt="Card image" style="width:100%">
                         <div class="card-body">
-                            <h4 class="card-title">Twitter Clone</h4>
+                            <h4 class="card-title">Casey Brooks</h4>
                             <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             <div class="text-center">
                                 <a href="#" class="btn btn-success">Link</a>
@@ -73,9 +73,9 @@
 
                 <div class="col-lg-4 mt-4">
                     <div class="card portfolioContent">
-                        <img class="card-img-top" src="images/portfolioImage4.jpg" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="img/teacher.png.webp" alt="Card image" style="width:100%">
                         <div class="card-body">
-                            <h4 class="card-title">Blog App</h4>
+                            <h4 class="card-title">Morgan Elise</h4>
                             <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             <div class="text-center">
                                 <a href="#" class="btn btn-success">Link</a>

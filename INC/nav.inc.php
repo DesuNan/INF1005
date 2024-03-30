@@ -33,7 +33,7 @@
                             <a class="nav-link" style="color: white;" href="#portfolio">Portfolio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="color: white;" href="member.php">Register</a>
+                            <a class="nav-link" style="color: white;" href="/member.php">Register</a>
                         </li>
                     </ul>
                 </div>
