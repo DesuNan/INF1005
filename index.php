@@ -9,7 +9,7 @@
 
     <body>
         <?php
-        include "inc/nav.inc.php";
+        include "inc/nav2.inc.php";
         include "inc/banner.inc.php";
         include "inc/about.inc.php";
         // include "inc/services.inc.php";

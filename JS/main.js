@@ -1,12 +1,23 @@
- // add class navbarDark on navbar scroll
-const header = document.querySelector('.navbar');
+// const hamburger = document.querySelector('.hamburger-menu');
+// const navMenu = document.querySelector('.nav-menu');
 
-window.onscroll = function() {
-    var top = window.scrollY;
-    if(top >=100) {
-        header.classList.add('navbarDark');
-    }
-    else {
-        header.classList.remove('navbarDark');
-    }
-}
+// hamburger.addEventListener('click', () => {
+//     navMenu.classList.toggle('hide');
+// });
+
+window.addEventListener("scroll", function(){
+    var header = document.querySelector("header");
+    header.classList.toggle('sticky', window.scrollY > 0);
+});
+
+var menu = document.querySelector('.menu');
+var menuBtn = document.querySelector('.menu-btn');
+var closeBtn = document.querySelector('.close-btn');
+
+menuBtn.addEventListener("click", () => {
+    menu.classList.add('active');
+});
+
+closeBtn.addEventListener("click", () => {
+    menu.classList.remove('active');
+});
