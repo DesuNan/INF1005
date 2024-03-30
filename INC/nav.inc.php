@@ -12,13 +12,30 @@
 <link rel="stylesheet" href="CSS/main.css">
 <script defer src="JS/main.js"></script>
 
-<div class="topnav" id="myTopnav">
-<a class="navbar-brand"><img class="img-fluid" src="IMG/pngwing.com.png"></a>
-    <a href="/index.php" class="active">Home</a>
-    <a href="/content.php">Content</a>
-    <a href="#contact">Contact</a>
-    <a href="/about.php">About</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-    </a>
-</div>
+<nav class="navbar navbar-expand-lg fixed-top navbarScroll">
+            <div class="container" style="color: white;">
+                <a class="navbar-brand" style="color: white;" href="#">BS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" style="color: white;" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white;" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white;" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white;" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white;" href="/member.php">Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>

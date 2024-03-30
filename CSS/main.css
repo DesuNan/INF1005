@@ -3,14 +3,11 @@
   background-color: black;
 }
 
-.a{
-  color: white;
-}
-
 /* about section image css */
 .imageAboutPage {
   width: 100%;
 }
+
 
 /* hero background image */
 .bgimage {
@@ -19,6 +16,7 @@
   background-size:cover;
   position:relative;
 }
+
 
 /* text css above hero image*/
 .hero_title {
@@ -35,6 +33,7 @@
   transform: translate(-50%, -50%);
   color: white;
 }
+
 
 /* services section css */
 .servicesText.card {
@@ -56,13 +55,43 @@
   border: 1px solid #008000;
 }
 
+<<<<<<< HEAD
+=======
+/* course css */
+.section-border {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.article-border {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.img-popup {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+}
+
+.logothumbnail.hover img {
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+>>>>>>> janessa
+
 /* social media icons styling */
 .social-icons {
   font-size: 36px;
   cursor: pointer;
 }
 .fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover {
-  color: #008000;
+  color: green;
 }
 .fab {
   color: #000000;
@@ -71,4 +100,20 @@
 #footer {
   background-color: #808080;
   text-align: center;
+}
+
+<<<<<<< HEAD
+/* spacing on all sections */
+#about, #services, #portfolio, #contact {
+  margin-top: 2rem;
+  padding-top: 2rem;
+}
+#contact {
+  padding-bottom: 2rem;
+=======
+footer p {
+  font-size: 10px;
+  font-style: italic;
+  text-align: center;
+>>>>>>> janessa
 }
