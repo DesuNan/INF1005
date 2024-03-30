@@ -12,7 +12,7 @@
         include "inc/nav.inc.php";
         include "inc/banner.inc.php";
         include "inc/about.inc.php";
-        include "inc/services.inc.php";
+        // include "inc/services.inc.php";
         include "inc/portfolio.inc.php";
         ?>
     </body>

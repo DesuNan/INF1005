@@ -2,12 +2,12 @@
     <!-- services section-->
     <section id="services">
         <div class="container">
-            <h1 class="text-center">Services</h1>
+            <h1 class="text-center">Instructors</h1>
             <div class="row">
                 <div class="col-lg-4 mt-4">
                     <div class="card servicesText">
                         <div class="card-body">
-                            <i class="fas servicesIcon fa-clock"></i>
+                            <i class="fas servicesIcon fa-clock"></i> -->
                             <h4 class="card-title mt-3">Website Development</h4>
                             <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.
                                 Some quick example text to build on the card title and make up the bulk of the card's content.

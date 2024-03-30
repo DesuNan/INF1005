@@ -3,14 +3,11 @@
   background-color: black;
 }
 
-.a{
-  color: white;
-}
-
 /* about section image css */
 .imageAboutPage {
   width: 100%;
 }
+
 
 /* hero background image */
 .bgimage {
@@ -19,6 +16,7 @@
   background-size:cover;
   position:relative;
 }
+
 
 /* text css above hero image*/
 .hero_title {
@@ -35,6 +33,7 @@
   transform: translate(-50%, -50%);
   color: white;
 }
+
 
 /* services section css */
 .servicesText.card {
@@ -56,6 +55,7 @@
   border: 1px solid #008000;
 }
 
+
 /* social media icons styling */
 .social-icons {
   font-size: 36px;
@@ -75,9 +75,9 @@
 
 /* spacing on all sections */
 #about, #services, #portfolio, #contact {
-  margin-top: 4rem;
-  padding-top: 4rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
 }
 #contact {
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
 }
