@@ -4,7 +4,7 @@
         <h1 class="text-center">About Us</h1>
         <div class="row mt-4">
             <div class="col-lg-4">
-                <img src="img/teacher.png.webp" class="imageAboutPage" alt="">
+                <img src="/img/teacher.png.webp" class="imageAboutPage" alt="">
             </div>
             <div class="col-lg-8">
                 <p>
