@@ -8,8 +8,8 @@
             <a href="#">Home</a>
             <a href="#">Services</a>
             <a href="#">About</a>
-            <a href="#">Content</a>
-            <a href="#">Register/Login</a>
+            <a href="/english.php">Content</a>
+            <a href="/js/">Register/Login</a>
         </div>
         <div class="btn">
             <i class="fas fa-bars menu-btn"></i>
