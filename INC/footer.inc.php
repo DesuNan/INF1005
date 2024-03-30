@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <link rel="stylesheet" href="css/main.css">
 <script defer src="js/main.js"></script>
 
@@ -17,4 +18,8 @@
             <a href="https://www.twitch.tv/" target="_blank"><i class="fab fa-twitch"></i></a>
         </div>
     </div>
+=======
+<footer class="container">
+    <p>Copyright &copy; 2024 Coursedemy Pte. Ltd.</p>
+>>>>>>> janessa
 </footer>
