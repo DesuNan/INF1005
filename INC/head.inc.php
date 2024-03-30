@@ -9,6 +9,8 @@ crossorigin="anonymous">
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous">
 </script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
 <!--React JS-->
 <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script> -->
