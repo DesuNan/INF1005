@@ -13,7 +13,7 @@
 <script defer src="JS/main.js"></script>
 
 <div class="topnav" id="myTopnav">
-<a class="navbar-brand"><img class="img-fluid" src="IMG/pngwing.com.png"></a>
+<a class="navbar-brand"><img class="img-fluid" style="width: 150px; height: 100px; border-radius: 5px;" src="IMG/pngwing.com.png"></a>
     <a href="/index.php" class="active">Home</a>
     <a href="/content.php">Content</a>
     <a href="#contact">Contact</a>

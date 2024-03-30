@@ -56,6 +56,33 @@
   border: 1px solid #008000;
 }
 
+/* course css */
+.section-border {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.article-border {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.img-popup {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+}
+
+.logothumbnail.hover img {
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+
 /* social media icons styling */
 .social-icons {
   font-size: 36px;
@@ -70,5 +97,11 @@
 /* footer styling */
 #footer {
   background-color: #808080;
+  text-align: center;
+}
+
+footer p {
+  font-size: 10px;
+  font-style: italic;
   text-align: center;
 }
