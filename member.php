@@ -6,7 +6,7 @@
         include "inc/head.inc.php";
     ?>
 </head>
-<body>
+<body class="loginRegister">
     <?php
         include "inc/nav.inc.php";
     ?>
@@ -18,18 +18,18 @@
             <input type="checkbox" id="flip">
             <div class="cover">
                 <div class="front">
-                    <img src="images/frontImg.jpg" alt="">
+                    <img class="frontImg" src="img/math.jpg" alt="">
                     <div class="text">
                         <span class="text-1">Every new friend is a <br> new adventure</span>
                         <span class="text-2">Let's get connected</span>
                     </div>
                 </div>
-            </div>
-            <div class="back">
-                <!--<img class="backImg" src="images/backImg.jpg" alt="">-->
-                <div class="text">
-                    <span class="text-1">Complete miles of journey <br> with one step</span>
-                    <span class="text-2">Let's get started</span>
+                <div class="back">
+                    <img class="backImg" src="img/physics.jpg" alt="">
+                    <div class="text">
+                        <span class="text-1">Complete miles of journey <br> with one step</span>
+                        <span class="text-2">Let's get started</span>
+                    </div>
                 </div>
             </div>
             <div class="forms">
