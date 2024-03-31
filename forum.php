@@ -21,6 +21,56 @@ if(isset($_POST["submit"])){
 ?>
 
 <html>
+<style>
+    *{
+      margin: 0px;
+      padding: 0px;
+    }
+    body{
+      background: #212523;
+    }
+    .container{
+      background: white;
+      width: 700px;
+      margin: 0 auto;
+      padding-top: 1px;
+      padding-bottom: 5px;
+    }
+    .comment, .reply{
+      margin-top: 5px;
+      padding: 10px;
+      border-bottom: 1px solid black;
+    }
+    .reply{
+      border: 1px solid #ccc;
+    }
+    p{
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    form{
+      margin: 10px;
+    }
+    form h3{
+      margin-bottom: 5px;
+    }
+    form input, form textarea{
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    form button.submit, button{
+      background: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px 20px;
+      width: 100%;
+    }
+    button.reply{
+      background: orange;
+    }
+  </style>
   <body>
     <div class="container">
       <?php
