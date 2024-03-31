@@ -122,7 +122,7 @@ header .btn {
 /* hero background image */
 .bgimage {
   height: 100vh;
-  background: url("/IMG/bg.jpg");
+  background: url("/img/bg.jpg");
   background-size: cover;
   position: relative;
 }
