@@ -9,7 +9,7 @@
             <a href="#">Services</a>
             <a href="#">About</a>
             <a href="/english.php">Content</a>
-            <a href="/js/">Register/Login</a>
+            <a href="/member.php">Register/Login</a>
         </div>
         <div class="btn">
             <i class="fas fa-bars menu-btn"></i>

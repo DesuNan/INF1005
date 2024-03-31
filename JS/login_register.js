@@ -20,8 +20,8 @@ function LoginRegister() {
                 <div>
                     <h1>Member Login</h1>
                     <p>
-                        Existing members log in here. For new members, please go to the
-                        <button onClick={toggleForm}>Member Registration page</button>.
+                        Existing members log in here. For new members, please go to the{" "}
+                        <button onClick={toggleForm} style={{ marginLeft: '5px' }}>Member Registration page</button>.
                     </p>
                     <form action="process_login.php" method="post">
                         <div class="mb-3">
@@ -43,8 +43,8 @@ function LoginRegister() {
                 <div>
                 <h1>Member Registration</h1>
                 <p>
-                    For existing members, please go to the
-                    <button onClick={toggleForm}>Sign In page</button>.
+                    For existing members, please go to the{""}
+                    <button onClick={toggleForm} style={{ marginLeft: '5px' }}>Sign In page</button>.
                 </p>
                 <form action="process_register.php" method="post">
                     <div class="mb-3">
