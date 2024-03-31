@@ -7,8 +7,8 @@
 <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<link rel="stylesheet" href="CSS/main.css">
-<script defer src="JS/main.js"></script>
+<link rel="stylesheet" href="css/main.css">
+<script defer src="js/main.js"></script>
 
 <nav class="navbar navbar-expand-lg fixed-top navbarScroll">
     <div class="container" style="color: white;">
