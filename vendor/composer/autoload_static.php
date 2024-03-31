@@ -110,6 +110,7 @@ class ComposerStaticInit451fa8820a68e533c1cba8db0d383730
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Zebra_Session' => __DIR__ . '/..' . '/stefangabos/zebra_session/Zebra_Session.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
