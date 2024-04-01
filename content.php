@@ -10,8 +10,8 @@
 
 <body>
     <?php
-    include "inc/nav2.inc.php";
-    ?>
+        include "inc/nav.inc.php";
+        ?>
     <main class="container">
         <section id="languages" class="section-border">
             <h2 style="padding-top: 120px;">Languages</h2>

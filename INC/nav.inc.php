@@ -6,8 +6,8 @@
                 <i class="fas fa-times close-btn"></i>
             </div>
             <a href="/index.php">Home</a>
-            <a href="/index.php/#about">About</a>
-            <a href="/index.php/#portfolio">Services</a>
+            <a href="/index.php#about">About</a>
+            <a href="/index.php#portfolio">Services</a>
             <a href="/content.php">Content</a>
             <a href="/member.php">Register/Login</a>
         </div>
