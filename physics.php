@@ -89,16 +89,20 @@
         </div>
     </nav>
 
-    <!-- english content -->
+    <!-- physics content -->
     <main class="main-containerSub container">
         <!-- About and Chapters Section -->
         <div class="about-chapters-container">
             <section id="aboutSub">
                 <div class="row">
                     <article class="col-sm">
-                        <h1>About English</h1>
+                        <h1>About Physics</h1>
                         <p style="color: #666; line-height: 1.6;">
-                            Unlock the world with English! As the global language of communication, learning English opens doors to endless opportunities. Whether you're traveling, studying, or pursuing a career, English proficiency empowers you to connect with people from diverse cultures and backgrounds. From enhancing job prospects to enriching cultural experiences, mastering English enriches your life in countless ways.
+                        Embark on a thrilling journey into the boundless realms of physics! Physics is the fundamental science that unravels the mysteries of the universe, 
+                        from the smallest particles to the vastness of space and time. By studying physics, you delve into the laws and principles that govern motion, energy, 
+                        and matter, allowing you to comprehend the inner workings of the cosmos. Explore the wonders of quantum mechanics, delve into the mysteries of relativity, 
+                        and uncover the secrets of the forces that shape our world. Embrace the challenge of exploring the unknown and let physics ignite your curiosity, inspire 
+                        your imagination, and propel you toward a deeper understanding of the universe!
                         </p>
                     </article>
                 </div>
@@ -112,8 +116,8 @@
                             <!-- Chapter card 1 -->
                             <div class="card chapter-card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Chapter 1: Introduction to English</h5>
-                                    <p class="card-text">Learn the basics of the English language and its importance in today's world.</p>
+                                    <h5 class="card-title">Chapter 1: Mechanics</h5>
+                                    <p class="card-text">Explore the fundamental principles of motion, forces, and energy in mechanics.</p>
                                     <a href="#" class="btn btn-primary">Read Chapter</a>
                                 </div>
                             </div>
@@ -122,8 +126,8 @@
                             <!-- Chapter card 2 -->
                             <div class="card chapter-card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Chapter 2: Grammar Essentials</h5>
-                                    <p class="card-text">Explore the fundamental grammar rules and improve your language skills.</p>
+                                    <h5 class="card-title">Chapter 2: Electricity and Magnetism</h5>
+                                    <p class="card-text">Understand the behavior of electric charges, currents, and magnetic fields.</p>
                                     <a href="#" class="btn btn-primary">Read Chapter</a>
                                 </div>
                             </div>
@@ -132,8 +136,8 @@
                             <!-- Chapter card 3 -->
                             <div class="card chapter-card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Chapter 3: Vocabulary Expansion</h5>
-                                    <p class="card-text">Expand your vocabulary and learn new words and phrases for effective communication.</p>
+                                    <h5 class="card-title">Chapter 3: Thermodynamics</h5>
+                                    <p class="card-text">Learn about the principles governing heat, temperature, and energy transfer in thermodynamics.</p>
                                     <a href="#" class="btn btn-primary">Read Chapter</a>
                                 </div>
                             </div>
