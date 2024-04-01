@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-     <title>Coursedemy</title>
+    <title>Coursedemy</title>
     <?php
     include "inc/head.inc.php";
-        include "inc/head.inc.php";
+    include "inc/head.inc.php";
     ?>
     <style>
         .main-containerSub {
@@ -22,7 +22,8 @@
         #aboutSub,
         #chapters {
             flex: 1;
-            margin-right: 20px; /* Adjust as needed */
+            margin-right: 20px;
+            /* Adjust as needed */
             width: 100%;
         }
 
@@ -47,7 +48,7 @@
             margin-bottom: 15px;
             border-radius: 10px;
         }
-                    
+
         .chapters-align {
             text-align: center;
         }
@@ -69,8 +70,7 @@
 
 <body style="padding-top: 110px;">
     <?php
-    include "inc/header.inc.php";
-        include "inc/nav.inc.php";
+    include "inc/nav.inc.php";
     ?>
 
     <nav class="navbar navbar-expand-lg navbar-courses">
@@ -160,29 +160,32 @@
                         </div>
                     </div>
                 </div>
-    <main class="container">
-        <section id="english">
-            <h2>English</h2>
-            <div class="row">
-                <article class="col-sm">
-                    <figure>
-                        <a target="_self" href="img/english_background.jpg" alt="English_Background" class="thumbnail"></a>
-                        <figcaption>English Language</figcaption>
-                    </figure>
-                    <p color="black">
-                    Unlock the world with English! As the global language of communication, learning English opens doors to endless opportunities. 
-                    Whether you're traveling, studying, or pursuing a career, English proficiency empowers you to connect with people from diverse 
-                    cultures and backgrounds. From enhancing job prospects to enriching cultural experiences, mastering English enriches your life in countless ways.
-                    </p>
-                </article>
-            </div>
-        </section>
+                <main class="container">
+                    <section id="english">
+                        <h2>English</h2>
+                        <div class="row">
+                            <article class="col-sm">
+                                <figure>
+                                    <a target="_self" href="img/english_background.jpg" alt="English_Background" class="thumbnail"></a>
+                                    <figcaption>English Language</figcaption>
+                                </figure>
+                                <p color="black">
+                                    Unlock the world with English! As the global language of communication, learning English opens doors to endless opportunities.
+                                    Whether you're traveling, studying, or pursuing a career, English proficiency empowers you to connect with people from diverse
+                                    cultures and backgrounds. From enhancing job prospects to enriching cultural experiences, mastering English enriches your life in countless ways.
+                                </p>
+                            </article>
+                        </div>
+                    </section>
 
-    </main>
-    <?php
+                </main>
+                <?php
     include "inc/footer.inc.php";
-        include "inc/footer.inc.php";
     ?>
 </body>
+
+<footer>
+
+</footer>
 
 </html>

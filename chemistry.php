@@ -21,7 +21,8 @@
         #aboutSub,
         #chapters {
             flex: 1;
-            margin-right: 20px; /* Adjust as needed */
+            margin-right: 20px;
+            /* Adjust as needed */
             width: 100%;
         }
 
@@ -46,7 +47,7 @@
             margin-bottom: 15px;
             border-radius: 10px;
         }
-                    
+
         .chapters-align {
             text-align: center;
         }
@@ -68,7 +69,7 @@
 
 <body style="padding-top: 110px;">
     <?php
-    include "inc/header.inc.php";
+    include "inc/nav.inc.php";
     ?>
 
     <nav class="navbar navbar-expand-lg navbar-courses">
@@ -101,11 +102,11 @@
                     <article class="col-sm">
                         <h1>About Chemistry</h1>
                         <p style="color: #666; line-height: 1.6;">
-                        Embark on a journey into the fascinating world of chemistry! From the tiniest atoms to the complex molecules that make up our world, chemistry 
-                        is the science that reveals the secrets of matter and its transformations. By studying chemistry, you unlock a deeper understanding of everything 
-                        around you, from the air we breathe to the food we eat and the medicines that heal us. With chemistry, you gain the power to innovate, create, and 
-                        contribute to solving some of the world's most pressing challenges. Embrace the excitement of discovery and let chemistry ignite your passion for 
-                        understanding the building blocks of life itself!
+                            Embark on a journey into the fascinating world of chemistry! From the tiniest atoms to the complex molecules that make up our world, chemistry
+                            is the science that reveals the secrets of matter and its transformations. By studying chemistry, you unlock a deeper understanding of everything
+                            around you, from the air we breathe to the food we eat and the medicines that heal us. With chemistry, you gain the power to innovate, create, and
+                            contribute to solving some of the world's most pressing challenges. Embrace the excitement of discovery and let chemistry ignite your passion for
+                            understanding the building blocks of life itself!
                         </p>
                     </article>
                 </div>

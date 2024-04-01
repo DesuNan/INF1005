@@ -68,7 +68,7 @@
 
 <body style="padding-top: 110px;">
     <?php
-    include "inc/header.inc.php";
+    include "inc/nav.inc.php";
     ?>
 
     <nav class="navbar navbar-expand-lg navbar-courses">
