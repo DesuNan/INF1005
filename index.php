@@ -3,7 +3,7 @@
     <head>
         <title>BasicStudys</title>
         <?php
-            include "INC/head.inc.php";
+            include "inc/head.inc.php";
         ?>
     </head>
 

@@ -1,3 +1,7 @@
+<?php
+    include "head.inc.php";
+?>
+
 <!-- about section-->
 <section id="about">
         <div class="container mt-4 pt-4">

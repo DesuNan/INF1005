@@ -23,6 +23,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 100px;
+  background: rgb(70, 69, 69);
+  transition: 0.6;
 }
 
 header.sticky {
@@ -109,7 +111,137 @@ header .btn {
   }
 }
 
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.section-main {
+  position: relative;
+  width: 100%;
+}
+
+header {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+}
+
+header.sticky {
+  background: black;
+  padding: 15px 100px;
+  transition: 0.6s;
+}
+
+header .brand {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+header .menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .menu.active{
+  right: 0;
+}
+
+header .menu a {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0 30px;
+  padding: 0 10px;
+  border-radius: 20px;
+  transition: 0.3s;
+  transition-property: color, background;
+}
+
+header .menu a:hover {
+  color: #000000;
+  background: white;
+}
+
+header .btn {
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 1040px) {
+  header .btn {
+    display: block;
+  }
+
+  header .menu {
+    position: fixed;
+    background-color: black;
+    flex-direction: column;
+    min-width: 400px;
+    height: 100vh;
+    top: 0;
+    right: -100%;
+    padding: 80px 50px;
+  }
+
+  header .menu.active{
+    right: 0;
+  }
+
+  header .menu .close-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 25px;
+  }
+
+  header .menu a {
+    display: block;
+    font-size: 20px;
+    margin: 20px;
+    padding: 0 15px;
+  }
+  .login-container .cover{
+    display: none;
+  }
+  .form-content .login-form,
+  .form-content .signup-form{
+    width: 100%;
+  }
+  .form-content .signup-form{
+    display: none;
+  }
+  .login-container #flip:checked ~ .forms .signup-form{
+    display: block;
+  }
+  .login-container #flip:checked ~ .forms .login-form{
+    display: none;
+  }
+}
+
 /* display background color black on navbar scroll */
+/* .navbarScroll.navbarDark {
 /* .navbarScroll.navbarDark {
   background-color: black;
 } */
@@ -122,7 +254,7 @@ header .btn {
 /* hero background image */
 .bgimage {
   height: 100vh;
-  background: url("/IMG/bg.jpg");
+  background: url("/img/bg.jpg");
   background-size: cover;
   position: relative;
 }
@@ -132,9 +264,11 @@ header .btn {
   font-size: 4.5rem;
 }
 
+
 .hero_desc {
   font-size: 2rem;
 }
+
 
 .hero-text {
   text-align: center;
@@ -150,6 +284,7 @@ header .btn {
   height: 280px;
   cursor: pointer;
 }
+
 
 .servicesIcon {
   font-size: 36px;
@@ -187,22 +322,23 @@ header .btn {
 .fab {
   color: #000000;
 }
-
 /* footer styling */
 #footer {
   background-color: #808080;
   text-align: center;
 }
 
-/* spacing on all sections */
-#about,
-#services,
-#portfolio,
-#contact {
-  margin-top: 2rem;
-  padding-top: 2rem;
+footer p {
+  font-size: 10px;
+  font-style: italic;
+  text-align: center;
 }
 
+/* spacing on all sections */
+#about, #services, #portfolio, #contact {
+  margin-top: 4rem;
+  padding-top: 4rem;
+}
 #contact {
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
 }
