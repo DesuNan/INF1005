@@ -36,44 +36,52 @@
                 <div class="form-content">
                     <div class="login-form">
                         <div class="title">Login</div>
-                        <form action="#">
+                        <form action="process_login.php" method="post">
                             <div class="input-boxes">
                                 <div class="input-box">
                                     <i class="fas fa-envelope"></i>
-                                    <input type="text" placeholder="Enter your email" required>
+                                    <input required type="text" id="email" name="email" placeholder="Enter your email">
                                 </div>
                                 <div class="input-box">
                                     <i class="fas fa-lock"></i>
-                                    <input type="password" placeholder="Enter your password" required>
+                                    <input required type="password" id="pwd" name="pwd" placeholder="Enter your password">
                                 </div>
                                 <div class="text">
-                                    <a href="#">Forgot password?</a>
+                                    <a href="password_reset.php">Forgot password?</a>
                                 </div>
                                 <div class="button input-box">
-                                    <input type="submit" value="Sumbit">
+                                    <input type="submit" value="Submit">
                                 </div>
-                                <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
+                                <div class="text sign-up-text">Don't have an account? <label for="flip">Signup now</label></div>
                             </div>
                         </form>
                     </div>
                     <div class="signup-form">
                         <div class="title">Signup</div>
-                        <form action="#">
+                        <form action="process_register.php" method="post">
                             <div class="input-boxes">
                                 <div class="input-box">
                                     <i class="fas fa-user"></i>
-                                    <input type="text" placeholder="Enter your name" required>
+                                    <input maxlength="45" type="text" id="fname" name="fname" placeholder="Enter your first name">
+                                </div>
+                                <div class="input-box">
+                                    <i class="fas fa-user"></i>
+                                    <input required maxlength="45" type="text" id="lname" name="lname" placeholder="Enter your last name" >
                                 </div>
                                 <div class="input-box">
                                     <i class="fas fa-envelope"></i>
-                                    <input type="text" placeholder="Enter your email" required>
+                                    <input required maxlength="45" type="text" id="email" name="email" placeholder="Enter your email" >
                                 </div>
                                 <div class="input-box">
                                     <i class="fas fa-lock"></i>
-                                    <input type="password" placeholder="Enter your password" required>
+                                    <input required minlength="12" type="password" id="pwd" name="pwd" placeholder="Enter your password">
+                                </div>
+                                <div class="input-box">
+                                    <i class="fas fa-lock"></i>
+                                    <input required minlength="12" type="password" id="pwd_confirm" name="pwd_confirm" placeholder="Enter your password">
                                 </div>
                                 <div class="button input-box">
-                                    <input type="submit" value="Sumbit">
+                                    <input type="submit" value="Submit">
                                 </div>
                                 <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
                             </div>
