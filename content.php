@@ -4,6 +4,7 @@
 <head>
     <?php
         include "inc/nav.inc.php";
+        include "inc/nav.inc.php";
     ?>
     <title>Coursedemy</title>
     <?php

@@ -9,7 +9,7 @@
             <a href="#about">About</a>
             <a href="#portfolio">Services</a>
             <a href="/content.php">Content</a>
-            <a href="/js/">Register/Login</a>
+            <a href="/member.php">Register/Login</a>
         </div>
         <div class="btn">
             <i class="fas fa-bars menu-btn"></i>
