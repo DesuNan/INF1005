@@ -1,25 +1,26 @@
-<link rel="stylesheet" href="css/main.css">
-<script defer src="js/main.js"></script>
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-<body>
+<head>
     <?php
         include "inc/nav.inc.php";
+        include "inc/nav.inc.php";
     ?>
+    <title>Coursedemy</title>
     <?php
-        include "inc/header.inc.php";
+    include "inc/head.inc.php";
     ?>
+</head>
+<body>
+
     <main class="container">
         <section id="languages" class="section-border">
-            <h2>Languages</h2>
+            <h2 style="padding-top: 120px;">Languages</h2>
             <div class="row">
                 <article class="col-sm">
                     <h3 style="color:#555;">English</h3>
                     <figure>
-                        <a target="_self" href="img/english.jpg" class="logothumbnail">
+                        <a target="_self" href="english.php" class="logothumbnail">
                             <img class="img-popup" src="img/english.jpg" alt="English" title="View larger image..." >
                         </a>
                     </figure>
@@ -36,7 +37,7 @@
                 <h2>Mathematics</h2>
                 <article class="col-sm">
                     <figure>
-                        <a href="img/math.jpg" class="logothumbnail">
+                        <a href="math.php" class="logothumbnail">
                             <img class="img-popup" src="img/math.jpg" alt="Math" title="View larger image..." >
                         </a>
                     </figure>
@@ -55,7 +56,7 @@
                 <article class="col-sm article-border">
                     <h3 style="color:#555;">Chemistry</h3>
                     <figure>
-                        <a href="img/chemistry.jpg" class="logothumbnail">
+                        <a href="chemistry.php" class="logothumbnail">
                             <img class="img-popup" src="img/chemistry.jpg" alt="Chemistry" title="View larger image..." >
                         </a>
                     </figure>
@@ -70,7 +71,7 @@
                 <article class="col-sm article-border">
                     <h3 style="color:#555;">Physics</h3>
                     <figure>
-                        <a href="img/physics.jpg" class="logothumbnail">
+                        <a href="physics.php" class="logothumbnail">
                             <img class="img-popup" src="img/physics.jpg" alt="Physics" title="View larger image..." >
                         </a>
                     </figure>
@@ -86,6 +87,6 @@
         </section>
     </main>
     <?php
-        include "ing/footer.inc.php";
+        include "inc/footer.inc.php";
     ?>
 </body>

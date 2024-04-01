@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <title>Coursedemy</title>
-    <?php
-    include "inc/head.inc.php";
-    ?>
-</head>
+    <head>
+        <title>BasicStudys</title>
+        <?php
+            include "inc/head.inc.php";
+        ?>
+    </head>
 
 <body>
     <?php

@@ -2,10 +2,9 @@
 <html lang="en">
 
 <head>
-     <title>Coursedemy</title>
+    <title>Coursedemy</title>
     <?php
     include "inc/head.inc.php";
-        include "inc/head.inc.php";
     ?>
     <style>
         .main-containerSub {
@@ -70,7 +69,6 @@
 <body style="padding-top: 110px;">
     <?php
     include "inc/header.inc.php";
-        include "inc/nav.inc.php";
     ?>
 
     <nav class="navbar navbar-expand-lg navbar-courses">
@@ -94,16 +92,20 @@
         </div>
     </nav>
 
-    <!-- english content -->
+    <!-- chemistry content -->
     <main class="main-containerSub container">
         <!-- About and Chapters Section -->
         <div class="about-chapters-container">
             <section id="aboutSub">
                 <div class="row">
                     <article class="col-sm">
-                        <h1>About English</h1>
+                        <h1>About Chemistry</h1>
                         <p style="color: #666; line-height: 1.6;">
-                            Unlock the world with English! As the global language of communication, learning English opens doors to endless opportunities. Whether you're traveling, studying, or pursuing a career, English proficiency empowers you to connect with people from diverse cultures and backgrounds. From enhancing job prospects to enriching cultural experiences, mastering English enriches your life in countless ways.
+                        Embark on a journey into the fascinating world of chemistry! From the tiniest atoms to the complex molecules that make up our world, chemistry 
+                        is the science that reveals the secrets of matter and its transformations. By studying chemistry, you unlock a deeper understanding of everything 
+                        around you, from the air we breathe to the food we eat and the medicines that heal us. With chemistry, you gain the power to innovate, create, and 
+                        contribute to solving some of the world's most pressing challenges. Embrace the excitement of discovery and let chemistry ignite your passion for 
+                        understanding the building blocks of life itself!
                         </p>
                     </article>
                 </div>
@@ -117,8 +119,8 @@
                             <!-- Chapter card 1 -->
                             <div class="card chapter-card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Chapter 1: Introduction to English</h5>
-                                    <p class="card-text">Learn the basics of the English language and its importance in today's world.</p>
+                                    <h5 class="card-title">Chapter 1: Atomic Structure</h5>
+                                    <p class="card-text">Explore the basic building blocks of matter, including atoms, isotopes, and atomic models.</p>
                                     <a href="#" class="btn btn-primary">Read Chapter</a>
                                 </div>
                             </div>
@@ -127,8 +129,8 @@
                             <!-- Chapter card 2 -->
                             <div class="card chapter-card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Chapter 2: Grammar Essentials</h5>
-                                    <p class="card-text">Explore the fundamental grammar rules and improve your language skills.</p>
+                                    <h5 class="card-title">Chapter 2: Chemical Bonding</h5>
+                                    <p class="card-text">Understand the forces that hold atoms together to form molecules and compounds.</p>
                                     <a href="#" class="btn btn-primary">Read Chapter</a>
                                 </div>
                             </div>
@@ -137,8 +139,8 @@
                             <!-- Chapter card 3 -->
                             <div class="card chapter-card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Chapter 3: Vocabulary Expansion</h5>
-                                    <p class="card-text">Expand your vocabulary and learn new words and phrases for effective communication.</p>
+                                    <h5 class="card-title">Chapter 3: Stoichiometry</h5>
+                                    <p class="card-text">Learn about the quantitative relationships between reactants and products in chemical reactions.</p>
                                     <a href="#" class="btn btn-primary">Read Chapter</a>
                                 </div>
                             </div>
@@ -160,28 +162,12 @@
                         </div>
                     </div>
                 </div>
-    <main class="container">
-        <section id="english">
-            <h2>English</h2>
-            <div class="row">
-                <article class="col-sm">
-                    <figure>
-                        <a target="_self" href="img/english_background.jpg" alt="English_Background" class="thumbnail"></a>
-                        <figcaption>English Language</figcaption>
-                    </figure>
-                    <p color="black">
-                    Unlock the world with English! As the global language of communication, learning English opens doors to endless opportunities. 
-                    Whether you're traveling, studying, or pursuing a career, English proficiency empowers you to connect with people from diverse 
-                    cultures and backgrounds. From enhancing job prospects to enriching cultural experiences, mastering English enriches your life in countless ways.
-                    </p>
-                </article>
             </div>
         </section>
 
     </main>
     <?php
     include "inc/footer.inc.php";
-        include "inc/footer.inc.php";
     ?>
 </body>
 
