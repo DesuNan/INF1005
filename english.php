@@ -4,13 +4,13 @@
 <head>
     <title>English Language</title>
     <?php
-        include "INC/head.inc.php";
+        include "inc/head.inc.php";
     ?>
 </head>
 
 <body>
     <?php
-        include "INC/nav.inc.php";
+        include "inc/nav.inc.php";
     ?>
     <main class="container">
         <section id="english">
@@ -18,7 +18,7 @@
             <div class="row">
                 <article class="col-sm">
                     <figure>
-                        <a target="_self" href="IMG/english_background.jpg" alt="English_Background" class="thumbnail"></a>
+                        <a target="_self" href="img/english_background.jpg" alt="English_Background" class="thumbnail"></a>
                         <figcaption>English Language</figcaption>
                     </figure>
                     <p color="black">
@@ -31,7 +31,7 @@
         </section>
     </main>
     <?php
-        include "INC/footer.inc.php";
+        include "inc/footer.inc.php";
     ?>
 </body>
 </html>
