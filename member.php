@@ -1,96 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Member Page</title>
-    <?php
-        include "inc/head.inc.php";
-    ?>
-</head>
-<body class="loginRegister">
-    <?php
-        include "inc/nav.inc.php";
-    ?>
-    <main class="container">
-        <div class="login-container">
-            <input type="checkbox" id="flip">
-            <div class="cover">
-                <div class="front">
-                    <img class="frontImg" src="img/math.jpg" alt="">
-                    <div class="text">
-                        <span class="text-1">Every new friend is a <br> new adventure</span>
-                        <span class="text-2">Let's get connected</span>
-                    </div>
-                </div>
-                <div class="back">
-                    <img class="backImg" src="img/physics.jpg" alt="">
-                    <div class="text">
-                        <span class="text-1">Complete miles of journey <br> with one step</span>
-                        <span class="text-2">Let's get started</span>
-                    </div>
-                </div>
-            </div>
-            <div class="forms">
-                <div class="form-content">
-                    <div class="login-form">
-                        <div class="title">Login</div>
-                        <form action="process_login.php" method="post">
-                            <div class="input-boxes">
-                                <div class="input-box">
-                                    <i class="fas fa-envelope"></i>
-                                    <input required type="text" id="email" name="email" placeholder="Enter your email">
-                                </div>
-                                <div class="input-box">
-                                    <i class="fas fa-lock"></i>
-                                    <input required type="password" id="pwd" name="pwd" placeholder="Enter your password">
-                                </div>
-                                <div class="text">
-                                    <a href="password_reset.php">Forgot password?</a>
-                                </div>
-                                <div class="button input-box">
-                                    <input type="submit" value="Submit">
-                                </div>
-                                <div class="text sign-up-text">Don't have an account? <label for="flip">Signup now</label></div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="signup-form">
-                        <div class="title">Signup</div>
-                        <form action="process_register.php" method="post">
-                            <div class="input-boxes">
-                                <div class="input-box">
-                                    <i class="fas fa-user"></i>
-                                    <input maxlength="45" type="text" id="fname" name="fname" placeholder="Enter your first name">
-                                </div>
-                                <div class="input-box">
-                                    <i class="fas fa-user"></i>
-                                    <input required maxlength="45" type="text" id="lname" name="lname" placeholder="Enter your last name" >
-                                </div>
-                                <div class="input-box">
-                                    <i class="fas fa-envelope"></i>
-                                    <input required maxlength="45" type="text" id="email" name="email" placeholder="Enter your email" >
-                                </div>
-                                <div class="input-box">
-                                    <i class="fas fa-lock"></i>
-                                    <input required minlength="12" type="password" id="pwd" name="pwd" placeholder="Enter your password">
-                                </div>
-                                <div class="input-box">
-                                    <i class="fas fa-lock"></i>
-                                    <input required minlength="12" type="password" id="pwd_confirm" name="pwd_confirm" placeholder="Enter your password">
-                                </div>
-                                <div class="button input-box">
-                                    <input type="submit" value="Submit">
-                                </div>
-                                <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--<script src="jsx/login_register.js"></script>-->
-    </main>
-    <?php
-        include "inc/footer.inc.php";
-    ?>
-</body>
+    <head>
+        <title>Member Page</title>
+        <?php
+            include "inc/head.inc.php"
+        ?>
+    </head>
+    <body>
+        <?php
+            include "inc/nav.inc.php"
+        ?>
+        <main>
+            <div id="app" class="memberProfile"></div>
+            <script src="jsx/member_profile.js"></script>
+        </main>
+        <?php
+            include "inc/footer.inc.php"
+        ?>
+    </body>
 </html>

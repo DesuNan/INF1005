@@ -12,7 +12,7 @@
             </div>
             <div class="col-lg-8">
                 <p>
-                    We are an online school, whos sole focus is the development on the minds of tomorrow, and increaing the knowledge of the youth of today.
+                    We are an online school, whose sole focus is the development on the minds of tomorrow, and increaing the knowledge of the youth of today.
                 </p>
 
                 <div class="row mt-3">
