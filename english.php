@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Coursedemy</title>
+    <title>BasicStudys English</title>
     <?php
     include "inc/head.inc.php";
     include "inc/head.inc.php";

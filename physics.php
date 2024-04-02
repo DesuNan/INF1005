@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Coursedemy</title>
+    <title>BasicStudys Physics</title>
     <?php
     include "inc/head.inc.php";
     ?>

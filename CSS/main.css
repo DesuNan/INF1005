@@ -27,13 +27,13 @@ header {
   transition: 0.6;
 }
 
-header.sticky {
+/* header.sticky {
   background: black;
   padding: 15px 100px;
   transition: 0.6s;
-}
+} */
 
-header .brand {
+/* header .brand {
   color: white;
   font-size: 30px;
   font-weight: 700;
@@ -109,7 +109,7 @@ header .btn {
     margin: 20px;
     padding: 0 15px;
   }
-}
+} */
 
 /* Google Font Link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
@@ -149,7 +149,7 @@ header.sticky {
   transition: 0.6s;
 }
 
-header .brand {
+header .basicstudy {
   color: white;
   font-size: 30px;
   font-weight: 700;
