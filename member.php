@@ -10,9 +10,6 @@
     <?php
         include "inc/nav.inc.php";
     ?>
-    <?php
-        include "inc/header.inc.php";
-    ?>
     <main class="container">
         <div class="login-container">
             <input type="checkbox" id="flip">
