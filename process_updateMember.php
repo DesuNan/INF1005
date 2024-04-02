@@ -4,6 +4,7 @@
     <title>Registration Results</title>
         <?php
             include "inc/head.inc.php";
+            require_once "zebra_session/session_start.php";
         ?>
     </head>
     <body>
@@ -13,47 +14,60 @@
         <main class="container">
             <section class="updateMember">
             <?php
-                $email = $pwd = $fname = $lname = $errorMsg = "";
+                $email = $pwd = $fname = $lname = $userID = $errorMsg = "";
                 $success = true;
+                $userID = $_SESSION["userID"];
 
-                if (empty($_POST["email"])) {
-                    $errorMsg .= "Email is required.<br>";
-                    $success = false;
-                }
-                else if (empty($_POST["pwd"]) || empty($_POST["pwd_confirm"])) {
-                   $errorMsg .= "Password is required.<br>";
-                   $success = false;
-                }
-                else if (!check_password($_POST["pwd"])) {
-                    $errorMsg .= "Password should be at least 12 characters in length and should include at least one upper case letter, one number, and one special character.<br>";
-                    $success = false;
-                }
-                else if ($_POST["pwd"] != $_POST["pwd_confirm"]) {
-                    $errorMsg .= "Passwords do not match.";
-                    $success = false;
-                }
-                else {
-                    $email = sanitize_input($_POST["email"]);
-                    $pwd = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
-                    $fname = sanitize_input($_POST["fname"]);
-                    $lname = sanitize_input($_POST["lname"]);
-
+                if (!empty($_POST["email"])) {
                     // Additional check to make sure e-mail address is well-formed.
                     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                         $errorMsg .= "Invalid email format.";
                         $success = false;
                     }
 
-                    // Save to DB
+                    $email = sanitize_input($_POST["email"]);
+
+                    // Update email to DB
                     if ($success) {
-                        saveMemberToDB();
+                        UpdateEmailToDB();
+                    }
+                }
+                if (!empty($_POST["pwd"]) && !empty($_POST["pwd_confirm"])) {
+                    if ($_POST["pwd"] != $_POST["pwd_confirm"]) {
+                        $errorMsg .= "Passwords do not match.";
+                        $success = false;
+                    } else if (!check_password($_POST["pwd"])) {
+                        $errorMsg .= "Password should be at least 12 characters in length and should include at least one upper case letter, one number, and one special character.<br>";
+                        $success = false;
+                    }
+
+                    $pwd = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
+
+                    // Update pwd to DB
+                    if ($success) {
+                        UpdatePWDToDB();
+                    }
+                }
+                if (!empty($_POST["fname"])) {
+                    $fname = sanitize_input($_POST["fname"]);
+
+                    // Update fname to DB
+                    if ($success) {
+                        UpdateFNameToDB();
+                    }
+                }
+                if (!empty($_POST["lname"])) {
+                    $fname = sanitize_input($_POST["fname"]);
+
+                    // Update lname to DB
+                    if ($success) {
+                        UpdateLNameToDB();
                     }
                 }
 
                 if ($success) {
-                    echo "<h2>Your registration is successful!</h2>";
-                    echo "<h4>Thank you for signing up, " . $fname . " " . $lname . ".</h4>";
-                    echo "<button type='login' class='btn btn-success' onclick=\"location.href='login.php'\">Log-in</button>";
+                    echo "<h2>Your profile has been updated!</h2>";
+                    echo "UserID: " . $userID . "<br>";
                 }
                 else {
                     echo "<h2>Oops!</h2>";
@@ -92,8 +106,90 @@
                 /*
                  * Helper function to write member data to the database.
                  */
-                function saveMemberToDB() {
-                    global $fname, $lname, $email, $pwd, $errorMsg, $success;
+                function UpdateFNameToDB() {
+                    global $fname, $userID, $errorMsg, $success;
+
+                    // Create database connection.
+                    $config = parse_ini_file('/var/www/private/db-config-zebra.ini');
+
+                    if(!$config) {
+                        $errorMsg = "Failed to read database config file.";
+                        $success = false;
+                    }
+                    else {
+                        $conn = new mysqli(
+                            $config['servername'],
+                            $config['username'],
+                            $config['password'],
+                            $config['dbname']
+                        );
+
+                        // Check connection
+                        if($conn -> connect_error) {
+                            $errorMsg = "Connection failed: " . $conn -> connect_error;
+                            $success = false;
+                        }
+                        else {
+                            // Prepare the statement:
+                            $updateStmt = $conn->prepare("UPDATE Students SET fname = ? WHERE studentID = ?");
+
+                            // Bind & execute the query statement:
+                            $updateStmt -> bind_param("si", $fname, $userID);
+
+                            if(!$updateStmt -> execute()) {
+                                $errorMsg = "Execution failed: (" . $updateStmt -> errno . ") " . $updateStmt -> error;
+                                $success = false;
+                            }
+
+                            $updateStmt -> close();
+                        }
+
+                        $conn -> close();
+                    }
+                }
+                function UpdateLNameToDB() {
+                    global $fname, $userID, $errorMsg, $success;
+
+                    // Create database connection.
+                    $config = parse_ini_file('/var/www/private/db-config-zebra.ini');
+
+                    if(!$config) {
+                        $errorMsg = "Failed to read database config file.";
+                        $success = false;
+                    }
+                    else {
+                        $conn = new mysqli(
+                            $config['servername'],
+                            $config['username'],
+                            $config['password'],
+                            $config['dbname']
+                        );
+
+                        // Check connection
+                        if($conn -> connect_error) {
+                            $errorMsg = "Connection failed: " . $conn -> connect_error;
+                            $success = false;
+                        }
+                        else {
+                            // Prepare the statement:
+                            $updateStmt = $conn->prepare("UPDATE Students SET lname = ? WHERE studentID = ?");
+
+                            // Bind & execute the query statement:
+                            $updateStmt -> bind_param("si", $lname, $userID);
+
+                            if(!$updateStmt -> execute()) {
+                                $errorMsg = "Execution failed: (" . $updateStmt -> errno . ") " . $updateStmt -> error;
+                                $success = false;
+                            }
+
+                            $updateStmt -> close();
+                        }
+
+                        $conn -> close();
+                    }
+                }
+                function UpdateEmailToDB() {
+                    global $email, $userID, $errorMsg, $success;
 
                     // Create database connection.
                     $config = parse_ini_file('/var/www/private/db-config-zebra.ini');
@@ -128,17 +224,17 @@
                                 $success = false;
                             } else {
                                 // Prepare the statement:
-                                $insertStmt = $conn->prepare("INSERT INTO Students (fname, lname, email, password) VALUES (?, ?, ?, ?)");
+                                $updateStmt = $conn->prepare("UPDATE Students SET email = ? WHERE studentID = ?");
 
                                 // Bind & execute the query statement:
-                                $insertStmt -> bind_param("ssss", $fname, $lname, $email, $pwd);
+                                $updateStmt -> bind_param("si", $email, $userID);
 
-                                if(!$insertStmt -> execute()) {
-                                    $errorMsg = "Execution failed: (" . $insertStmt -> errno . ") " . $insertStmt -> error;
+                                if(!$updateStmt -> execute()) {
+                                    $errorMsg = "Execution failed: (" . $updateStmt -> errno . ") " . $updateStmt -> error;
                                     $success = false;
                                 }
 
-                                $insertStmt -> close();
+                                $updateStmt -> close();
                             }
                             
                             $checkStmt -> close();
@@ -146,7 +242,48 @@
 
                         $conn -> close();
                     }
-                } 
+                }
+                function UpdatePWDToDB() {
+                    global $email, $userID, $errorMsg, $success;
+
+                    // Create database connection.
+                    $config = parse_ini_file('/var/www/private/db-config-zebra.ini');
+
+                    if(!$config) {
+                        $errorMsg = "Failed to read database config file.";
+                        $success = false;
+                    }
+                    else {
+                        $conn = new mysqli(
+                            $config['servername'],
+                            $config['username'],
+                            $config['password'],
+                            $config['dbname']
+                        );
+
+                        // Check connection
+                        if($conn -> connect_error) {
+                            $errorMsg = "Connection failed: " . $conn -> connect_error;
+                            $success = false;
+                        }
+                        else {
+                            // Prepare the statement:
+                            $updateStmt = $conn->prepare("UPDATE Students SET password = ? WHERE studentID = ?");
+
+                            // Bind & execute the query statement:
+                            $updateStmt -> bind_param("si", $pwd, $userID);
+
+                            if(!$updateStmt -> execute()) {
+                                $errorMsg = "Execution failed: (" . $updateStmt -> errno . ") " . $updateStmt -> error;
+                                $success = false;
+                            }
+
+                            $updateStmt -> close();
+                        }
+
+                        $conn -> close();
+                    }
+                }
             ?>
             </section>
         </main>
