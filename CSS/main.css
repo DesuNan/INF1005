@@ -578,10 +578,10 @@ header .btn {
   cursor: pointer;
 }
 .fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover {
-  color: blue;
+  color: #008000;
 }
 .fab {
-  color: white;
+  color: #000000;
 }
 /* footer styling */
 #footer {
@@ -593,7 +593,12 @@ footer p {
   font-size: 10px;
   font-style: italic;
   text-align: center;
-  color: white;
+}
+
+footer p {
+  font-size: 10px;
+  font-style: italic;
+  text-align: center;
 }
 
 footer .container{
@@ -611,4 +616,165 @@ footer .container{
 
 #contact {
   padding-bottom: 4rem;
+}
+
+/* content page css */
+.c-container{
+  max-width: 1200px;
+  margin:0 auto;
+  padding:3rem 2rem;
+}
+
+.c-container .c-title{
+  font-size: 3.5rem;
+  color:#444;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.c-container .courses-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap:2rem;
+}
+
+.c-container .courses-container .course{
+  text-align: center;
+  padding:3rem 2rem;
+  background: #fff;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  outline: .1rem solid #ccc;
+  outline-offset: -1.5rem;
+  cursor: pointer;
+}
+
+.c-container .courses-container .course:hover{
+  outline: .2rem solid #222;
+  outline-offset: 0;
+}
+
+.c-container .courses-container .course img{
+  height: 25rem;
+}
+
+.c-container .courses-container .course:hover img{
+  transform: scale(.9);
+}
+
+.c-container .courses-container .course h3{
+  padding:.5rem 0;
+  font-size: 2rem;
+  color:#444;
+}
+
+.c-container .courses-container .course:hover h3{
+  color:#27ae60;
+}
+
+.c-container .courses-container .course .description{
+  font-size: 2rem;
+  color:#444;
+}
+
+.courses-preview{
+  position: fixed;
+  top:0; left:0;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0,0,0,.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.courses-preview .preview{
+  display: none;
+  padding:2rem;
+  text-align: center;
+  background: #fff;
+  position: relative;
+  margin:2rem;
+  width: 40rem;
+}
+
+.courses-preview .preview.c-active{
+  display: inline-block;
+}
+
+.courses-preview .preview img{
+  height: 30rem;
+}
+
+.courses-preview .preview .fa-times{
+  position: absolute;
+  top:1rem; right:1.5rem;
+  cursor: pointer;
+  color:#444;
+  font-size: 4rem;
+}
+
+.courses-preview .preview .fa-times:hover{
+  transform: rotate(90deg);
+}
+
+.courses-preview .preview h3{
+  color:#444;
+  padding:.5rem 0;
+  font-size: 2.5rem;
+}
+
+.courses-preview .preview p{
+  line-height: 1.5;
+  padding:1rem 0;
+  font-size: 1.6rem;
+  color:#777;
+}
+
+.courses-preview .preview .c-buttons{
+  display: flex;
+  gap:1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.courses-preview .preview .c-buttons a{
+  flex:1 1 16rem;
+  padding:1rem;
+  font-size: 1.8rem;
+  color:#444;
+  border:.1rem solid #444;
+}
+
+.courses-preview .preview .c-buttons a.sign-up{
+  background: #444;
+  color:#fff;
+}
+
+.courses-preview .preview .c-buttons a.sign-up:hover{
+  background: #111;
+}
+
+.courses-preview .preview .c-buttons a.view:hover{
+  background: #444;
+  color:#fff;
+}
+
+
+@media (max-width:991px){
+  html{
+    font-size: 55%;
+  }
+}
+
+@media (max-width:768px){
+  .courses-preview .preview img{
+    height: 25rem;
+  }
+}
+
+@media (max-width:450px){
+  html{
+    font-size: 50%;
+  }
 }
