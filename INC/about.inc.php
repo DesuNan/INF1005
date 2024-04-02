@@ -1,23 +1,27 @@
+<?php
+    include "head.inc.php";
+?>
+
 <!-- about section-->
 <section id="about">
-        <div class="container mt-4 pt-4">
-            <h1 class="text-center">About Us</h1>
-            <div class="row mt-4">
-                <div class="col-lg-4">
-                    <img src="/img/teacher.png.webp" class= "imageAboutPage" alt="">
-                </div>
-                <div class="col-lg-8">
-                    <p> 
-                        We are an online school, whos sole focus is the development on the minds of tomorrow, and increaing the knowledge of the youth of today.
-                    </p>
-                    
-                    <div class="row mt-3">
-                        <div class="col-md-6">
-                            <ul>
-                                <li>Founder: Eleanor Hayes</li>
-                                <li>Age: 37</li>
-                                <li>Years in Education: 15</li>
-                            </ul>
+    <div class="container mt-4 pt-4">
+        <h1 class="text-center">About Us</h1>
+        <div class="row mt-4">
+            <div class="col-lg-4">
+                <img src="/img/teacher.png.webp" class="imageAboutPage" alt="">
+            </div>
+            <div class="col-lg-8">
+                <p>
+                    We are an online school, whose sole focus is the development on the minds of tomorrow, and increaing the knowledge of the youth of today.
+                </p>
+
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <ul>
+                            <li>Founder: Eleanor Hayes</li>
+                            <li>Age: 37</li>
+                            <li>Years in Education: 15</li>
+                        </ul>
                         <!-- </div>
                         <div class="col-md-6">
                             <ul>
@@ -36,4 +40,4 @@
                     </div>
                 </div>
             </div>
-    </section>
+</section>

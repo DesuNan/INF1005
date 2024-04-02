@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>BasicStudys English</title>
+    <title>BasicStudys Maths</title>
     <?php
     include "inc/head.inc.php";
     require_once "zebra_session/session_start.php";
@@ -73,16 +73,19 @@
     include "inc/nav.inc.php";
     ?>
 
-    <!-- english content -->
+    <!-- math content -->
     <main class="main-containerSub container">
         <!-- About and Chapters Section -->
         <div class="about-chapters-container">
             <section id="aboutSub">
                 <div class="row">
                     <article class="col-sm">
-                        <h1>About English</h1>
+                        <h1>About Mathematics</h1>
                         <p style="color: #666; line-height: 1.6;">
-                            Unlock the world with English! As the global language of communication, learning English opens doors to endless opportunities. Whether you're traveling, studying, or pursuing a career, English proficiency empowers you to connect with people from diverse cultures and backgrounds. From enhancing job prospects to enriching cultural experiences, mastering English enriches your life in countless ways.
+                            Discover the magic of mathematics! Dive into a world where numbers, patterns, and equations come alive to solve problems and unlock
+                            mysteries. Mathematics is the language of logic and reason, guiding us through the complexities of the universe. From calculating
+                            everyday expenses to unraveling the secrets of the cosmos, math empowers us to understand the world around us and make informed decisions.
+                            Embrace the beauty of numbers and embark on a journey of discovery that will sharpen your mind and enrich your life.
                         </p>
                     </article>
                 </div>
@@ -96,8 +99,8 @@
                             <!-- Chapter card 1 -->
                             <div class="card chapter-card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Chapter 1: Introduction to English</h5>
-                                    <p class="card-text">Learn the basics of the English language and its importance in today's world.</p>
+                                    <h5 class="card-title">Chapter 1: Algebra</h5>
+                                    <p class="card-text">Explore the basic concepts of algebra, including equations, inequalities, and functions.</p>
                                     <a href="#" class="btn btn-primary">Read Chapter</a>
                                 </div>
                             </div>
@@ -106,8 +109,8 @@
                             <!-- Chapter card 2 -->
                             <div class="card chapter-card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Chapter 2: Grammar Essentials</h5>
-                                    <p class="card-text">Explore the fundamental grammar rules and improve your language skills.</p>
+                                    <h5 class="card-title">Chapter 2: Geometry</h5>
+                                    <p class="card-text">Dive into the world of shapes, angles, and spatial relationships with geometry.</p>
                                     <a href="#" class="btn btn-primary">Read Chapter</a>
                                 </div>
                             </div>
@@ -116,8 +119,8 @@
                             <!-- Chapter card 3 -->
                             <div class="card chapter-card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Chapter 3: Vocabulary Expansion</h5>
-                                    <p class="card-text">Expand your vocabulary and learn new words and phrases for effective communication.</p>
+                                    <h5 class="card-title">Chapter 3: Calculus</h5>
+                                    <p class="card-text">Learn the fundamental principles of calculus, including limits, derivatives, and integrals.</p>
                                     <a href="#" class="btn btn-primary">Read Chapter</a>
                                 </div>
                             </div>
@@ -139,9 +142,13 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
     </main>
     <?php
     include "inc/footer.inc.php";
     ?>
 </body>
+
 </html>
