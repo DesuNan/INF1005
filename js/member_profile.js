@@ -1,3 +1,5 @@
+//import UserList from "./userList";
+
 // React component to handle login and register forms
 function LoginRegister() {
     // State variable to track the current form (login or register)
@@ -7,7 +9,7 @@ function LoginRegister() {
     function toggleForm() {
         console.log('Toggling form');
         setIsEdit(!viewOnly);
-        console.log('isLogin: ', isLogin);
+        console.log('isEdit: ', viewOnly);
     }
 
     console.log('Rendering Member Profile component'); // Add console log here
@@ -71,6 +73,9 @@ function LoginRegister() {
                         <button onClick={toggleForm} style={{ marginLeft: '5px' }}>Discard Changes</button>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
+                </form>
+                <form action="process_deleteMember.php" method="post">
+                    <button type="delete" class="btn btn-alert">Delete</button>
                 </form>
                 </div>
             )}
