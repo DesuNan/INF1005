@@ -17,3 +17,5 @@ if (!$config) {
         $success = false;
     }
 }
+
+?>

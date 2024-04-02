@@ -3,7 +3,8 @@
     <head>
         <title>Member Page</title>
         <?php
-            include "inc/head.inc.php"
+            include "inc/head.inc.php";
+            require_once "zebra_session/session_start.php";
         ?>
     </head>
     <body>
