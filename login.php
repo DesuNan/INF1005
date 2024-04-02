@@ -33,41 +33,11 @@
                 <div class="form-content">
                     <div id="login-form" class="login-form"></div>
                     <script src="jsx/login.js"></script>
-                    <div class="signup-form">
-                        <div class="title">Signup</div>
-                        <form action="process_register.php" method="post">
-                            <div class="input-boxes">
-                                <div class="input-box">
-                                    <i class="fas fa-user"></i>
-                                    <input maxlength="45" type="text" id="fname" name="fname" placeholder="Enter your first name">
-                                </div>
-                                <div class="input-box">
-                                    <i class="fas fa-user"></i>
-                                    <input required maxlength="45" type="text" id="lname" name="lname" placeholder="Enter your last name" >
-                                </div>
-                                <div class="input-box">
-                                    <i class="fas fa-envelope"></i>
-                                    <input required maxlength="45" type="text" id="email" name="email" placeholder="Enter your email" >
-                                </div>
-                                <div class="input-box">
-                                    <i class="fas fa-lock"></i>
-                                    <input required minlength="12" type="password" id="pwd" name="pwd" placeholder="Enter your password">
-                                </div>
-                                <div class="input-box">
-                                    <i class="fas fa-lock"></i>
-                                    <input required minlength="12" type="password" id="pwd_confirm" name="pwd_confirm" placeholder="Enter your password">
-                                </div>
-                                <div class="button input-box">
-                                    <input type="submit" value="Submit">
-                                </div>
-                                <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
-                            </div>
-                        </form>
-                    </div>
+                    <div id="signup-form" class="signup-form"></div>
+                    <script src="jsx/register.js"></script>
                 </div>
             </div>
         </div>
-        <!--<script src="jsx/login_register.js"></script>-->
     </main>
     <?php
         include "inc/footer.inc.php";
