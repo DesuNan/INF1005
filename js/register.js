@@ -21,7 +21,7 @@ function LoginRegister() {
                     <h1>Student Registration</h1>
                     <p>
                         To register as student, please go to the 
-                        <button onClick={toggleForm} style={{ marginLeft: '5px' }}>Instructor Registration page</button>.
+                        <button onClick={toggleForm} style={{ marginLeft: '5px' }}>Instructor Registration</button> page.
                     </p>
                     <form action="process_registerStudent.php" method="post">
                         <div class="input-boxes">
@@ -57,7 +57,7 @@ function LoginRegister() {
                     <h1>Instructor Registration</h1>
                     <p>
                         To register as student, please go to the 
-                        <button onClick={toggleForm} style={{ marginLeft: '5px' }}>Student Registration page</button>.
+                        <button onClick={toggleForm} style={{ marginLeft: '5px' }}>Student Registration</button> page.
                     </p>
                     <form action="process_registerInstructor.php" method="post">
                         <div class="input-boxes">
