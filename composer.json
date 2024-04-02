@@ -3,8 +3,7 @@
         "openai-php/client": "^0.8.4",
         "symfony/http-client": "^7.0",
         "nyholm/psr7": "^1.8",
-        "guzzlehttp/guzzle": "^7.8",
-        "stefangabos/zebra_session": "dev-master"
+        "guzzlehttp/guzzle": "^7.8"
     },
     "config": {
         "allow-plugins": {
