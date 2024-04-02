@@ -8,7 +8,7 @@
     ?>
 </head>
 
-<body class="loginRegister">
+<body class="loginpage">
     <?php
         include "inc/nav.inc.php";
     ?>

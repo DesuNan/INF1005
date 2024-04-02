@@ -38,7 +38,6 @@
                 </div>
             </div>
         </div>
-        <!--<script src="jsx/login_register.js"></script>-->
     </main>
     <?php
         include "inc/footer.inc.php";

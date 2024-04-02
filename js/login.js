@@ -67,9 +67,6 @@ function LoginRegister() {
                                 <input type="submit" value="Submit" />
                             </div>
                             <div class="text sign-up-text">Don't have an account? <label for="flip">Signup now</label></div>
-                            <div>
-                                <button onClick={toggleForm} style={{ marginLeft: '5px' }}>Login as Student</button>
-                            </div>
                         </div>
                     </form>
                 </div>
