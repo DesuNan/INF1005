@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Coursedemy</title>
+    <title>BasicStudys English</title>
     <?php
     include "inc/head.inc.php";
     include "inc/head.inc.php";
@@ -73,27 +73,6 @@
     include "inc/nav.inc.php";
     ?>
 
-    <nav class="navbar navbar-expand-lg navbar-courses">
-        <div class="container">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: black;" href="content.php">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: black;" href="#aboutSub">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: black;" href="#announcements">Announcements</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: black;" href="#chapters">Chapters</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
     <!-- english content -->
     <main class="main-containerSub container">
         <!-- About and Chapters Section -->
@@ -160,32 +139,9 @@
                         </div>
                     </div>
                 </div>
-                <main class="container">
-                    <section id="english">
-                        <h2>English</h2>
-                        <div class="row">
-                            <article class="col-sm">
-                                <figure>
-                                    <a target="_self" href="img/english_background.jpg" alt="English_Background" class="thumbnail"></a>
-                                    <figcaption>English Language</figcaption>
-                                </figure>
-                                <p color="black">
-                                    Unlock the world with English! As the global language of communication, learning English opens doors to endless opportunities.
-                                    Whether you're traveling, studying, or pursuing a career, English proficiency empowers you to connect with people from diverse
-                                    cultures and backgrounds. From enhancing job prospects to enriching cultural experiences, mastering English enriches your life in countless ways.
-                                </p>
-                            </article>
-                        </div>
-                    </section>
-
-                </main>
-                <?php
+    </main>
+    <?php
     include "inc/footer.inc.php";
     ?>
 </body>
-
-<footer>
-
-</footer>
-
 </html>

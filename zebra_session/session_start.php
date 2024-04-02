@@ -1,6 +1,6 @@
 <?php
 include "./db_connect.php";
-require "vendor\stefangabos\zebra_session\Zebra_Session.php";
+include "Zebra_Session.php";
 
 $session = new Zebra_Session($link, 'sEcUr1tY_c0dE');
 

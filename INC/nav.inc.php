@@ -1,6 +1,6 @@
 <body>
     <header>
-        <a href="#" class="brand">Brand</a>
+        <a href="/index.php" class="basicstudy" style="font-family: Verdana;">BasicStudys</a>
         <div class="menu">
             <div class="btn">
                 <i class="fas fa-times close-btn"></i>

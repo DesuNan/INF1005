@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>BasicStudys</title>
+    <title>BasicStudys Index</title>
     <?php
     include "inc/head.inc.php";
     ?>

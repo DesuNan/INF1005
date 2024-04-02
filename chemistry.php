@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Coursedemy</title>
+    <title>Basicstudy Chemistry</title>
     <?php
     include "inc/head.inc.php";
     ?>
@@ -71,27 +71,6 @@
     <?php
     include "inc/nav.inc.php";
     ?>
-
-    <nav class="navbar navbar-expand-lg navbar-courses">
-        <div class="container">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: black;" href="content.php">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: black;" href="#aboutSub">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: black;" href="#announcements">Announcements</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: black;" href="#chapters">Chapters</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
     <!-- chemistry content -->
     <main class="main-containerSub container">
