@@ -7,8 +7,7 @@
     include "inc/head.inc.php";
     ?>
     <?php
-    include "/zebra_session/session_start.php";
-
+    require_once "zebra_session/session_start.php";
     ?>
 </head>
 
@@ -42,10 +41,10 @@
             }
 
             if ($success) {
-                echo "<h2>Login successful!</h2>";
-                echo "<h4>Welcome back, " . $fname . " " . $lname . ".</h4>";
-                echo "User ID retrieved: " . $_SESSION['userID'];
-                echo "<button type='home' class='btn btn-success' onclick=\"location.href='/'\">Return to Home</button>";
+                $_SESSION['fname'] = $fname;
+                $_SESSION['lname'] = $lname;
+                header("Location: /index.php");
+                exit();
             } else {
                 echo "<h2>Oops!</h2>";
                 echo "<h4>The following errors were detected:</h4>";
