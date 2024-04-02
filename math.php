@@ -5,6 +5,7 @@
     <title>BasicStudys Maths</title>
     <?php
     include "inc/head.inc.php";
+    require_once "zebra_session/session_start.php";
     ?>
     <style>
         .main-containerSub {

@@ -1,5 +1,5 @@
 <?php
-include "zebra_session/session_start.php";
+require_once "zebra_session/session_start.php";
 
 
 $_SESSION = array();
