@@ -21,3 +21,27 @@ menuBtn.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
     menu.classList.remove('active');
 });
+
+// preview for courses on-click
+let previewContainer = document.querySelector('.courses-preview');
+let previewBox = previewContainer.querySelectorAll('.preview');
+
+document.querySelectorAll('.courses-container .course').forEach(course => {
+  course.onclick = () => {
+    previewContainer.style.display = 'flex';
+    let name = course.getAttribute('data-name');
+    previewBox.forEach(preview => {
+      let target = preview.getAttribute('data-target');
+      if(name == target) {
+        preview.classList.add('active');
+      }
+    });
+  };
+});
+
+previewBox.forEach(preview => {
+  preview.querySelector('.fa-times').onclick = () => {
+    preview.classList.remove('active');
+    previewContainer.style.display = 'none';
+  };
+});
