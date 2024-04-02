@@ -3,7 +3,7 @@
         'name' => '__root__',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '1041cc1fa7c95969d454035b299546c536792300',
+        'reference' => 'f7e69489cde8a47baadbf8ba11714c6cb93ca1d8',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         '__root__' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '1041cc1fa7c95969d454035b299546c536792300',
+            'reference' => 'f7e69489cde8a47baadbf8ba11714c6cb93ca1d8',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -173,17 +173,6 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../ralouphie/getallheaders',
             'aliases' => array(),
-            'dev_requirement' => false,
-        ),
-        'stefangabos/zebra_session' => array(
-            'pretty_version' => 'dev-master',
-            'version' => 'dev-master',
-            'reference' => '29d637cfdc8939396a4e97a03fa8b8ec155d67a7',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../stefangabos/zebra_session',
-            'aliases' => array(
-                0 => '9999999-dev',
-            ),
             'dev_requirement' => false,
         ),
         'symfony/deprecation-contracts' => array(
