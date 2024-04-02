@@ -1,10 +1,10 @@
 <?php
-include "zebra_session/session_start.php";
+require_once "zebra_session/session_start.php";
 
 
 $_SESSION = array();
 
 $session->stop();
 session_destroy();
-header("Location: /logout.php");
+header("Location: /index.php");
 ?>

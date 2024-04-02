@@ -5,6 +5,7 @@
 	<title>Reset Password</title>
     <?php
         include "inc/head.inc.php";
+        require_once "zebra_session/session_start.php";
     ?>
 </head>
 
