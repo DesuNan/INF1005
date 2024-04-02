@@ -59,7 +59,7 @@
                     echo "<h2>Oops!</h2>";
                     echo "<h4>The following errors were detected:</h4>";
                     echo "<p>" . $errorMsg . "</p>";
-                    echo "<button type='register' class='btn btn-danger' onclick=\"location.href='register.php'\">Return to Sign Up</button>";
+                    echo "<button type='register' class='btn btn-danger' onclick=\"location.href='login.php'\">Return to Sign Up</button>";
                 }
 
                 /*
@@ -117,7 +117,7 @@
                         }
                         else {
                             // Check if the email already exists in the database
-                            $checkStmt = $conn->prepare("SELECT email FROM Students WHERE email = ?");
+                            $checkStmt = $conn->prepare("SELECT email FROM Instructors WHERE email = ?");
                             $checkStmt -> bind_param("s", $email);
                             $checkStmt -> execute();
                             $checkStmt -> store_result();
@@ -128,7 +128,7 @@
                                 $success = false;
                             } else {
                                 // Prepare the statement:
-                                $insertStmt = $conn->prepare("INSERT INTO Students (fname, lname, email, password) VALUES (?, ?, ?, ?)");
+                                $insertStmt = $conn->prepare("INSERT INTO Instructors (fname, lname, email, password) VALUES (?, ?, ?, ?)");
 
                                 // Bind & execute the query statement:
                                 $insertStmt -> bind_param("ssss", $fname, $lname, $email, $pwd);
