@@ -6,8 +6,27 @@
 	<?php
 	include "inc/head.inc.php";
 	?>
-</head>
 
+	<style>
+		*{
+			margin:0; padding:0;
+			box-sizing: border-box;
+			outline: none; border:none;
+			text-decoration: none;
+			transition: all .2s linear;
+			text-transform: capitalize;
+		}
+
+		html{
+			font-size: 62.5%;
+			overflow-x: hidden;
+		}
+
+		body{
+			background: #eee;
+		}
+	</style>
+</head>
 <body>
     <?php
     include "inc/nav.inc.php";
@@ -43,7 +62,7 @@
 	</div>
 
 	<div class="courses-preview">
-	   <div class="preview c-active" data-target="c-1">
+	   <div class="preview" data-target="c-1">
 		  <i class="fas fa-times"></i>
 		  <img src="img/english.jpg" alt="English">
 		  <h3>English Language</h3>

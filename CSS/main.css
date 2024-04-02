@@ -578,10 +578,10 @@ header .btn {
   cursor: pointer;
 }
 .fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover {
-  color: #008000;
+  color: blue;
 }
 .fab {
-  color: #000000;
+  color: white;
 }
 /* footer styling */
 #footer {
@@ -593,12 +593,7 @@ footer p {
   font-size: 10px;
   font-style: italic;
   text-align: center;
-}
-
-footer p {
-  font-size: 10px;
-  font-style: italic;
-  text-align: center;
+  color: white;
 }
 
 footer .container{
@@ -618,7 +613,7 @@ footer .container{
   padding-bottom: 4rem;
 }
 
-/* content page css */
+/* content css */
 .c-container{
   max-width: 1200px;
   margin:0 auto;
@@ -694,11 +689,14 @@ footer .container{
   text-align: center;
   background: #fff;
   position: relative;
-  margin:2rem;
-  width: 40rem;
+  margin:2rem auto;
+  max-width: 70%;
+  max-height: 60%;
+  overflow-y: auto;
+  width: auto;
 }
 
-.courses-preview .preview.c-active{
+.courses-preview .preview.active{
   display: inline-block;
 }
 
