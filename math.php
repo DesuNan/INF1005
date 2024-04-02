@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Coursedemy</title>
+    <title>BasicStudys Maths</title>
     <?php
     include "inc/head.inc.php";
     ?>
@@ -21,7 +21,8 @@
         #aboutSub,
         #chapters {
             flex: 1;
-            margin-right: 20px; /* Adjust as needed */
+            margin-right: 20px;
+            /* Adjust as needed */
             width: 100%;
         }
 
@@ -46,7 +47,7 @@
             margin-bottom: 15px;
             border-radius: 10px;
         }
-                    
+
         .chapters-align {
             text-align: center;
         }
@@ -68,29 +69,8 @@
 
 <body style="padding-top: 110px;">
     <?php
-    include "inc/header.inc.php";
+    include "inc/nav.inc.php";
     ?>
-
-    <nav class="navbar navbar-expand-lg navbar-courses">
-        <div class="container">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: black;" href="content.php">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: black;" href="#aboutSub">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: black;" href="#announcements">Announcements</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: black;" href="#chapters">Chapters</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
     <!-- math content -->
     <main class="main-containerSub container">
@@ -101,10 +81,10 @@
                     <article class="col-sm">
                         <h1>About Mathematics</h1>
                         <p style="color: #666; line-height: 1.6;">
-                        Discover the magic of mathematics! Dive into a world where numbers, patterns, and equations come alive to solve problems and unlock 
-                        mysteries. Mathematics is the language of logic and reason, guiding us through the complexities of the universe. From calculating 
-                        everyday expenses to unraveling the secrets of the cosmos, math empowers us to understand the world around us and make informed decisions. 
-                        Embrace the beauty of numbers and embark on a journey of discovery that will sharpen your mind and enrich your life.
+                            Discover the magic of mathematics! Dive into a world where numbers, patterns, and equations come alive to solve problems and unlock
+                            mysteries. Mathematics is the language of logic and reason, guiding us through the complexities of the universe. From calculating
+                            everyday expenses to unraveling the secrets of the cosmos, math empowers us to understand the world around us and make informed decisions.
+                            Embrace the beauty of numbers and embark on a journey of discovery that will sharpen your mind and enrich your life.
                         </p>
                     </article>
                 </div>

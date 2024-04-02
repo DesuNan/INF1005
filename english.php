@@ -2,8 +2,9 @@
 <html lang="en">
 
 <head>
-    <title>Coursedemy</title>
+    <title>BasicStudys English</title>
     <?php
+    include "inc/head.inc.php";
     include "inc/head.inc.php";
     ?>
     <style>
@@ -21,7 +22,8 @@
         #aboutSub,
         #chapters {
             flex: 1;
-            margin-right: 20px; /* Adjust as needed */
+            margin-right: 20px;
+            /* Adjust as needed */
             width: 100%;
         }
 
@@ -46,7 +48,7 @@
             margin-bottom: 15px;
             border-radius: 10px;
         }
-                    
+
         .chapters-align {
             text-align: center;
         }
@@ -68,29 +70,8 @@
 
 <body style="padding-top: 110px;">
     <?php
-    include "inc/header.inc.php";
+    include "inc/nav.inc.php";
     ?>
-
-    <nav class="navbar navbar-expand-lg navbar-courses">
-        <div class="container">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: black;" href="content.php">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: black;" href="#aboutSub">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: black;" href="#announcements">Announcements</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: black;" href="#chapters">Chapters</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
     <!-- english content -->
     <main class="main-containerSub container">
@@ -158,13 +139,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
     </main>
     <?php
     include "inc/footer.inc.php";
     ?>
 </body>
-
 </html>

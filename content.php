@@ -42,7 +42,7 @@
 	</div>
 
 	<div class="courses-preview">
-	   <div class="preview c-active" data-target="c-1">
+	   <div class="preview" data-target="c-1">
 		  <i class="fas fa-times"></i>
 		  <img src="img/english.jpg" alt="English">
 		  <h3>English Language</h3>
