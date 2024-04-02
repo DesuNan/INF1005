@@ -689,8 +689,11 @@ footer .container{
   text-align: center;
   background: #fff;
   position: relative;
-  margin:2rem;
-  width: 40rem;
+  margin:2rem auto;
+  max-width: 70%;
+  max-height: 60%;
+  overflow-y: auto;
+  width: auto;
 }
 
 .courses-preview .preview.active{

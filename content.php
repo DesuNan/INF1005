@@ -6,6 +6,26 @@
 	<?php
 	include "inc/head.inc.php";
 	?>
+
+	<style>
+		*{
+			margin:0; padding:0;
+			box-sizing: border-box;
+			outline: none; border:none;
+			text-decoration: none;
+			transition: all .2s linear;
+			text-transform: capitalize;
+		}
+
+		html{
+			font-size: 62.5%;
+			overflow-x: hidden;
+		}
+
+		body{
+			background: #eee;
+		}
+	</style>
 </head>
 <body>
     <?php
