@@ -19,6 +19,10 @@ function LoginRegister() {
             {student ? (
                 <div>
                     <div class="title">Student Login</div>
+                    <p>
+                        To login as instructor, please go to the 
+                        <button onClick={toggleForm} style={{ marginLeft: '5px' }}>Instructor Login</button> page.
+                    </p>
                     <form action="process_loginStudent.php" method="post">
                         <div class="input-boxes">
                             <div class="input-box">
@@ -36,15 +40,16 @@ function LoginRegister() {
                                 <input type="submit" value="Submit" />
                             </div>
                             <div class="text sign-up-text">Don't have an account? <label for="flip">Signup now</label></div>
-                            <div>
-                                <button onClick={toggleForm} style={{ marginLeft: '5px' }}>Login as Instructor</button>
-                            </div>
                         </div>
                     </form>
                 </div>
             ) : (
                 <div>
                     <div class="title">Instructor Login</div>
+                    <p>
+                        To login as instructor, please go to the 
+                        <button onClick={toggleForm} style={{ marginLeft: '5px' }}>Student Login</button> page.
+                    </p>
                     <form action="process_loginInstructor.php" method="post">
                         <div class="input-boxes">
                             <div class="input-box">
@@ -62,9 +67,6 @@ function LoginRegister() {
                                 <input type="submit" value="Submit" />
                             </div>
                             <div class="text sign-up-text">Don't have an account? <label for="flip">Signup now</label></div>
-                            <div>
-                                <button onClick={toggleForm} style={{ marginLeft: '5px' }}>Login as Student</button>
-                            </div>
                         </div>
                     </form>
                 </div>
