@@ -7,7 +7,7 @@
             </div>
             <a href="/">Home</a>
             <a href="/#about">About</a>
-            <a href="/#portfolio">Services</a>
+            <a href="/#portfolio">Instructors</a>
             <a href="/content.php">Content</a>
             <a href="/forum_main.php">Forum</a>
             <?php

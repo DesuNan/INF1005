@@ -7,68 +7,9 @@
     include "inc/head.inc.php";
     require_once "zebra_session/session_start.php";
     ?>
-    <style>
-        .main-containerSub {
-            display: flex;
-        }
-
-        .navbar-courses {
-            text-align: center;
-            border: 2px solid black;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        #aboutSub,
-        #chapters {
-            flex: 1;
-            margin-right: 20px;
-            /* Adjust as needed */
-            width: 100%;
-        }
-
-        #announcement {
-            width: 30px;
-        }
-
-        .announcement-border {
-            border: 2px solid black;
-            border-radius: 10px;
-            padding: 10px;
-            padding-top: 10px;
-            width: 100%;
-            height: 500px;
-            overflow: auto;
-            text-align: center;
-        }
-
-        .chapter-border {
-            border: 2px solid black;
-            padding: 20px;
-            margin-bottom: 15px;
-            border-radius: 10px;
-        }
-
-        .chapters-align {
-            text-align: center;
-        }
-
-        @media (max-width: 768px) {
-            .main-containerSub {
-                flex-direction: column;
-            }
-
-            #aboutSub,
-            #chapters,
-            #announcements {
-                width: 100%;
-                margin-right: 0;
-            }
-        }
-    </style>
 </head>
 
-<body style="padding-top: 110px;">
+<body id="content_body">
     <?php
     include "inc/nav.inc.php";
     ?>
@@ -81,7 +22,7 @@
                 <div class="row">
                     <article class="col-sm">
                         <h1>About Chemistry</h1>
-                        <p style="color: #666; line-height: 1.6;">
+                        <p>
                             Embark on a journey into the fascinating world of chemistry! From the tiniest atoms to the complex molecules that make up our world, chemistry
                             is the science that reveals the secrets of matter and its transformations. By studying chemistry, you unlock a deeper understanding of everything
                             around you, from the air we breathe to the food we eat and the medicines that heal us. With chemistry, you gain the power to innovate, create, and
@@ -92,8 +33,8 @@
                 </div>
             </section>
 
-            <section id="chapters" style="padding-top: 65px">
-                <div class="container">
+            <section id="chapters">
+                <div id="chapters_container" class="container">
                     <h1>Chapters</h1>
                     <div class="row chapter-border">
                         <div class="col-lg-4 mt-4 chapters-align">
@@ -135,7 +76,7 @@
         <section id="announcements">
             <div class="container">
                 <h1>Announcements</h1>
-                <div class="row">
+                <div id="a-row" class="row">
                     <div class="col-lg-12 mt-4">
                         <!-- Add notification border with text -->
                         <div class="announcement-border">
@@ -147,9 +88,11 @@
         </section>
 
     </main>
+</body>
+<footer>
     <?php
     include "inc/footer.inc.php";
     ?>
-</body>
+</footer>
 
 </html>
