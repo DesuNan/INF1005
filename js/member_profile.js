@@ -75,7 +75,7 @@ function LoginRegister() {
                     </div>
                 </form>
                 <form action="process_deleteMember.php" method="post">
-                    <button type="delete" class="btn btn-alert">Delete</button>
+                    <button type="delete" class="btn btn-danger">Delete</button>
                 </form>
                 </div>
             )}
