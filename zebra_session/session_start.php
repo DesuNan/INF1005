@@ -1,5 +1,5 @@
 <?php
-include "./db_connect.php";
+include "db_connect.php";
 include "Zebra_Session.php";
 
 $session = new Zebra_Session($link, 'sEcUr1tY_c0dE');
@@ -19,3 +19,43 @@ if (isset($_SESSION['timeout']) && $_SESSION['timeout'] < time()) {
     session_destroy();
     exit();
 }
+
+// function LoginSession($fname = null, $lname, $email, $admin)
+// {
+//     global $session;
+//     if (!empty($fname)) {
+//         $_SESSION['name'] = $fname . " " . $lname;
+//         $_SESSION['email'] = $email;
+//     } else {
+//         $_SESSION['name'] = $lname;
+//         $_SESSION['email'] = $email;
+//     }
+
+//     $_SESSION["logged_in"] = 1;
+//     $_SESSION["admin"] = $admin;
+// }
+
+
+// // function RetrieveInfo(){
+// //     global $session;
+// //     return $_SESSION['name'];
+// //     if (isset($_SESSION['name'])){
+// //         return $_SESSION['name'];
+// //     }else{
+// //         return "TEST";
+// //     }
+// // }
+
+// function RetrieveMoreInfo()
+// {
+//     global $session;
+//     return $_SESSION['name'];
+//     if (isset($_SESSION['name'])) {
+//         return $_SESSION;
+//     } else {
+//         return "TEST";
+//     }
+// }
+
+?>
+

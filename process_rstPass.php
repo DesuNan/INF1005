@@ -3,39 +3,24 @@
 
 <head>
 	<title>Reset Password</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-	<link rel="icon" type="image/png" href="assets/brightbuys.ico" />
-
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/login.css">
-
+    <?php
+        include "inc/head.inc.php";
+    ?>
 </head>
 
-<body>
-
-	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100">
-				<div class="login100-pic js-tilt" data-tilt>
-					<img src="images/login.png" alt="Page Image">
-				</div>
-                
-                <div class="login100-pic js-tilt" data-tilt>
-                <?php
+<body class="loginpage">
+    <?php
+        include "inc/nav.inc.php";
+    ?>
+	<main class="container">
+		<div class="login-container">
+            <?php
                 use PHPMailer\PHPMailer\PHPMailer as PHPMailer;
                 use PHPMailer\PHPMailer\SMTP;
 
                 $emailSentMsg = ''; // define emailSentMsg
                 
-                if(isset($_POST['password_reset_submit'])) {
+                if(isset($_POST['resetpass_submit'])) {
                     $_SESSION['email'] = $email;
                     $email = $_POST['email'];
                     
@@ -73,7 +58,7 @@
                             //if does not exist, email is not sent and displays following message
                             $emailSentMsg = "Email does not exist.";
                             echo $emailSentMsg;
-                            echo '<a class="txt2" href="password_reset.php"><br>';
+                            echo '<a class="txt2" href="passReset.php"><br>';
                             echo '    Go back';
                             echo '    <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>';
                             echo '</a>';
@@ -99,8 +84,13 @@
                 
                             //email content
                             $mail->isHTML(true);                                       // Set email format to HTML
-                            $mail->Subject = 'Password Reset Request for BrightBuys';
-                            $mail->Body    = 'Hi,<br><br>Seems like you requested for a password reset. If you did not, kindly ignore this email.<br>To reset your password, click <a href="http://35.212.164.26/password_reset.php?otp='.$otp.'">here</a>.';
+                            $mail->Subject = 'Password Reset Request for Coursedemy';
+                            $mail->Body = "Hi,<br><br>"
+                                        . "We have received your request to reset your account's password. "
+                                        . 'To reset your password, please click <a href="http://35.212.224.236/passReset.php?otp='.$otp.'">here</a>.' . '.<br>'
+                                        . "If you did not make this request, please contact us as soon as you can.<br>"
+                                        . "Yours sincerely,<br>"
+                                        . "Coursdemy Membership Services";
                 
                             //send email
                             if (!$mail->send()) {
@@ -110,23 +100,23 @@
                                 $emailSentMsg = "Email sent successfully. Please check your email for the OTP.";
                             }
                             
-                            //checks if email address already exists in the passReset table
-                            $stmt_check = $conn->prepare("SELECT email FROM passReset WHERE email = ?");
+                            //checks if email address already exists in the resetPass table
+                            $stmt_check = $conn->prepare("SELECT email FROM resetPass WHERE email = ?");
                             $stmt_check->bind_param("s", $email);
                             $stmt_check->execute();
                             $result_check = $stmt_check->get_result();
                 
                             if ($result_check->num_rows > 0) {
-                                //email already exists in passReset table, so OTP will only be updated for record
-                                $updateQuery = $conn->prepare("UPDATE passReset SET otp = ? WHERE email = ?");
+                                //email already exists in resetPass table, so OTP will only be updated for record
+                                $updateQuery = $conn->prepare("UPDATE resetPass SET otp = ? WHERE email = ?");
                                 $updateQuery->bind_param("ss", $otp, $email);
                                 if (!$updateQuery->execute()) {
                                     throw new Exception("Error updating record: " . $conn->error);
                                 }
                                 $emailSentMsg = "OTP updated. Please check your email for the OTP.";
                             } else {
-                                //when email address exists in users but not yet in passReset, insert a new record
-                                $insertQuery = $conn->prepare("INSERT INTO passReset (email, otp) VALUES (?, ?)");
+                                //when email address exists in users but not yet in resetPass, insert a new record
+                                $insertQuery = $conn->prepare("INSERT INTO resetPass (email, otp) VALUES (?, ?)");
                                 $insertQuery->bind_param("ss", $email, $otp);
                                 if (!$insertQuery->execute()) {
                                     throw new Exception("Error inserting record: " . $conn->error);
@@ -149,16 +139,12 @@
                     echo "password_reset_submit is not set"; //for debugging
                     exit();
                 }
-                ?>
-                </div>
-
-			</div>
+            ?>
 		</div>
-	</div>
-
-	<div id="faceio-modal"></div>
-	<script src="https://cdn.faceio.net/fio.js"></script>
-
+    </main>
+    <?php
+        include "inc/footer.inc.php";
+    ?>
 </body>
 
 </html>
