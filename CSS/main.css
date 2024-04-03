@@ -24,18 +24,17 @@ header {
   z-index: 999;
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 100px;
+  padding: 15px;
   background: black;
 }
 
 header.sticky {
   background: black;
-  padding: 15px 100px;
+  padding: 15px;
   transition: 0.6s;
 }
 
@@ -46,13 +45,14 @@ header .basicstudy {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 2px;
+  
 }
 
 header .menu {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 
 header .menu.active {
@@ -136,10 +136,12 @@ header .btn {
 /* text css above hero image*/
 .hero_title {
   font-size: 4.5rem;
+  color: lightgrey;
 }
 
 .hero_desc {
   font-size: 2rem;
+  color: lightgrey;
 }
 
 .hero-text {
@@ -165,6 +167,10 @@ header .btn {
 }
 
 .card-title {
+  text-align: center;
+}
+
+.card-text{
   text-align: center;
 }
 
@@ -465,6 +471,7 @@ body .loginmain {
   background-color: black;
   text-align: center;
   width: -webkit-fill-available;
+  bottom: 0%;
 }
 
 footer p {

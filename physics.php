@@ -7,67 +7,9 @@
     include "inc/head.inc.php";
     require_once "zebra_session/session_start.php";
     ?>
-    <style>
-        .main-containerSub {
-            display: flex;
-        }
-
-        .navbar-courses {
-            text-align: center;
-            border: 2px solid black;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        #aboutSub,
-        #chapters {
-            flex: 1;
-            margin-right: 20px; /* Adjust as needed */
-            width: 100%;
-        }
-
-        #announcement {
-            width: 30px;
-        }
-
-        .announcement-border {
-            border: 2px solid black;
-            border-radius: 10px;
-            padding: 10px;
-            padding-top: 10px;
-            width: 100%;
-            height: 500px;
-            overflow: auto;
-            text-align: center;
-        }
-
-        .chapter-border {
-            border: 2px solid black;
-            padding: 20px;
-            margin-bottom: 15px;
-            border-radius: 10px;
-        }
-                    
-        .chapters-align {
-            text-align: center;
-        }
-
-        @media (max-width: 768px) {
-            .main-containerSub {
-                flex-direction: column;
-            }
-
-            #aboutSub,
-            #chapters,
-            #announcements {
-                width: 100%;
-                margin-right: 0;
-            }
-        }
-    </style>
 </head>
 
-<body style="padding-top: 110px;">
+<body id="content_body">
     <?php
     include "inc/nav.inc.php";
     ?>
@@ -80,19 +22,19 @@
                 <div class="row">
                     <article class="col-sm">
                         <h1>About Physics</h1>
-                        <p style="color: #666; line-height: 1.6;">
-                        Embark on a thrilling journey into the boundless realms of physics! Physics is the fundamental science that unravels the mysteries of the universe, 
-                        from the smallest particles to the vastness of space and time. By studying physics, you delve into the laws and principles that govern motion, energy, 
-                        and matter, allowing you to comprehend the inner workings of the cosmos. Explore the wonders of quantum mechanics, delve into the mysteries of relativity, 
-                        and uncover the secrets of the forces that shape our world. Embrace the challenge of exploring the unknown and let physics ignite your curiosity, inspire 
-                        your imagination, and propel you toward a deeper understanding of the universe!
+                        <p>
+                            Embark on a thrilling journey into the boundless realms of physics! Physics is the fundamental science that unravels the mysteries of the universe,
+                            from the smallest particles to the vastness of space and time. By studying physics, you delve into the laws and principles that govern motion, energy,
+                            and matter, allowing you to comprehend the inner workings of the cosmos. Explore the wonders of quantum mechanics, delve into the mysteries of relativity,
+                            and uncover the secrets of the forces that shape our world. Embrace the challenge of exploring the unknown and let physics ignite your curiosity, inspire
+                            your imagination, and propel you toward a deeper understanding of the universe!
                         </p>
                     </article>
                 </div>
             </section>
 
-            <section id="chapters" style="padding-top: 65px">
-                <div class="container">
+            <section id="chapters">
+                <div id="chapters_container" class="container">
                     <h1>Chapters</h1>
                     <div class="row chapter-border">
                         <div class="col-lg-4 mt-4 chapters-align">
@@ -134,7 +76,7 @@
         <section id="announcements">
             <div class="container">
                 <h1>Announcements</h1>
-                <div class="row">
+                <div id="a-row" class="row">
                     <div class="col-lg-12 mt-4">
                         <!-- Add notification border with text -->
                         <div class="announcement-border">
@@ -146,9 +88,11 @@
         </section>
 
     </main>
+</body>
+<footer>
     <?php
     include "inc/footer.inc.php";
     ?>
-</body>
+</footer>
 
 </html>
