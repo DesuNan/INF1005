@@ -127,21 +127,29 @@ header .btn {
 /* hero background image */
 .bgimage {
   height: 100vh;
-  /* background: url("/img/bg.jpg"); */
   background: url("/img/bg.jpg");
   background-size: cover;
   position: relative;
 }
 
+.overlay{
+  height: 100vh;
+  background: url("/img/bg.jpg");
+  background-size: cover;
+  background: rgba(0, 0, 0, 0.5);
+}
+
 /* text css above hero image*/
 .hero_title {
   font-size: 4.5rem;
-  color: lightgrey;
+  color: white;
+  font-weight: bold;
 }
 
 .hero_desc {
   font-size: 2rem;
-  color: lightgrey;
+  color: white;
+  font-weight: bold;
 }
 
 .hero-text {
