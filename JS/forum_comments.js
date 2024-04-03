@@ -1,6 +1,7 @@
-$(document).ready(function(){ 
+jQuery(document).ready(function($){ 
 	showComments();
 	$('#commentForm').on('submit', function(event){
+		console.log("Post");
 		event.preventDefault();
 		var formData = $(this).serialize();
 		$.ajax({
@@ -20,7 +21,7 @@ $(document).ready(function(){
 			}
 		})
 	});	
-	$(document).on('click', '.reply', function(){
+	jQuery(document).on('click', '.reply', function(){
 		var commentId = $(this).attr("id");
 		$('#commentId').val(commentId);
 		$('#name').focus();

@@ -3,6 +3,7 @@
 <?php
 include_once("forum_db_connect.php");
 if(!empty($_POST["name"]) && !empty($_POST["comment"])){
+	echo "Inserting..";
 	$insertComments = "INSERT INTO Forum (parent_id, comment, sender) VALUES ('".$_POST["commentId"]."', '".$_POST["comment"]."', '".$_POST["name"]."')";
 	mysqli_query($conn, $insertComments) or die("database error: ". mysqli_error($conn));	
 	$message = '<label class="text-success">Comment posted Successfully.</label>';

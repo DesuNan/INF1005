@@ -1,5 +1,5 @@
 <?php
-$config = parse_ini_file('/var/www/private/db-zebra-config.ini');
+$config = parse_ini_file('/var/www/private/db-config-zebra.ini');
 
 $conn = new mysqli(
   $config['servername'],

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php 
-include('INC/head.inc.php');
+include('inc/head.inc.php');
 ?>
 <title>Basic Studies General Q&A Board</title>
-<script src="js/comments.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="js/forum_comments.js"></script>
+
 <?php 
-include('INC/nav.inc.php');
+include('inc/nav.inc.php');
 ?>
 <html>
-<?php 
-include('INC/header.inc.php');
-?>
 <body>
 	<div class="container">		
 		<h2>Basic Studies General Q&A Board</h2>		
