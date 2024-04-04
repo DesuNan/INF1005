@@ -651,7 +651,7 @@ footer .container {
 
 .view-disabled {
   pointer-events: none; /* Prevents clicking */
-  opacity: 0.5;
+  opacity: 1;
 }
 
 @media (max-width:991px) {
