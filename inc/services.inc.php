@@ -1,6 +1,6 @@
 <html lang="en">
 <!-- services section-->
-<section id="services" role="Instructors">
+<section id="services" aria-hidden="true">
     <div class="container">
         <h1 class="text-center">Instructors</h1>
         <div class="row">

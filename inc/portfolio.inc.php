@@ -1,7 +1,7 @@
 <html lang="en">
 
 <!-- portfolio section-->
-<section id="portfolio" role="Portfolio">
+<section id="portfolio" aria-hidden="true">
     <div class="container mt-3" >
         <h1 class="text-center">Instructors</h1>
         <div class="row">
