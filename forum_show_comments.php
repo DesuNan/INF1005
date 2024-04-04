@@ -13,7 +13,7 @@ while($comment = mysqli_fetch_assoc($commentsResult)){
 		<div class="panel-heading">By <b>'.$comment["sender"].'</b> on <i>'.$comment["date"].'</i></div>
 		<div class="panel-body">'.$comment["comment"].'</div>
 		<div class="panel-footer" align="right"><button type="button" class="btn btn-primary reply" id="'.$comment["id"].'">Reply</button>';
-		if ($comment["sender"] == $username) {
+		if ($comment["sender"] == $username || $_SESSION["accType"] == "instructor") {
 			$commentHTML .= '<button type="button" class="btn btn-danger delete" id="'.$comment["id"].'">Delete</button>';
 		}
 		$commentHTML .= '</div>
@@ -40,7 +40,7 @@ function getCommentReply($conn, $parentId = 0, $marginLeft = 0) {
 				<div class="panel-heading">By <b>'.$comment["sender"].'</b> on <i>'.$comment["date"].'</i></div>
 				<div class="panel-body">'.$comment["comment"].'</div>
 				<div class="panel-footer" align="right"><button type="button" class="btn btn-primary reply" id="'.$comment["id"].'">Reply</button>';
-				if ($comment["sender"] == $username) {
+				if ($comment["sender"] == $username || $_SESSION["accType"] == "instructor") {
 					$commentHTML .= '<button type="button" class="btn btn-danger delete" id="'.$comment["id"].'">Delete</button>';
 				}
 				$commentHTML .= '</div>

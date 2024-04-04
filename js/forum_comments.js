@@ -44,6 +44,24 @@ jQuery(document).ready(function($){
 			})
 		}
 	});
+	$('#deleteForm').on('submit', function(){
+		if(confirm("Are you sure you want to delete all the comments?")) {
+			$.ajax({
+				url: "forum_delete_all.php",
+				method: "POST",
+				success:function(response) {
+					if(!response.error) {
+						$('#commentForm')[0].reset();
+						$('#commentId').val('0');
+						$('#message').html(response.message);
+						showComments();
+					} else if(response.error){
+						$('#message').html(response.message);
+					}
+				} 
+			})
+		}
+	})
 });
 // function to show comments
 function showComments()	{
