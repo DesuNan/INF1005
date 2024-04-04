@@ -16,6 +16,7 @@
                 $email = $pwd = $fname = $lname = $userID = $errorMsg = "";
                 $success = true;
                 $userID = $_SESSION["userID"];
+                $accType = $_SESSION["accType"];
 
                 if (!empty($_POST["email"])) {
                     // Additional check to make sure e-mail address is well-formed.
@@ -106,7 +107,7 @@
                  * Helper function to write member data to the database.
                  */
                 function UpdateFNameToDB() {
-                    global $fname, $userID, $errorMsg, $success;
+                    global $fname, $userID, $accType, $errorMsg, $success;
 
                     // Create database connection.
                     $config = parse_ini_file('/var/www/private/db-config-zebra.ini');
@@ -130,7 +131,11 @@
                         }
                         else {
                             // Prepare the statement:
-                            $updateStmt = $conn->prepare("UPDATE Students SET fname = ? WHERE studentID = ?");
+                            if ($accType == "student") {
+                                $updateStmt = $conn->prepare("UPDATE Students SET fname = ? WHERE studentID = ?");
+                            } else if ($accType == "instructor") {
+                                $updateStmt = $conn->prepare("UPDATE Instructors SET fname = ? WHERE instructorID = ?");
+                            }
 
                             // Bind & execute the query statement:
                             $updateStmt -> bind_param("si", $fname, $userID);
@@ -147,7 +152,7 @@
                     }
                 }
                 function UpdateLNameToDB() {
-                    global $fname, $userID, $errorMsg, $success;
+                    global $lname, $userID, $accType, $errorMsg, $success;
 
                     // Create database connection.
                     $config = parse_ini_file('/var/www/private/db-config-zebra.ini');
@@ -171,7 +176,11 @@
                         }
                         else {
                             // Prepare the statement:
-                            $updateStmt = $conn->prepare("UPDATE Students SET lname = ? WHERE studentID = ?");
+                            if ($accType == "student") {
+                                $updateStmt = $conn->prepare("UPDATE Students SET lname = ? WHERE studentID = ?");
+                            } else if ($accType == "instructor") {
+                                $updateStmt = $conn->prepare("UPDATE Instructors SET lname = ? WHERE instructorID = ?");
+                            }
 
                             // Bind & execute the query statement:
                             $updateStmt -> bind_param("si", $lname, $userID);
@@ -188,7 +197,7 @@
                     }
                 }
                 function UpdateEmailToDB() {
-                    global $email, $userID, $errorMsg, $success;
+                    global $email, $userID, $accType, $errorMsg, $success;
 
                     // Create database connection.
                     $config = parse_ini_file('/var/www/private/db-config-zebra.ini');
@@ -212,7 +221,11 @@
                         }
                         else {
                             // Check if the email already exists in the database
-                            $checkStmt = $conn->prepare("SELECT email FROM Students WHERE email = ?");
+                            if ($accType == "student") {
+                                $checkStmt = $conn->prepare("SELECT email FROM Students WHERE email = ?");
+                            } else if ($accType == "instructor") {
+                                $checkStmt = $conn->prepare("SELECT email FROM Instructors WHERE email = ?");
+                            }
                             $checkStmt -> bind_param("s", $email);
                             $checkStmt -> execute();
                             $checkStmt -> store_result();
@@ -223,7 +236,11 @@
                                 $success = false;
                             } else {
                                 // Prepare the statement:
-                                $updateStmt = $conn->prepare("UPDATE Students SET email = ? WHERE studentID = ?");
+                                if ($accType == "student") {
+                                    $updateStmt = $conn->prepare("UPDATE Students SET email = ? WHERE studentID = ?");
+                                } else if ($accType == "instructor") {
+                                    $updateStmt = $conn->prepare("UPDATE Instructors SET email = ? WHERE instructorID = ?");
+                                }
 
                                 // Bind & execute the query statement:
                                 $updateStmt -> bind_param("si", $email, $userID);
@@ -243,7 +260,7 @@
                     }
                 }
                 function UpdatePWDToDB() {
-                    global $email, $userID, $errorMsg, $success;
+                    global $userID, $accType, $errorMsg, $success;
 
                     // Create database connection.
                     $config = parse_ini_file('/var/www/private/db-config-zebra.ini');
@@ -267,7 +284,11 @@
                         }
                         else {
                             // Prepare the statement:
-                            $updateStmt = $conn->prepare("UPDATE Students SET password = ? WHERE studentID = ?");
+                            if ($accType == "student") {
+                                $updateStmt = $conn->prepare("UPDATE Students SET password = ? WHERE studentID = ?");
+                            } else if ($accType == "instructor") {
+                                $updateStmt = $conn->prepare("UPDATE Instructors SET password = ? WHERE instructorID = ?");
+                            }
 
                             // Bind & execute the query statement:
                             $updateStmt -> bind_param("si", $pwd, $userID);

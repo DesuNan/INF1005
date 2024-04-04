@@ -23,8 +23,11 @@ function LoginRegister() {
                         To register as student, please go to the 
                         <button onClick={toggleForm} style={{ marginLeft: '5px' }}>Instructor Registration</button> page.
                     </p>
-                    <form action="process_registerStudent.php" method="post">
+                    <form action="process_register.php" method="post">
                         <div class="input-boxes">
+                            <div class="input-hidden">
+                                <input hidden id="accType" name="accType" value="student" />
+                            </div>
                             <div class="input-box">
                                 <i class="fas fa-user"></i>
                                 <input maxlength="45" type="text" id="fname" name="fname" placeholder="Enter your first name" />
@@ -59,8 +62,11 @@ function LoginRegister() {
                         To register as student, please go to the 
                         <button onClick={toggleForm} style={{ marginLeft: '5px' }}>Student Registration</button> page.
                     </p>
-                    <form action="process_registerInstructor.php" method="post">
+                    <form action="process_register.php" method="post">
                         <div class="input-boxes">
+                            <div class="input-hidden">
+                                <input hidden id="accType" name="accType" value="instructor" />
+                            </div>
                             <div class="input-box">
                                 <i class="fas fa-user"></i>
                                 <input maxlength="45" type="text" id="fname" name="fname" placeholder="Enter your first name" />

@@ -13,9 +13,12 @@
         <main class="container">
             <section class="updateMember">
             <?php
-                $email = $pwd = $fname = $lname = $userID = $errorMsg = "";
+                $email = $fname = $lname = $userID = $errorMsg = "";
                 $success = true;
                 $userID = $_SESSION["userID"];
+                $accType = $_SESSION["accType"];
+                $fname = $_SESSION["fname"];
+                $lname = $_SESSION["lname"];
 
                 $config = parse_ini_file('/var/www/private/db-config-zebra.ini');
 
@@ -38,7 +41,11 @@
                     }
                     else {
                         // Prepare the statement:
-                        $deleteStmt = $conn->prepare("DELETE FROM Students WHERE studentID = ?");
+                        if ($accType == "student") {
+                            $deleteStmt = $conn->prepare("DELETE FROM Students WHERE studentID = ?");
+                        } else if ($accType == "instructor") {
+                            $deleteStmt = $conn->prepare("DELETE FROM Instructors WHERE instructorID = ?");
+                        }
 
                         // Bind & execute the query statement:
                         $deleteStmt -> bind_param("i", $userID);
@@ -56,7 +63,7 @@
 
                 if ($success) {
                     echo "<h2>Your profile has been deleted!</h2>";
-                    echo "<h2>Goodbye!</h2>";
+                    echo "<h2>Goodbye, ".$fname." ".$lname."</h2>";
                 }
                 else {
                     echo "<h2>Oops!</h2>";
