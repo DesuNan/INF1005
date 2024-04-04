@@ -14,7 +14,7 @@
     <?php
     include "inc/nav.inc.php";
     ?>
-    
+
     <!-- english content -->
     <main class="main-containerSub container">
         <!-- About and Chapters Section -->
@@ -83,9 +83,8 @@
                 </div>
     </main>
 </body>
-<footer>
-    <?php
-    include "inc/footer.inc.php";
-    ?>
-</footer>
+<?php
+include "inc/footer.inc.php";
+?>
+
 </html>

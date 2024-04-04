@@ -89,10 +89,8 @@
 
     </main>
 </body>
-<footer>
-    <?php
-    include "inc/footer.inc.php";
-    ?>
-</footer>
+<?php
+include "inc/footer.inc.php";
+?>
 
 </html>
