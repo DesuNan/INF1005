@@ -40,7 +40,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Chapter 1: Introduction to English</h5>
                                     <p class="card-text">Learn the basics of the English language and its importance in today's world.</p>
-                                    <a href="#" class="btn btn-primary">Read Chapter</a>
+                                    <a href="/chapter.php" class="btn btn-primary">Read Chapter</a>
                                 </div>
                             </div>
                         </div>

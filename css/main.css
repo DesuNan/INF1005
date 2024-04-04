@@ -71,6 +71,10 @@ header .menu a {
   transition-property: color, background;
 }
 
+header .basicstudy:hover {
+  color: white;
+}
+
 header .menu a:hover {
   color: #000000;
   background: white;
@@ -670,4 +674,26 @@ footer .container {
   html {
     font-size: 50%;
   }
+}
+
+/*For chapter.php*/
+.nav-tabs .nav-link {
+    position: relative;
+}
+
+.nav-tabs .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Adjust the thickness of the line as needed */
+    background-color: #007bff; /* Adjust the color of the line as needed */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-tabs .nav-link.active::after,
+.nav-tabs .nav-link:hover::after {
+    transform: scaleX(1);
 }
