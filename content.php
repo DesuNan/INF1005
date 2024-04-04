@@ -55,11 +55,10 @@
 				</p>
 				<div class="c-buttons">
 					<?php if (isset($_SESSION['userID'])) : ?>
-						<a href="english.php" class="view">View More</a>
+						<a href="math.php" class="view">View More</a>
 					<?php else : ?>
-						<a href="#" class="view view-disabled" disabled>Login to view</a>
+						<a href="/login.php" class="sign-up">Sign Up</a>
 					<?php endif; ?>
-					<a href="/login.php" class="sign-up">Sign Up</a>
 				</div>
 			</div>
 
@@ -76,9 +75,8 @@
 					<?php if (isset($_SESSION['userID'])) : ?>
 						<a href="math.php" class="view">View More</a>
 					<?php else : ?>
-						<a href="#" class="view view-disabled" disabled>Login to view</a>
+						<a href="/login.php" class="sign-up">Sign Up</a>
 					<?php endif; ?>
-					<a href="/login.php" class="sign-up">Sign Up</a>
 				</div>
 			</div>
 
@@ -94,11 +92,10 @@
 				</p>
 				<div class="c-buttons">
 					<?php if (isset($_SESSION['userID'])) : ?>
-						<a href="chemistry.php" class="view">View More</a>
+						<a href="math.php" class="view">View More</a>
 					<?php else : ?>
-						<a href="#" class="view view-disabled" disabled>Login to view</a>
+						<a href="/login.php" class="sign-up">Sign Up</a>
 					<?php endif; ?>
-					<a href="/login.php" class="sign-up">Sign Up</a>
 				</div>
 			</div>
 
@@ -114,18 +111,19 @@
 				</p>
 				<div class="c-buttons">
 					<?php if (isset($_SESSION['userID'])) : ?>
-						<a href="physics.php" class="view">View More</a>
+						<a href="math.php" class="view">View More</a>
 					<?php else : ?>
-						<a href="#" class="view view-disabled" disabled>Login to view</a>
+						<a href="/login.php" class="sign-up">Sign Up</a>
 					<?php endif; ?>
-					<a href="/login.php" class="sign-up">Sign Up</a>
 				</div>
 			</div>
 		</div>
+	</main>
 </body>
-</main>
-<?php
-include "inc/footer.inc.php"
-?>
+<footer>
+	<?php
+	include "inc/footer.inc.php"
+	?>
+</footer>
 
 </html>
