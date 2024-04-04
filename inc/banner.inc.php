@@ -1,8 +1,7 @@
 <!-- main banner -->
 <html lang="en">
 
-<body>
-    <section class="bgimage" id="home" role="banner">
+    <section class="bgimage" id="home" aria-hidden="true">
         <div class="overlay"></div>
         <div class="container-fluid">
             <div class="row">
@@ -13,6 +12,5 @@
             </div>
         </div>
     </section>
-</body>
 
 </html>
