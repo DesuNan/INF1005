@@ -105,7 +105,7 @@ include "db_connect.php";
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
                 <div class="col-sm-6 d-grid">
-                    <a class="btn btn-outline-primary" href= "library.php" role="button">Cancel</button>
+                    <a class="btn btn-outline-primary" href= "library/library.php" role="button">Cancel</button>
                 </div>
             </div>
         </form>
