@@ -2,6 +2,8 @@
 include "head.inc.php";
 ?>
 
+<html lang="en">
+
 <!-- about section-->
 <section id="about">
     <div class="container mt-4 pt-4">
@@ -32,3 +34,5 @@ include "head.inc.php";
                 </div>
             </div>
 </section>
+
+</html>

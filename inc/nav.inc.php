@@ -1,4 +1,5 @@
-<body>
+<html lang="en">
+
     <header>
         <a href="/index.php" class="basicstudy" style="font-family: Verdana;">BasicStudys</a>
         <div class="menu">
@@ -29,4 +30,5 @@
     </header>
     <section class="section-main">
     </section>
-</body>
+
+</html>

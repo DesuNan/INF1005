@@ -1,5 +1,7 @@
+<html lang="en">
+
 <!-- portfolio section-->
-<section id="portfolio">
+<section id="portfolio" role="Portfolio">
     <div class="container mt-3" >
         <h1 class="text-center">Instructors</h1>
         <div class="row">
@@ -84,3 +86,5 @@
             </div>
         </div>
 </section>
+
+</html>
