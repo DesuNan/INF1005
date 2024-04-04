@@ -18,7 +18,7 @@ function LoginRegister() {
         <div>
             {student ? (
                 <div>
-                    <div class="title">Student Login</div>
+                    <h1>Student Login</h1>
                     <p>
                         To login as instructor, please go to the 
                         <button onClick={toggleForm} style={{ marginLeft: '5px' }}>Instructor Login</button> page.
@@ -48,7 +48,7 @@ function LoginRegister() {
                 </div>
             ) : (
                 <div>
-                    <div class="title">Instructor Login</div>
+                    <h1>Instructor Login</h1>
                     <p>
                         To login as instructor, please go to the 
                         <button onClick={toggleForm} style={{ marginLeft: '5px' }}>Student Login</button> page.

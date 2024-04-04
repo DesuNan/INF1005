@@ -5,13 +5,14 @@
         <?php
             include "inc/head.inc.php";
         ?>
+        <link rel="stylesheet" href="css/login.css">    
     </head>
     <body>
         <?php
         include "inc/nav.inc.php";
         ?>
-        <main class="container">
-            <section class="registration">
+        <main class="login-container">
+            <section class="forms">
             <?php
                 $email = $pwd = $fname = $lname = $accType = $errorMsg = "";
                 $success = true;

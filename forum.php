@@ -39,10 +39,10 @@ include('inc/nav.inc.php');
 		<br>
 		<div id="showComments"></div>   
 	</div>
+	<?php 
+		include('inc/footer.inc.php');
+	?>
 </body>
 </html>
-<?php 
-include('inc/footer.inc.php');
-?>
 
 

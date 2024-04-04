@@ -5,13 +5,14 @@
             include "inc/head.inc.php";
             require_once "zebra_session/session_start.php";
         ?>
+        <link rel="stylesheet" href="css/login.css">  
     </head>
     <body>
         <?php
         include "inc/nav.inc.php";
         ?>
-        <main class="container">
-            <section class="updateMember">
+        <main class="login-container">
+            <section class="forms">
             <?php
                 $email = $fname = $lname = $userID = $errorMsg = "";
                 $success = true;
@@ -64,6 +65,9 @@
                 if ($success) {
                     echo "<h2>Your profile has been deleted!</h2>";
                     echo "<h2>Goodbye, ".$fname." ".$lname."</h2>";
+                    $_SESSION = array();
+                    session_destroy();
+                    echo "<button type='home' class='btn btn-primary' onclick=\"location.href='/'\">Return to Home</button>";
                 }
                 else {
                     echo "<h2>Oops!</h2>";
