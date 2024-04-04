@@ -37,7 +37,7 @@ include "db_connect.php";
 
         $successMsg = "Entry added successfully";
 
-        header("location: library.php");
+        header("location: library/library.php");
         exit;
     }
 ?>

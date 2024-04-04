@@ -8,7 +8,7 @@ $id = 0;
 // Handle GET request to populate form for editing
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     if (!isset($_GET["id"])) {
-        header("Location: library.php");
+        header("Location: library/library.php");
         exit;
     }
 
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $row = $result->fetch_assoc();
 
     if (!$row) {
-        header("Location: library.php");
+        header("Location: library/library.php");
         exit;
     }
     
@@ -52,7 +52,7 @@ else if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($stmt->execute()) {
             $successMsg = "Updated successfully";
             $stmt->close();
-            header("Location: library.php");
+            header("Location: library/library.php");
             exit;
         } else {
             $errorMsg = "Invalid query: " . $stmt->error;
@@ -127,7 +127,7 @@ else if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
                 <div class="col-sm-6 d-grid">
-                    <a class="btn btn-outline-primary" href= "library.php" role="button">Cancel</button>
+                    <a class="btn btn-outline-primary" href= "library/library.php" role="button">Cancel</button>
                 </div>
             </div>
         </form>
