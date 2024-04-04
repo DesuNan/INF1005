@@ -20,7 +20,7 @@ if(isset($_POST["submit"])){
 
 ?>
 
-<html>
+<html lang="en">
 <style>
     *{
       margin: 0px;
