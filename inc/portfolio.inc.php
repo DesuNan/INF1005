@@ -1,6 +1,7 @@
+<html lang="en">
 <!-- portfolio section-->
-<section id="portfolio">
-    <div class="container mt-3" >
+<section id="portfolio" aria-hidden="true">
+    <div class="container mt-3">
         <h1 class="text-center">Instructors</h1>
         <div class="row">
             <div class="col-lg-4 mt-4">
@@ -16,10 +17,10 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 mt-4" >
+            <div class="col-lg-4 mt-4">
                 <div class="card portfolioContent" style="border: none;">
                     <img class="card-img-top" src="img/teacher.png.webp" alt="Card image" style="border-radius: 50%;">
-                    <div class="card-body" >
+                    <div class="card-body">
                         <h4 class="card-title">Alex Morgan</h4>
                         <p class="card-text">Assistant Head of English Department</p>
                         <div class="text-center">
@@ -57,7 +58,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 mt-4" >
+            <div class="col-lg-4 mt-4">
                 <div class="card portfolioContent" style="border: none;">
                     <img class="card-img-top" src="img/teacher.png.webp" alt="Card image" style="border-radius: 50%;">
                     <div class="card-body">
@@ -84,3 +85,5 @@
             </div>
         </div>
 </section>
+
+</html>

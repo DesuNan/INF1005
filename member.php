@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Member Page</title>
+        <title>Profile</title>
         <?php
             include "inc/head.inc.php";
             require_once "zebra_session/session_start.php";

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Reset Password</title>
+	<title>BasicStudys</title>
     <?php
         include "inc/head.inc.php";
         require_once "zebra_session/session_start.php";
@@ -19,11 +19,13 @@
                 //checks if OTP is provided in the URL
                 if (isset($_GET['otp'])) {
                     $otp = $_GET['otp'];
+                    $accType = $_GET['acc'];
 
                     //displays new password reset form
                     ?>
                     <form action="process_newPass.php" method="post">
                         <input type="hidden" name="otp" value="<?php echo $otp; ?>">
+                        <input type="hidden" name="accType" value="<?php echo $accType; ?>">
                         <span class="login100-form-title">
                             Reset Your Password
                         </span>
@@ -52,27 +54,22 @@
                         <span class="login100-form-title">
                             Reset Password
                         </span>
+                        <br>
 						<p1>Enter your email below.<p1><br>
 
                         <div class="wrap-input100 validate-input">
-                            <input class="input100" type="email" id="email" name="email" placeholder="Email">
-                            <span class="focus-input100"></span>
-                            <span class="symbol-input100">
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
-                            </span>
+                            <i class="fas fa-envelope"></i>
+                            <input required type="text" id="email" name="email" placeholder="Enter your email" />
                         </div>
-
+                        <div>
+                            <select id="accType" name="accType">
+                                <option value="instructor">Instructor</option>
+                                <option value="student">Student</option>
+                            </select>
+                        </div>
                         <div class="container-login100-form-btn">
-                            <button class="login100-form-btn" type="submit" name="resetpass_submit">
-                                Submit
-                            </button>
-                        </div>
-
-                        <div class="text-center p-t-136">
-                            <a class="txt2" href="login.php">
-                                Go Back
-                                <i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i>
-                            </a>
+                            <a href="login.php" class="btn btn-danger" role="button">Go Back</a>
+                            <button class="btn btn-primary" type="submit" name="resetpass_submit">Submit</button>
                         </div>
                     </form>
                     <?php
