@@ -40,7 +40,7 @@
                             <!-- Chapter card 1 -->
                             <div class="card chapter-card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Chapter 1: Algebra</h5>
+                                    <h2 class="card-title" style="font-size: 22px;">Chapter 1: Algebra</h2>
                                     <p class="card-text">Explore the basic concepts of algebra, including equations, inequalities, and functions.</p>
                                     <a href="#" class="btn btn-primary">Read Chapter</a>
                                 </div>
@@ -50,7 +50,7 @@
                             <!-- Chapter card 2 -->
                             <div class="card chapter-card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Chapter 2: Geometry</h5>
+                                    <h2 class="card-title" style="font-size: 22px;">Chapter 2: Geometry</h2>
                                     <p class="card-text">Dive into the world of shapes, angles, and spatial relationships with geometry.</p>
                                     <a href="#" class="btn btn-primary">Read Chapter</a>
                                 </div>
@@ -60,7 +60,7 @@
                             <!-- Chapter card 3 -->
                             <div class="card chapter-card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Chapter 3: Calculus</h5>
+                                    <h2 class="card-title" style="font-size: 22px;">Chapter 3: Calculus</h2>
                                     <p class="card-text">Learn the fundamental principles of calculus, including limits, derivatives, and integrals.</p>
                                     <a href="#" class="btn btn-primary">Read Chapter</a>
                                 </div>

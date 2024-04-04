@@ -41,7 +41,7 @@
                             <!-- Chapter card 1 -->
                             <div class="card chapter-card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Chapter 1: Mechanics</h5>
+                                    <h2 class="card-title" style="font-size: 22px;">Chapter 1: Mechanics</h2>
                                     <p class="card-text">Explore the fundamental principles of motion, forces, and energy in mechanics.</p>
                                     <a href="#" class="btn btn-primary">Read Chapter</a>
                                 </div>
@@ -51,7 +51,7 @@
                             <!-- Chapter card 2 -->
                             <div class="card chapter-card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Chapter 2: Electricity and Magnetism</h5>
+                                    <h2 class="card-title" style="font-size: 22px;">Chapter 2: Electricity and Magnetism</h2>
                                     <p class="card-text">Understand the behavior of electric charges, currents, and magnetic fields.</p>
                                     <a href="#" class="btn btn-primary">Read Chapter</a>
                                 </div>
@@ -61,7 +61,7 @@
                             <!-- Chapter card 3 -->
                             <div class="card chapter-card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Chapter 3: Thermodynamics</h5>
+                                    <h2 class="card-title" style="font-size: 22px;">Chapter 3: Thermodynamics</h2>
                                     <p class="card-text">Learn about the principles governing heat, temperature, and energy transfer in thermodynamics.</p>
                                     <a href="#" class="btn btn-primary">Read Chapter</a>
                                 </div>

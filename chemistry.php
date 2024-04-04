@@ -41,7 +41,7 @@
                             <!-- Chapter card 1 -->
                             <div class="card chapter-card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Chapter 1: Atomic Structure</h5>
+                                    <h2 class="card-title" style="font-size: 22px;">Chapter 1: Atomic Structure</h2>
                                     <p class="card-text">Explore the basic building blocks of matter, including atoms, isotopes, and atomic models.</p>
                                     <a href="#" class="btn btn-primary">Read Chapter</a>
                                 </div>
@@ -51,7 +51,7 @@
                             <!-- Chapter card 2 -->
                             <div class="card chapter-card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Chapter 2: Chemical Bonding</h5>
+                                    <h2 class="card-title" style="font-size: 22px;">Chapter 2: Chemical Bonding</h2>
                                     <p class="card-text">Understand the forces that hold atoms together to form molecules and compounds.</p>
                                     <a href="#" class="btn btn-primary">Read Chapter</a>
                                 </div>
@@ -61,7 +61,7 @@
                             <!-- Chapter card 3 -->
                             <div class="card chapter-card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Chapter 3: Stoichiometry</h5>
+                                    <h2 class="card-title" style="font-size: 22px;">Chapter 3: Stoichiometry</h2>
                                     <p class="card-text">Learn about the quantitative relationships between reactants and products in chemical reactions.</p>
                                     <a href="#" class="btn btn-primary">Read Chapter</a>
                                 </div>
