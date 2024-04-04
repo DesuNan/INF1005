@@ -89,7 +89,7 @@
                                 //if email not found in passReset table
                                 echo "Email not found for provided OTP.<br>";
                             }       
-                            $stmt_check->close(); // Close the statement      
+                            $stmt->close(); // Close the statement      
                             $conn->close();
                     
                         } catch (Exception $e) {
