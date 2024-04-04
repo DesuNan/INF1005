@@ -13,7 +13,7 @@
         ?>
         <main>
             <div id="app" class="memberProfile"></div>
-            <script src="jsx/member_profile.js"></script>
+            <script type="module" src="jsx/member_profile.js"></script>
         </main>
         <?php
             include "inc/footer.inc.php"
