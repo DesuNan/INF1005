@@ -26,6 +26,24 @@ jQuery(document).ready(function($){
 		$('#commentId').val(commentId);
 		$('#name').focus();
 	});
+	jQuery(document).on('click', '.delete', function(){
+		var commentId = $(this).attr("id");
+		if(confirm("Are you sure you want to delete this comment?")) {
+			$.ajax({
+				url: "forum_delete_comments.php",
+				method: "POST",
+				data: {commentId: commentId},
+				dataType: "JSON",
+				success:function(response) {
+					if(!response.error) {
+						showComments();
+					} else if(response.error) {
+						$('message').html(response.message);
+					}
+				}
+			})
+		}
+	});
 });
 // function to show comments
 function showComments()	{
