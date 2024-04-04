@@ -2,7 +2,6 @@
 
 <head aria-hidden="true">
     <title>BasicStudys</title>
-    <h1 style="font-size: xx-small;">.</h1>
     <?php
     include "inc/head.inc.php";
     require_once "zebra_session/session_start.php";
@@ -17,6 +16,7 @@
         include "inc/about.inc.php";
         include "inc/portfolio.inc.php";
         ?>
+        <h1 style="font-size: xx-small; color:white">.</h1>
     </main>
 </body>
 
