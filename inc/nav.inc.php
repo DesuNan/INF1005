@@ -24,11 +24,5 @@
             }
             ?>
         </div>
-        <div class="btn">
-            <i class="fas fa-bars menu-btn"></i>
-        </div>
     </header>
-    <section class="section-main">
-    </section>
-
 </html>
