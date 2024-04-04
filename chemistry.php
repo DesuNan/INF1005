@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Basicstudy Chemistry</title>
+    <title>Basicstudy</title>
     <?php
     include "inc/head.inc.php";
     require_once "zebra_session/session_start.php";

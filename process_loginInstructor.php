@@ -2,7 +2,6 @@
 <html>
 
 <head>
-    <title>Login Results</title>
     <?php
     include "inc/head.inc.php";
     ?>

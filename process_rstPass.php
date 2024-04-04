@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-	<title>Reset Password</title>
     <?php
         include "inc/head.inc.php";
     ?>

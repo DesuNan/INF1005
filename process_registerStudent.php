@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <title>Registration Results</title>
         <?php
             include "inc/head.inc.php";
         ?>
