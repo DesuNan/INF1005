@@ -1,99 +1,47 @@
-<?php
-$config = parse_ini_file('/var/www/private/db-config-zebra.ini');
-if(!$config){
-    die("Failed to read database config file.");
-} else {
-    $conn = mysqli_connect($config['servername'],$config['username'], $config['password'], $config['dbname']);
-    if(!$conn){
-        die("Connection failed: ". mysqli_connect_error());
-    }
-}
-if(isset($_POST["submit"])){
-    $name = $_POST["name"];
-    $comment = $_POST["comment"];
-    $date = date('F d Y, h:i:s A');
-    $reply_id = $_POST["reply_id"];
-  
-    $query = "INSERT INTO tb_data VALUES('', '$name', '$comment', '$date', '$reply_id')";
-    mysqli_query($conn, $query);
-}
+<!DOCTYPE html>
+<html lang="en">
+<?php 
+include('inc/head.inc.php');
+require_once "zebra_session/session_start.php";
+?>
+<br>
+<title>Basic Studies General Q&A Board</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+<script src="js/forum_comments.js"></script>
+
+<?php 
+include('inc/nav.inc.php');
+?>
+<body>
+	<div class="container">		
+		<h2>Basic Studies General Q&A Board</h2>		
+		<br>		
+		<form method="POST" id="commentForm">
+			<div class="form-group">
+				<input hidden name="name" id="name" class="form-control" value="<?php echo (!empty($_SESSION["fname"])) ? $_SESSION["fname"] . " " . $_SESSION["lname"] : $_SESSION["lname"] ?>"></input>
+			</div>
+			<div class="form-group">
+				<textarea name="comment" id="comment" class="form-control" placeholder="Enter Comment" rows="5" required></textarea>
+			</div>
+			<span id="message"></span>
+			<br>
+			<div class="form-group">
+				<input type="hidden" name="commentId" id="commentId" value="0"/>
+				<input type="submit" name="submit" id="submit" class="btn btn-primary" value="Post Comment"/>
+			</div>
+		</form>	
+		<form method="POST" id="deleteForm">	
+			<?php if ($_SESSION["accType"] == "instructor") : ?>
+				<input type="submit" name="delete" id="delete" class="btn btn-danger" value="Delete All" />
+			<?php endif; ?>
+		</form>	
+		<br>
+		<div id="showComments"></div>   
+	</div>
+</body>
+</html>
+<?php 
+include('inc/footer.inc.php');
 ?>
 
-<html lang="en">
-<style>
-    *{
-      margin: 0px;
-      padding: 0px;
-    }
-    body{
-      background: #212523;
-    }
-    .container{
-      background: white;
-      width: 700px;
-      margin: 0 auto;
-      padding-top: 1px;
-      padding-bottom: 5px;
-    }
-    .comment, .reply{
-      margin-top: 5px;
-      padding: 10px;
-      border-bottom: 1px solid black;
-    }
-    .reply{
-      border: 1px solid #ccc;
-    }
-    p{
-      margin-top: 5px;
-      margin-bottom: 5px;
-    }
-    form{
-      margin: 10px;
-    }
-    form h3{
-      margin-bottom: 5px;
-    }
-    form input, form textarea{
-      width: 100%;
-      padding: 5px;
-      margin-bottom: 10px;
-    }
-    form button.submit, button{
-      background: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-      padding: 10px 20px;
-      width: 100%;
-    }
-    button.reply{
-      background: orange;
-    }
-  </style>
-  <body>
-    <div class="container">
-      <?php
-      $datas = mysqli_query($conn, "SELECT * FROM tb_data WHERE reply_id = 0"); // only select comment and not select reply
-      foreach($datas as $data) {
-        require 'comment.php';
-      }
-      ?>
-      <form action = "" method = "post">
-        <h3 id = "title">Leave a Comment</h3>
-        <input type="hidden" name="reply_id" id="reply_id">
-        <input type="text" name="name" placeholder="Your name">
-        <textarea name="comment" placeholder="Your comment"></textarea>
-        <button class = "submit" type="submit" name="submit">Submit</button>
-      </form>
-    </div>
-
-    <script>
-      function reply(id, name){
-        title = document.getElementById('title');
-        title.innerHTML = "Reply to " + name;
-        document.getElementById('reply_id').value = id;
-      }
-    </script>
-  </body>
-</html>
