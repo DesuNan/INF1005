@@ -1,5 +1,4 @@
 <html lang="en">
-
     <header>
         <a href="/index.php" class="basicstudy" style="font-family: Verdana;">BasicStudys</a>
         <div class="menu">

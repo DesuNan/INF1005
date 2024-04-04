@@ -13,7 +13,6 @@ require_once "zebra_session/session_start.php";
 <?php 
 include('inc/nav.inc.php');
 ?>
-<html>
 <body>
 	<div class="container">		
 		<h2>Basic Studies General Q&A Board</h2>		
