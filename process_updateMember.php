@@ -5,13 +5,14 @@
             include "inc/head.inc.php";
             require_once "zebra_session/session_start.php";
         ?>
+        <link rel="stylesheet" href="css/login.css">    
     </head>
     <body>
         <?php
         include "inc/nav.inc.php";
         ?>
-        <main class="container">
-            <section class="updateMember">
+        <main class="login-container">
+            <section class="forms">
             <?php
                 $email = $pwd = $fname = $lname = $userID = $errorMsg = "";
                 $success = true;
@@ -67,12 +68,13 @@
 
                 if ($success) {
                     echo "<h2>Your profile has been updated!</h2>";
+                    echo "<button type='register' class='btn btn-success' onclick=\"location.href='member.php'\">Return to Profile Page</button>";
                 }
                 else {
                     echo "<h2>Oops!</h2>";
                     echo "<h4>The following errors were detected:</h4>";
                     echo "<p>" . $errorMsg . "</p>";
-                    echo "<button type='register' class='btn btn-danger' onclick=\"location.href='member.php'\">Return to Profile Page</button>";
+                    echo "<button type='register' class='btn btn-warning' onclick=\"location.href='member.php'\">Return to Profile Page</button>";
                 }
 
                 /*

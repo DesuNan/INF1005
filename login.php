@@ -5,8 +5,9 @@
     <?php
         include "inc/head.inc.php";
     ?>
+    <link rel="stylesheet" href="css/login.css">
 </head>
-<body class="loginpage">
+<body>
     <?php
         include "inc/nav.inc.php";
     ?>
@@ -39,8 +40,8 @@
             </div>
         </div>
     </main>
-    <?php
-        include "inc/footer.inc.php";
-    ?>
 </body>
+<?php
+    include "inc/footer.inc.php";
+?>
 </html>

@@ -7,14 +7,15 @@
         include "inc/head.inc.php";
         require_once "zebra_session/session_start.php";
     ?>
+    <link rel="stylesheet" href="css/login.css">
 </head>
 
-<body class="loginpage">
+<body>
     <?php
         include "inc/nav.inc.php";
     ?>
-	<main class="container">
-		<div class="login-container">
+	<main class="login-container">
+		<div class="forms">
             <?php
                 //checks if OTP is provided in the URL
                 if (isset($_GET['otp'])) {
@@ -26,24 +27,20 @@
                     <form action="process_newPass.php" method="post">
                         <input type="hidden" name="otp" value="<?php echo $otp; ?>">
                         <input type="hidden" name="accType" value="<?php echo $accType; ?>">
-                        <span class="login100-form-title">
-                            Reset Your Password
-                        </span>
+                        <h1>Reset Your Password</h1>
 						
-                        <div class="wrap-input100 validate-input">
-                            <input required class="input100" type="password" id="new_pwd" name="new_pwd" placeholder="New Password">
-                            <span class="focus-input100"></span>
+                        <div class="input-box">
+                            <i class="fas fa-lock"></i>
+                            <input required type="password" id="new_pwd" name="new_pwd" placeholder="New Password">
                         </div>
 
-                        <div class="wrap-input100 validate-input">
-                            <input required class="input100" type="password" id="confirm_pwd" name="confirm_pwd" placeholder="Confirm Password">
-                            <span class="focus-input100"></span>
+                        <div class="input-box">
+                            <i class="fas fa-lock"></i>
+                            <input required type="password" id="confirm_pwd" name="confirm_pwd" placeholder="Confirm Password">
                         </div>
-
-                        <div class="container-login100-form-btn">
-                            <button class="login100-form-btn" type="submit" name="passreset_submit">
-                                Reset Password
-                            </button>
+                        <br>
+                        <div class="button input-box">
+                            <button class="btn btn-primary" type="submit" name="passreset_submit">Reset Password</button>
                         </div>
                     </form>
                     <?php
@@ -51,23 +48,22 @@
                     //displays email submission form if no request
                     ?>
                     <form action="process_rstPass.php" method="post">
-                        <span class="login100-form-title">
-                            Reset Password
-                        </span>
+                        <h1>Reset Password</h1>
+						<p1>Enter your email below.<p1>
                         <br>
-						<p1>Enter your email below.<p1><br>
-
-                        <div class="wrap-input100 validate-input">
+                        <div class="input-box">
                             <i class="fas fa-envelope"></i>
                             <input required type="text" id="email" name="email" placeholder="Enter your email" />
                         </div>
-                        <div>
+                        <div class="input-box">
+                            <i class="fas fa-user-alt"></i>
                             <select id="accType" name="accType">
                                 <option value="instructor">Instructor</option>
                                 <option value="student">Student</option>
                             </select>
                         </div>
-                        <div class="container-login100-form-btn">
+                        <br>
+                        <div class="button input-box">
                             <a href="login.php" class="btn btn-danger" role="button">Go Back</a>
                             <button class="btn btn-primary" type="submit" name="resetpass_submit">Submit</button>
                         </div>

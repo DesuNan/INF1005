@@ -5,14 +5,15 @@
     <?php
         include "inc/head.inc.php";
     ?>
+    <link rel="stylesheet" href="css/login.css">
 </head>
 
-<body class="loginpage">
+<body>
     <?php
         include "inc/nav.inc.php";
     ?>
-	<main class="container">
-		<div class="login-container">
+	<main class="login-container">
+		<div class="forms">
             <?php
                 $resultMsg = ''; //first define password reset result
                 $success = true;
@@ -79,15 +80,17 @@
                                 $affected_rows = $updateStmt->affected_rows;
                                 $updateStmt->close();
                                 if ($affected_rows > 0) {
-                                    echo "Password updated succesfully.<br>";
+                                    echo "Password updated succesfully.<br><br>";
                                     echo "<button type='login' class='btn btn-success' onclick=\"location.href='login.php'\">Log-in</button>";
                                 } else {
-                                    echo "Failed to update with new password.";
+                                    echo "Failed to update with new password.<br><br>";
+                                    echo "<button type='login' class='btn btn-success' onclick=\"location.href='login.php'\">Log-in</button>";
                                 }
     
                             } else {
                                 //if email not found in passReset table
-                                echo "Email not found for provided OTP.<br>";
+                                echo "Email not found for provided OTP.<br><br>";
+                                echo "<button type='login' class='btn btn-success' onclick=\"location.href='login.php'\">Log-in</button>";
                             }       
                             $stmt->close(); // Close the statement      
                             $conn->close();

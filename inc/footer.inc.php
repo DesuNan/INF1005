@@ -1,5 +1,5 @@
 <html lang="en">
-<footer id="footer" title="main footer">
+<footer id="footer" title="footer">
     <div class="container-fluid">
         <!-- social media icons -->
         <div class="social-icons mt-4">

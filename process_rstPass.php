@@ -4,15 +4,16 @@
 <head>
     <?php
         include "inc/head.inc.php";
-    ?>
+    ?>    
+    <link rel="stylesheet" href="css/login.css">
 </head>
 
-<body class="loginpage">
+<body>
     <?php
         include "inc/nav.inc.php";
     ?>
-	<main class="container">
-		<div class="login-container">
+	<main class="login-container">
+		<div class="forms">
             <?php
                 use PHPMailer\PHPMailer\PHPMailer as PHPMailer;
                 use PHPMailer\PHPMailer\SMTP;
@@ -51,7 +52,6 @@
                         $getStmt->bind_param("s", $email);
                         $getStmt->execute();
                         $getResult = $getStmt->get_result();
-                        echo "Email: " . $email;
                 
                         if ($getResult->num_rows === 0) {
                             //if does not exist, email is not sent and displays following message
@@ -80,13 +80,13 @@
                 
                             //email content
                             $mail->isHTML(true);                                       // Set email format to HTML
-                            $mail->Subject = 'Password Reset Request for Coursedemy';
+                            $mail->Subject = 'Password Reset Request for BasicStudys';
                             $mail->Body = "Hi,<br><br>"
                                         . "We have received your request to reset your account's password. "
-                                        . 'To reset your password, please click <a href="http://35.212.224.236/passReset.php?otp='.$otp.'&acc='.$accType.'">here</a>.' . '.<br>'
+                                        . 'To reset your password, please click <a href="http://www.basicstudys.com/passReset.php?otp='.$otp.'&acc='.$accType.'">here</a>.' . '.<br>'
                                         . "If you did not make this request, please contact us as soon as you can.<br>"
                                         . "Yours sincerely,<br>"
-                                        . "Coursdemy Membership Services";
+                                        . "BasicStudys Membership Services";
                 
                             //send email
                             if (!$mail->send()) {
@@ -111,7 +111,7 @@
                                     throw new Exception("Error updating record: " . $conn->error);
                                 }
 
-                                $emailSentMsg = "OTP updated. Please check your email for the OTP.";
+                                $emailSentMsg = "Email sent successfully. Please check your email for the OTP.";
                                 
                                 $updateStmt->close();
                             } else {

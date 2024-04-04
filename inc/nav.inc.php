@@ -16,6 +16,7 @@
                 // User is logged in, display welcome message and button to go to member.php
                 $fname = $_SESSION['fname'];
                 $lname = $_SESSION["lname"];
+                echo '<a href="/forum.php">Forum</a>';
                 echo '<a href="/member.php">' . $fname ." ". $lname . '</a>';
                 echo '<a href="/process_logout.php">Logout</a>';
             } else {
@@ -24,11 +25,5 @@
             }
             ?>
         </div>
-        <div class="btn">
-            <i class="fas fa-bars menu-btn"></i>
-        </div>
     </header>
-    <section class="section-main">
-    </section>
-
 </html>

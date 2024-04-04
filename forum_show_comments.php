@@ -51,3 +51,4 @@ function getCommentReply($conn, $parentId = 0, $marginLeft = 0) {
 	return $commentHTML;
 }
 ?>
+</html>
