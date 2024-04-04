@@ -639,13 +639,9 @@ footer .container {
   border: .1rem solid #444;
 }
 
-.courses-preview .preview .c-buttons a.sign-up {
+.courses-preview .preview .c-buttons a.sign-up:hover {
   background: #444;
   color: #fff;
-}
-
-.courses-preview .preview .c-buttons a.sign-up:hover {
-  background: #111;
 }
 
 .courses-preview .preview .c-buttons a.view:hover {
@@ -653,6 +649,10 @@ footer .container {
   color: #fff;
 }
 
+.view-disabled {
+  pointer-events: none; /* Prevents clicking */
+  opacity: 0.5;
+}
 
 @media (max-width:991px) {
   html {
