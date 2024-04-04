@@ -1,11 +1,23 @@
-<link rel="stylesheet" href="css/main.css">
-<script defer src="js/main.js"></script>
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+    <title>BasicStudys</title>
+    <?php
+    include "inc/head.inc.php";
+    require_once "zebra_session/session_start.php";
+    ?>
+</head>
 
 <body>
     <?php
     include "inc/nav.inc.php";
     ?>
 </body>
+<footer>
+    <?php
+    include "inc/footer.inc.php";
+    ?>
+</footer>
+
+</html>

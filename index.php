@@ -1,8 +1,7 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>BasicStudys Index</title>
+    <title>BasicStudys</title>
     <?php
     include "inc/head.inc.php";
     require_once "zebra_session/session_start.php";
@@ -14,13 +13,15 @@
     include "inc/nav.inc.php";
     include "inc/banner.inc.php";
     include "inc/about.inc.php";
-    // include "inc/services.inc.php";
     include "inc/portfolio.inc.php";
     ?>
 </body>
-<footer>
-    <?php
-    include "inc/footer.inc.php";
-    ?>
-</footer>
+
+
+<?php
+include "inc/footer.inc.php";
+?>
+
+
 </html>
+
