@@ -7,14 +7,15 @@
     include "inc/head.inc.php";
     require_once "zebra_session/session_start.php";
     ?>
+    <link rel="stylesheet" href="css/login.css">    
 </head>
 
 <body>
     <?php
     include "inc/nav.inc.php";
     ?>
-    <main class="container">
-        <section class="login">
+    <main class="login-container">
+        <section class="forms">
             <?php
             $email = $pwd_hashed = $fname = $lname = $accType = $errorMsg = "";
             $success = true;
