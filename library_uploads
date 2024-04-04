@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
             }
 
             //set target directory
-            $path = 'uploads/';
+            $path = 'var/www/html/library';
 
             // Check if the file is uploaded successfully
             if (!is_uploaded_file($_FILES['file1']['tmp_name'])) {
