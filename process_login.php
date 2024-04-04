@@ -18,7 +18,7 @@
     <main class="container">
         <section class="login">
             <?php
-            $email = $pwd_hashed = $fname = $lname = $errorMsg = "";
+            $email = $pwd_hashed = $fname = $lname = $accType = $errorMsg = "";
             $success = true;
 
             if (empty($_POST["email"])) {
@@ -29,6 +29,7 @@
                 $success = false;
             } else {
                 $email = sanitize_input($_POST["email"]);
+                $accType = sanitize_input($_POST["accType"]);
 
                 // Additional check to make sure e-mail address is well-formed.
                 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -42,13 +43,14 @@
             if ($success) {
                 $_SESSION['fname'] = $fname;
                 $_SESSION['lname'] = $lname;
-                header("Location: /index.php");
+                $_SESSION['accType'] = $accType;
+                header("Location: /content.php");
                 exit();
             } else {
                 echo "<h2>Oops!</h2>";
                 echo "<h4>The following errors were detected:</h4>";
                 echo "<p>" . $errorMsg . "</p>";
-                echo "<button type='login' class='btn btn-warning' onclick=\"location.href='member.php'\">Return to Login</button>";
+                echo "<button type='login' class='btn btn-warning' onclick=\"location.href='login.php'\">Return to Login</button>";
             }
 
             /*
@@ -66,7 +68,7 @@
                  */
             function authenticateUser()
             {
-                global $fname, $lname, $email, $pwd_hashed, $errorMsg, $success, $session;
+                global $fname, $lname, $email, $pwd_hashed, $accType, $errorMsg, $success;
 
                 // Create database connection.
                 $config = parse_ini_file('/var/www/private/db-config-zebra.ini');
@@ -87,7 +89,11 @@
                         $success = false;
                     } else {
                         // Prepare the statement:
-                        $stmt = $conn->prepare("Select * From Students WHERE email=?");
+                        if ($accType == "student") {
+                            $stmt = $conn->prepare("Select * From Students WHERE email=?");
+                        } else if ($accType == "instructor") {
+                            $stmt = $conn->prepare("Select * From Instructors WHERE email=?");
+                        }
 
                         // Bind & execute the query statement:
                         $stmt->bind_param("s", $email);
@@ -98,10 +104,12 @@
                             $row = $result->fetch_assoc();
                             $fname = $row["fname"];
                             $lname = $row["lname"];
-                            $userID = $row["studentID"];
+                            if ($accType == "student") {
+                                $userID = $row["studentID"];
+                            } else if ($accType == "instructor") {
+                                $userID = $row["instructorID"];
+                            }
                             $pwd_hashed = $row["password"];
-
-                            $_SESSION['userID'] = $userID;
 
                             // Check if the password matches:
                             if (!password_verify($_POST["pwd"], $pwd_hashed)) {
@@ -109,6 +117,8 @@
                                 $errorMsg = "Email not found or password does not match.";
                                 $success = false;
                             }
+                            
+                            $_SESSION['userID'] = $userID;
                         } else {
                             $errorMsg = "Email not found or password does not match";
                             $success = false;

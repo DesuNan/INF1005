@@ -21,8 +21,8 @@
                 $emailSentMsg = ''; // define emailSentMsg
                 
                 if(isset($_POST['resetpass_submit'])) {
-                    $_SESSION['email'] = $email;
                     $email = $_POST['email'];
+                    $accType = $_POST['accType'];
                     
                     //PHPMailer autoload and exceptions
                     require 'vendor/autoload.php';
@@ -48,20 +48,17 @@
                         }
                 
                         //checks if email exists in the users table
-                        $stmt_user_check = $conn->prepare("SELECT email FROM Students WHERE email = ?");
-                        $stmt_user_check->bind_param("s", $email);
-                        $stmt_user_check->execute();
-                        $result_user_check = $stmt_user_check->get_result();
+                        $getStmt = $conn->prepare("SELECT email FROM Students WHERE email = ?");
+                        $getStmt->bind_param("s", $email);
+                        $getStmt->execute();
+                        $getResult = $getStmt->get_result();
                         echo "Email: " . $email;
                 
-                        if ($result_user_check->num_rows === 0) {
+                        if ($getResult->num_rows === 0) {
                             //if does not exist, email is not sent and displays following message
                             $emailSentMsg = "Email does not exist.";
                             echo $emailSentMsg;
-                            echo '<a class="txt2" href="passReset.php"><br>';
-                            echo '    Go back';
-                            echo '    <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>';
-                            echo '</a>';
+                            echo '<a href="passReset.php" class="btn btn-info" role="button"></a>';
                             exit();
 
                         } else { //email exists in users table
@@ -87,7 +84,7 @@
                             $mail->Subject = 'Password Reset Request for Coursedemy';
                             $mail->Body = "Hi,<br><br>"
                                         . "We have received your request to reset your account's password. "
-                                        . 'To reset your password, please click <a href="http://35.212.224.236/passReset.php?otp='.$otp.'">here</a>.' . '.<br>'
+                                        . 'To reset your password, please click <a href="http://35.212.224.236/passReset.php?otp='.$otp.'&acc='.$accType.'">here</a>.' . '.<br>'
                                         . "If you did not make this request, please contact us as soon as you can.<br>"
                                         . "Yours sincerely,<br>"
                                         . "Coursdemy Membership Services";
@@ -101,32 +98,39 @@
                             }
                             
                             //checks if email address already exists in the resetPass table
-                            $stmt_check = $conn->prepare("SELECT email FROM resetPass WHERE email = ?");
-                            $stmt_check->bind_param("s", $email);
-                            $stmt_check->execute();
-                            $result_check = $stmt_check->get_result();
+                            $stmt = $conn->prepare("SELECT email FROM resetPass WHERE email = ?");
+                            $stmt->bind_param("s", $email);
+                            $stmt->execute();
+                            $result = $stmt->get_result();
                 
-                            if ($result_check->num_rows > 0) {
+                            if ($result->num_rows > 0) {
                                 //email already exists in resetPass table, so OTP will only be updated for record
-                                $updateQuery = $conn->prepare("UPDATE resetPass SET otp = ? WHERE email = ?");
-                                $updateQuery->bind_param("ss", $otp, $email);
-                                if (!$updateQuery->execute()) {
+                                $updateStmt = $conn->prepare("UPDATE resetPass SET otp = ? WHERE email = ?");
+                                $updateStmt->bind_param("ss", $otp, $email);
+
+                                if (!$updateStmt->execute()) {
                                     throw new Exception("Error updating record: " . $conn->error);
                                 }
+
                                 $emailSentMsg = "OTP updated. Please check your email for the OTP.";
+                                
+                                $updateStmt->close();
                             } else {
                                 //when email address exists in users but not yet in resetPass, insert a new record
-                                $insertQuery = $conn->prepare("INSERT INTO resetPass (email, otp) VALUES (?, ?)");
-                                $insertQuery->bind_param("ss", $email, $otp);
-                                if (!$insertQuery->execute()) {
+                                $insertStmt = $conn->prepare("INSERT INTO resetPass (email, otp) VALUES (?, ?)");
+                                $insertStmt->bind_param("ss", $email, $otp);
+
+                                if (!$insertStmt->execute()) {
                                     throw new Exception("Error inserting record: " . $conn->error);
                                 }
+
                                 $emailSentMsg .= "Email sent successfully. Please check your email for the OTP.";
+                                
+                                $insertStmt->close();
                             }
                             echo $emailSentMsg;
                 
-                            $stmt_check->close();
-                            $insertQuery->close();
+                            $stmt->close();
                         }
                 
                         $stmt_user_check->close();

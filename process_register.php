@@ -13,7 +13,7 @@
         <main class="container">
             <section class="registration">
             <?php
-                $email = $pwd = $fname = $lname = $errorMsg = "";
+                $email = $pwd = $fname = $lname = $accType = $errorMsg = "";
                 $success = true;
 
                 if (empty($_POST["email"])) {
@@ -37,6 +37,7 @@
                     $pwd = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
                     $fname = sanitize_input($_POST["fname"]);
                     $lname = sanitize_input($_POST["lname"]);
+                    $accType = sanitize_input($_POST["accType"]);
 
                     // Additional check to make sure e-mail address is well-formed.
                     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -93,7 +94,7 @@
                  * Helper function to write member data to the database.
                  */
                 function saveMemberToDB() {
-                    global $fname, $lname, $email, $pwd, $errorMsg, $success;
+                    global $fname, $lname, $email, $pwd, $accType, $errorMsg, $success;
 
                     // Create database connection.
                     $config = parse_ini_file('/var/www/private/db-config-zebra.ini');
@@ -117,7 +118,11 @@
                         }
                         else {
                             // Check if the email already exists in the database
-                            $checkStmt = $conn->prepare("SELECT email FROM Instructors WHERE email = ?");
+                            if ($accType == "student") {
+                                $checkStmt = $conn->prepare("Select * From Students WHERE email=?");
+                            } else if ($accType == "instructor") {
+                                $checkStmt = $conn->prepare("Select * From Instructors WHERE email=?");
+                            }
                             $checkStmt -> bind_param("s", $email);
                             $checkStmt -> execute();
                             $checkStmt -> store_result();
@@ -128,7 +133,11 @@
                                 $success = false;
                             } else {
                                 // Prepare the statement:
-                                $insertStmt = $conn->prepare("INSERT INTO Instructors (fname, lname, email, password) VALUES (?, ?, ?, ?)");
+                                if ($accType == "student") {
+                                    $insertStmt = $conn->prepare("INSERT INTO Students (fname, lname, email, password) VALUES (?, ?, ?, ?)");
+                                } else if ($accType == "instructor") {
+                                    $insertStmt = $conn->prepare("INSERT INTO Instructors (fname, lname, email, password) VALUES (?, ?, ?, ?)");
+                                }
 
                                 // Bind & execute the query statement:
                                 $insertStmt -> bind_param("ssss", $fname, $lname, $email, $pwd);
