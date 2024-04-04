@@ -19,13 +19,13 @@
                 $accType = $_SESSION["accType"];
 
                 if (!empty($_POST["email"])) {
+                    $email = sanitize_input($_POST["email"]);
+
                     // Additional check to make sure e-mail address is well-formed.
                     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                         $errorMsg .= "Invalid email format.";
                         $success = false;
                     }
-
-                    $email = sanitize_input($_POST["email"]);
 
                     // Update email to DB
                     if ($success) {
@@ -57,7 +57,7 @@
                     }
                 }
                 if (!empty($_POST["lname"])) {
-                    $fname = sanitize_input($_POST["fname"]);
+                    $fname = sanitize_input($_POST["lname"]);
 
                     // Update lname to DB
                     if ($success) {
@@ -67,13 +67,12 @@
 
                 if ($success) {
                     echo "<h2>Your profile has been updated!</h2>";
-                    echo "UserID: " . $userID . "<br>";
                 }
                 else {
                     echo "<h2>Oops!</h2>";
                     echo "<h4>The following errors were detected:</h4>";
                     echo "<p>" . $errorMsg . "</p>";
-                    echo "<button type='register' class='btn btn-danger' onclick=\"location.href='login.php'\">Return to Sign Up</button>";
+                    echo "<button type='register' class='btn btn-danger' onclick=\"location.href='member.php'\">Return to Profile Page</button>";
                 }
 
                 /*

@@ -57,6 +57,6 @@ if ($result->num_rows > 0) {
 }
 
 // Close the database connection
-$stmt->close();
+$getStmt->close();
 $conn->close();
 ?>
