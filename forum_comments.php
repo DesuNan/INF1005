@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang = en>
 <?php
-include_once("forum_db_connect.php");
+include_once("db_connect.php");
 if(!empty($_POST["name"]) && !empty($_POST["comment"])){
 	echo "Inserting..";
 	$insertComments = "INSERT INTO Forum (parent_id, comment, sender) VALUES ('".$_POST["commentId"]."', '".$_POST["comment"]."', '".$_POST["name"]."')";

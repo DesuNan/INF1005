@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang = en>
 <?php
-include_once("forum_db_connect.php");
+include_once("db_connect.php");
 $commentQuery = "SELECT id, parent_id, comment, sender, date FROM Forum WHERE parent_id = '0' ORDER BY id DESC";
 $commentsResult = mysqli_query($conn, $commentQuery) or die("database error:". mysqli_error($conn));
 $commentHTML = '';

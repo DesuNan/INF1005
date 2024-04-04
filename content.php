@@ -59,6 +59,12 @@
 			 <h3>Physics</h3>
 			 <div class="description">Click to understand more</div>
 		  </div>
+
+		  <div class="course" data-name="c-5">
+			 <img src="img/self-help.png" alt="Additional Resources">
+			 <h3>Additional Resources</h3>
+			 <div class="description">Need additional help? Review our self-help resources here!</div>
+		  </div>
 	   </div>
 	</div>
 
@@ -117,6 +123,21 @@
              and matter, allowing you to comprehend the inner workings of the cosmos. Explore the wonders of quantum mechanics, delve into the mysteries of relativity, 
              and uncover the secrets of the forces that shape our world. Embrace the challenge of exploring the unknown and let physics ignite your curiosity, inspire 
              your imagination, and propel you toward a deeper understanding of the universe!
+		  </p>
+		  <div class="c-buttons">
+			 <a href="physics.php" class="view">View More</a>
+			 <a href="#" class="sign-up">Sign Up</a>
+		  </div>
+	   </div>
+
+	   <div class="preview" data-target="c-5">
+		  <i class="fas fa-times"></i>
+		  <img src="img/self-help.png" alt="Additional Resources">
+		  <h3>Additional Resources</h3>
+		  <p>
+		  	Embark on a captivating journey through the expansive world of knowledge with our Additional Resources! This library is your gateway to an enriched educational experience,
+		   	transcending traditional boundaries to offer a treasure trove of knowledge across various disciplines. Whether you're a voracious learner hungry for additional insights or
+		    a curious mind seeking to explore new horizons, this module provides an array of resources designed to deepen your understanding and ignite your intellectual curiosity.
 		  </p>
 		  <div class="c-buttons">
 			 <a href="physics.php" class="view">View More</a>
