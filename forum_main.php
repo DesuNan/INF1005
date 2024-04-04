@@ -30,7 +30,12 @@ include('inc/nav.inc.php');
 				<input type="hidden" name="commentId" id="commentId" value="0"/>
 				<input type="submit" name="submit" id="submit" class="btn btn-primary" value="Post Comment"/>
 			</div>
-		</form>		
+		</form>	
+		<form method="POST" id="deleteForm">	
+			<?php if ($_SESSION["accType"] == "instructor") : ?>
+				<input type="submit" name="delete" id="delete" class="btn btn-danger" value="Delete All" />
+			<?php endif; ?>
+		</form>	
 		<br>
 		<div id="showComments"></div>   
 	</div>
