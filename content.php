@@ -72,9 +72,13 @@
              cultures and backgrounds. From enhancing job prospects to enriching cultural experiences, mastering English enriches your life in countless ways.
 		  </p>
 		  <div class="c-buttons">
-			 <a href="english.php" class="view">View More</a>
-			 <a href="#" class="sign-up">Sign Up</a>
-		  </div>
+				<?php if(isset($_SESSION['userID'])): ?>
+					<a href="english.php" class="view">View More</a>
+				<?php else: ?>
+					<a href="#" class="view view-disabled" disabled>Login to view</a>
+				<?php endif; ?>
+					<a href="#" class="sign-up">Sign Up</a>
+		   </div>
 	   </div>
 
 	   <div class="preview" data-target="c-2">
@@ -87,9 +91,13 @@
              Embrace the beauty of numbers and embark on a journey of discovery that will sharpen your mind and enrich your life.
 		  </p>
 		  <div class="c-buttons">
-			 <a href="math.php" class="view">View More</a>
-			 <a href="#" class="sign-up">Sign Up</a>
-		  </div>
+				<?php if(isset($_SESSION['userID'])): ?>
+					<a href="math.php" class="view">View More</a>
+				<?php else: ?>
+					<a href="#" class="view view-disabled" disabled>Login to view</a>
+				<?php endif; ?>
+					<a href="#" class="sign-up">Sign Up</a>
+		   </div>
 	   </div>
 
 	   <div class="preview" data-target="c-3">
@@ -103,9 +111,13 @@
              understanding the building blocks of life itself!
 		  </p>
 		  <div class="c-buttons">
-			 <a href="chemistry.php" class="view">View More</a>
-			 <a href="#" class="sign-up">Sign Up</a>
-		  </div>
+				<?php if(isset($_SESSION['userID'])): ?>
+					<a href="chemistry.php" class="view">View More</a>
+				<?php else: ?>
+					<a href="#" class="view view-disabled" disabled>Login to view</a>
+				<?php endif; ?>
+					<a href="#" class="sign-up">Sign Up</a>
+		   </div>
 	   </div>
 
 	   <div class="preview" data-target="c-4">
@@ -119,9 +131,13 @@
              your imagination, and propel you toward a deeper understanding of the universe!
 		  </p>
 		  <div class="c-buttons">
-			 <a href="physics.php" class="view">View More</a>
-			 <a href="#" class="sign-up">Sign Up</a>
-		  </div>
+				<?php if(isset($_SESSION['userID'])): ?>
+					<a href="physics.php" class="view">View More</a>
+				<?php else: ?>
+					<a href="#" class="view view-disabled" disabled>Login to view</a>
+				<?php endif; ?>
+					<a href="#" class="sign-up">Sign Up</a>
+		   </div>
 	   </div>
 	</div>
 	<?php
