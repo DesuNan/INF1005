@@ -1,6 +1,7 @@
+<!DOCTYPE html>
 <html lang="en">
 
-<head aria-hidden="true">
+<head>
     <title>BasicStudys</title>
     <?php
     include "inc/head.inc.php";

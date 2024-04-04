@@ -38,7 +38,7 @@
                             <!-- Chapter card 1 -->
                             <div class="card chapter-card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Chapter 1: Introduction to English</h5>
+                                    <h2 class="card-title" style="font-size: 22px;">Chapter 1: Introduction to English</h2>
                                     <p class="card-text">Learn the basics of the English language and its importance in today's world.</p>
                                     <a href="/chapter.php" class="btn btn-primary">Read Chapter</a>
                                 </div>
@@ -48,7 +48,7 @@
                             <!-- Chapter card 2 -->
                             <div class="card chapter-card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Chapter 2: Grammar Essentials</h5>
+                                    <h2 class="card-title" style="font-size: 22px;">Chapter 2: Grammar Essentials</h2>
                                     <p class="card-text">Explore the fundamental grammar rules and improve your language skills.</p>
                                     <a href="#" class="btn btn-primary">Read Chapter</a>
                                 </div>
@@ -58,7 +58,7 @@
                             <!-- Chapter card 3 -->
                             <div class="card chapter-card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Chapter 3: Vocabulary Expansion</h5>
+                                    <h2 class="card-title" style="font-size: 22px;">Chapter 3: Vocabulary Expansion</h2>
                                     <p class="card-text">Expand your vocabulary and learn new words and phrases for effective communication.</p>
                                     <a href="#" class="btn btn-primary">Read Chapter</a>
                                 </div>
