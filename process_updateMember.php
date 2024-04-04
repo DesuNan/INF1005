@@ -57,7 +57,7 @@
                     }
                 }
                 if (!empty($_POST["lname"])) {
-                    $fname = sanitize_input($_POST["lname"]);
+                    $lname = sanitize_input($_POST["lname"]);
 
                     // Update lname to DB
                     if ($success) {
