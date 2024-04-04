@@ -5,11 +5,14 @@ require_once "zebra_session/session_start.php";
 if (!isset($_SESSION['userID'])) {
     // If the user is not logged in, return an error message
     echo json_encode(array('error' => 'User is not logged in'));
-    exit;
+    header("Location: /login.php");
+    exit();
 }
 
 // Create database connection.
 $config = parse_ini_file('/var/www/private/db-config-zebra.ini');
+$userID = $_SESSION['userID'];
+$accType = $_SESSION['accType'];
 
 if(!$config) {
     $errorMsg = "Failed to read database config file.";
@@ -32,10 +35,14 @@ if ($conn->connect_error) {
 }
 
 // Prepare and execute a SQL query to fetch user details
-$stmt = $conn->prepare("SELECT * FROM Students WHERE studentID = ?");
-$stmt->bind_param("i", $_SESSION['userID']);
-$stmt->execute();
-$result = $stmt->get_result();
+if ($accType == "student") {
+    $getStmt = $conn->prepare("SELECT fname, lname, email FROM Students WHERE studentID = ?");
+} else if ($accType == "instructor") {
+    $getStmt = $conn->prepare("SELECT fname, lname, email FROM Instructors WHERE instructorID = ?");
+}
+$getStmt->bind_param("i", $userID);
+$getStmt->execute();
+$result = $getStmt->get_result();
 
 // Check if the query returned any rows
 if ($result->num_rows > 0) {

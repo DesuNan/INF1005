@@ -22,6 +22,7 @@
                     $otp = $_POST['otp']; //URL passed into input in form
                     $new_pwd = $_POST['new_pwd']; //from form
                     $confirm_pwd = $_POST['confirm_pwd']; //from form
+                    $accType = $_POST['accType'];
 
                     //validate inputs
                     if (empty($otp) || empty($new_pwd) || empty($confirm_pwd)) {
@@ -59,20 +60,24 @@
                             }
     
                             //checks if OTP already exists in the resetPass table
-                            $stmt_check = $conn->prepare("SELECT email FROM resetPass WHERE otp = ?");
-                            $stmt_check->bind_param("s", $otp); // Assuming $otp contains the OTP value
-                            $stmt_check->execute();
-                            $result = $stmt_check->get_result();
+                            $stmt = $conn->prepare("SELECT email FROM resetPass WHERE otp = ?");
+                            $stmt->bind_param("s", $otp); // Assuming $otp contains the OTP value
+                            $stmt->execute();
+                            $result = $stmt->get_result();
                 
                             if ($result-> num_rows > 0) {
                                 $row = $result->fetch_assoc();
                                 $email = $row['email']; //stored in $email variable                            
                                 //updates user's password in the users table
-                                $updateQuery = $conn->prepare("UPDATE Students SET password = ? WHERE email = ?");
-                                $updateQuery->bind_param("ss", password_hash($new_pwd, PASSWORD_DEFAULT), $email);
-                                $updateQuery->execute();
-                                $affected_rows = $updateQuery->affected_rows;
-                                $updateQuery->close();
+                                if ($accType == "student") {
+                                    $updateStmt = $conn->prepare("UPDATE Students SET password = ? WHERE email = ?");
+                                } else if ($accType == "instructor") {
+                                    $updateStmt = $conn->prepare("UPDATE Instructors SET password = ? WHERE email = ?");
+                                }
+                                $updateStmt->bind_param("ss", password_hash($new_pwd, PASSWORD_DEFAULT), $email);
+                                $updateStmt->execute();
+                                $affected_rows = $updateStmt->affected_rows;
+                                $updateStmt->close();
                                 if ($affected_rows > 0) {
                                     echo "Password updated succesfully.<br>";
                                     echo "<button type='login' class='btn btn-success' onclick=\"location.href='login.php'\">Log-in</button>";
@@ -84,7 +89,7 @@
                                 //if email not found in passReset table
                                 echo "Email not found for provided OTP.<br>";
                             }       
-                            $stmt_check->close(); // Close the statement      
+                            $stmt->close(); // Close the statement      
                             $conn->close();
                     
                         } catch (Exception $e) {
