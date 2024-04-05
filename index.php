@@ -20,10 +20,9 @@
     <main>
         <h1 style="font-size: xx-small; color:white">.</h1>
     </main>
+    <?php
+    include "inc/footer.inc.php";
+    ?>
 </body>
-
-<?php
-include "inc/footer.inc.php";
-?>
 
 </html>
