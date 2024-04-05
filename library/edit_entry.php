@@ -45,23 +45,28 @@ else if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = (int)$_POST["id"];
     $name = sanitize_input($_POST["name"]);
     $category = sanitize_input($_POST["category"]);
-    $link = sanitize_input($_POST["link"]);
+    $link = $_POST["link"];
 
-    // Check for empty fields
-    if (empty($name) || empty($category) || empty($link)) {
-        $errorMsg = "Please fill in all fields.";
+    // Validate URL
+    if (!filter_var($link, FILTER_VALIDATE_URL)) {
+        $errorMsg = "Invalid URL provided.";
     } else {
-        // Prepare the UPDATE statement
-        $stmt = $conn->prepare("UPDATE Library SET name = ?, category = ?, link = ?, last_updated = CURRENT_TIMESTAMP WHERE id = ?");
-        $stmt->bind_param("sssi", $name, $category, $link, $id);
-        if ($stmt->execute()) {
-            $successMsg = "Updated successfully";
-            $stmt->close();
-            header("Location: library/library.php");
-            exit;
+        // Check for empty fields
+        if (empty($name) || empty($category) || empty($link)) {
+            $errorMsg = "Please fill in all fields.";
         } else {
-            $errorMsg = "Invalid query: " . $stmt->error;
-            $stmt->close();
+            // Prepare the UPDATE statement
+            $stmt = $conn->prepare("UPDATE Library SET name = ?, category = ?, link = ?, last_updated = CURRENT_TIMESTAMP WHERE id = ?");
+            $stmt->bind_param("sssi", $name, $category, $link, $id);
+            if ($stmt->execute()) {
+                $successMsg = "Updated successfully";
+                $stmt->close();
+                header("Location: library/library.php");
+                exit;
+            } else {
+                $errorMsg = "Invalid query: " . $stmt->error;
+                $stmt->close();
+            }
         }
     }
 }
@@ -72,7 +77,7 @@ else if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html lang="en">
 <body>
     <div class="container my-5">
-        <h2>New Resource</h2>
+        <h2>Edit Resource</h2>
 
         <?php
             if(!empty($errorMsg)){
@@ -102,13 +107,7 @@ else if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="row mb-3">
                 <label class="col-sm-3 col-form-label">Link</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="link" value="<?php echo $link;?>">
-                </div>
-            </div>
-            <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Date Updated</label>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" name="date" value="<?php echo $date;?>">
+                    <input type="text" class="form-control" name="link" value="<?php echo htmlspecialchars(filter_var($link, FILTER_SANITIZE_URL)); ?>">
                 </div>
             </div>
             

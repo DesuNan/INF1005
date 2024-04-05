@@ -14,7 +14,8 @@ function sanitize_input($data) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = sanitize_input($_POST["name"]);
     $category = sanitize_input($_POST["category"]);
-    $link = sanitize_input($_POST["link"]);
+    //Not sanitized because we need the slashes, sanitize output instead
+    $link = $_POST["link"];
 
     if (empty($name) || empty($category) || empty($link)) {
         $errorMsg = "Please fill in all fields.";
@@ -70,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="row mb-3">
                 <label class="col-sm-3 col-form-label">Link</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="link" value="<?php echo $link;?>">
+                    <input type="text" class="form-control" name="link" value="<?php echo htmlspecialchars(filter_var($link, FILTER_SANITIZE_URL)); ?>">
                 </div>
             </div>
             
