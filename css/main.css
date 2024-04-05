@@ -84,7 +84,7 @@ header .btn {
   color: white;
   cursor: pointer;
   display: none;
-  font-size: 20px;
+  font-size: 40px;
 }
 
 @media (max-width: 1040px) {
