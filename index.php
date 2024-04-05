@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+<meta charset="UTF-8">
+
     <title>BasicStudys</title>
     <?php
     require_once "zebra_session/session_start.php";

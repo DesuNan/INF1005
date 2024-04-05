@@ -14,8 +14,9 @@ require_once "zebra_session/session_start.php";
 include('inc/nav.inc.php');
 ?>
 <body>
+	<main>
 	<div class="container">		
-		<h2>Basic Studies General Q&A Board</h2>		
+		<h1>Basic Studies General Q&A Board</h1>		
 		<br>		
 		<form method="POST" id="commentForm">
 			<div class="form-group">
@@ -46,6 +47,7 @@ include('inc/nav.inc.php');
 	<?php 
 		include('inc/footer.inc.php');
 	?>
+	</main>
 </body>
 </html>
 
