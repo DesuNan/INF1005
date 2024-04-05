@@ -1,4 +1,5 @@
 <?php
+include "inc/head.inc.php";
 
 $config = parse_ini_file('/var/www/private/db-config-zebra.ini');
 
@@ -87,17 +88,6 @@ else if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Resource Library</title>
-    <?php
-    include "inc/head.inc.php";
-    
-    // Redirect only when there's an error message
-    if (!empty($errorMsg)) {
-        echo '<meta http-equiv="refresh" content="5;url=edit_entry.php?id=' . htmlspecialchars($id) . '">';
-    }
-    ?>
-</head>
 <body>
     <div class="container my-5">
         <h2>Edit Resource</h2>
