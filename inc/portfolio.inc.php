@@ -1,7 +1,7 @@
 <!-- portfolio section-->
 <section id="portfolio" aria-hidden="true">
     <div class="container mt-3">
-        <h1 class="text-center">Instructors</h1>
+        <h2 class="text-center">Instructors</h2>
         <div class="row">
             <div class="col-lg-4 mt-4">
                 <div class="card" style="border: none;">

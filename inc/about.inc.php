@@ -1,7 +1,7 @@
 <!-- about section-->
 <section id="about" aria-hidden="true">
     <div class="container mt-4 pt-4">
-        <h1 class="text-center">About Us</h1>
+        <h2 class="text-center">About Us</h2>
         <div class="row mt-4">
             <div class="col-lg-4">
                 <img src="/img/teacher.png" class="imageAboutPage" alt="Founder">
