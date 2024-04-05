@@ -66,5 +66,7 @@ include "../inc/nav.inc.php";
         </table>
     </div>
 </body>
-
+<?php
+include "../inc/footer.inc.php"
+?>
 </html>
