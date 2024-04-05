@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $row = $result->fetch_assoc();
 
     if (!$row) {
-        header("Location: library/library.php");
+        header("Location: library.php");
         exit;
     }
     
