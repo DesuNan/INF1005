@@ -43,7 +43,9 @@ if ($conn->connect_error) {
                     <th>Category</th>
                     <th>Link</th>
                     <th>Last Updated</th>
-                    <th>Actions</th>
+                    <?php if ($_SESSION["accType"] == "instructor") : ?>
+                        <th>Actions</th>
+                    <?php endif; ?>
                 </tr>
             </thead>
             <tbody>
@@ -59,13 +61,17 @@ if ($conn->connect_error) {
                         <td>{$row['name']}</td>
                         <td>{$row['category']}</td>
                         <td><a href='{$row['link']}'>Link</a></td>
-                        <td>{$row['last_updated']}</td>
-                        <td>
-                            <a class='btn btn-secondary btn-sm' href='edit_entry.php?id={$row['id']}'>Edit</a> 
-                            <a class='btn btn-danger btn-sm' href='delete_entry.php?id={$row['id']}' onclick='return confirm(\"Are you sure you want to delete this?\");'>Delete</a> 
-                        </td>
-                    </tr>
-                    ";
+                        <td>{$row['last_updated']}</td>";
+                    if ($_SESSION["accType"] == "instructor") {
+                        echo "
+                            <td>
+                                <a class='btn btn-secondary btn-sm' href='edit_entry.php?id={$row['id']}'>Edit</a> 
+                                <a class='btn btn-danger btn-sm' href='delete_entry.php?id={$row['id']}' onclick='return confirm(\"Are you sure you want to delete this?\");'>Delete</a> 
+                            </td>
+                        </tr>";
+                    } else {
+                        echo "</tr";
+                    }
                 }
                 ?>
             </tbody>
