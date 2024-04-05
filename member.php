@@ -11,7 +11,7 @@
         <?php
             include "inc/nav.inc.php"
         ?>
-        <main>
+        <main class="container">
             <div id="app" class="memberProfile"></div>
             <script type="module" src="jsx/member_profile.js"></script>
         </main>

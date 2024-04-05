@@ -1,4 +1,3 @@
-<html lang="en">
 <footer id="footer" title="footer">
     <div class="container-fluid">
         <!-- social media icons -->
@@ -13,4 +12,3 @@
         </div>
     </div>
 </footer>
-</html>
