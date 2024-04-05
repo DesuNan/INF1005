@@ -1,44 +1,40 @@
 <?php
 include "inc/head.inc.php";
-?>
-
-<?php
 include "db_connect.php";
-?>
 
-<?php
-    $name = $category = $link = $errorMsg = $successMsg = "";
+$name = $category = $link = $errorMsg = $successMsg = "";
 
-    if($_SERVER['REQUEST METHOD'] == 'POST'){
-        $name = $_POST["name"];
-        $category = $_POST["category"];
-        $link = $_POST["link"];
+function sanitize_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
 
-        do{
-            if(empty($name) || empty($category) || empty($link)){
-                $errorMsg = "Please fill in all fields.";
-                break;
-            }
-        } while(false);
-        
-        // Add client to db
-        $sql = "INSERT into Library (name, category, link)" . "VALUES ('$name','$category','$link')";
-        $result = $conn->query($sql);
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $name = sanitize_input($_POST["name"]);
+    $category = sanitize_input($_POST["category"]);
+    $link = sanitize_input($_POST["link"]);
 
-        if (!$result) {
+    if (empty($name) || empty($category) || empty($link)) {
+        $errorMsg = "Please fill in all fields.";
+    } else {
+        // Use prepared statement to insert into the database
+        $stmt = $conn->prepare("INSERT INTO Library (name, category, link) VALUES (?, ?, ?)");
+        $stmt->bind_param("sss", $name, $category, $link);
+
+        if ($stmt->execute()) {
+            $successMsg = "Entry added successfully";
+            // Reset fields after adding to db
+            $name = $category = $link = "";
+        } else {
             $errorMsg = "Invalid query: " . $conn->error;
-            return $errorMsg;
         }
-
-
-        // Reset fields after adding client to db
-        $name = $category = $link = "";
-
-        $successMsg = "Entry added successfully";
-
-        header("location: library.php");
+        $stmt->close();
+        header("Location: library.php");
         exit;
     }
+}
 ?>
 
 <!DOCTYPE html>

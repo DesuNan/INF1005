@@ -19,6 +19,6 @@ if (isset($_GET["id"])) {
 }
 
 // Redirect to the library.php page
-header("Location: library/library.php");
+header("Location: library.php");
 exit;
 ?>

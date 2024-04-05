@@ -5,6 +5,13 @@ include "db_connect.php";
 $name = $category = $link = $errorMsg = $successMsg = "";
 $id = 0;
 
+function sanitize_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
 // Handle GET request to populate form for editing
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     if (!isset($_GET["id"])) {
@@ -26,9 +33,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         exit;
     }
     
-    $name = $row["name"];
-    $category = $row["category"];
-    $link = $row["link"];
+    $name = sanitize_input($row["name"]);
+    $category = sanitize_input($row["category"]);
+    $link = sanitize_input($row["link"]);
 
     $stmt->close();
 }
@@ -36,9 +43,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 // Handle POST request to update record
 else if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = (int)$_POST["id"];
-    $name = $_POST["name"];
-    $category = $_POST["category"];
-    $link = $_POST["link"];
+    $name = sanitize_input($_POST["name"]);
+    $category = sanitize_input($_POST["category"]);
+    $link = sanitize_input($_POST["link"]);
 
     // Check for empty fields
     if (empty($name) || empty($category) || empty($link)) {
@@ -71,7 +78,7 @@ else if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if(!empty($errorMsg)){
                 echo "
                 <div class='alert alert-warning alert-dismissible fade show' role='alert'>
-                    <strong>$errorMsg</strong>
+                    <strong>" . htmlspecialchars($errorMsg) ."</strong>
                     <button type = 'button' class ='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
                 </div>
                 ";
@@ -111,7 +118,7 @@ else if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <div class='row mb-3'>
                     <div class-'offset-sm-3 col-sm-6'>
                         <div class='alert alert-warning alert-dismissible fade show' role='alert'>
-                            <strong>$successMsg</strong>
+                            <strong>" . htmlspecialchars($successMsg) . "</strong>
                             <button type = 'button' class ='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
                         </div>
                     </div>
