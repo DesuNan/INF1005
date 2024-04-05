@@ -57,7 +57,7 @@
                             //if does not exist, email is not sent and displays following message
                             $emailSentMsg = "Email does not exist.";
                             echo $emailSentMsg;
-                            echo '<a href="passReset.php" class="btn btn-info" role="button"></a>';
+                            echo '<a href="passReset.php" class="btn btn-info" role="button">Back</a>';
                             exit();
 
                         } else { //email exists in users table
