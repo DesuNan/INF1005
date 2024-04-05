@@ -29,7 +29,8 @@ if ($conn->connect_error) {
     include "../inc/nav.inc.php";
     ?>
     <div class="container my-5">
-        <h2>List of Resources</h2>
+        <h2>List of Additional Resources</h2>
+        <br>
         <?php
         if ($_SESSION["accType"] == "instructor") : ?>
             <a class="btn btn-primary" href="create_entry.php" role="button">New Resource</a>
