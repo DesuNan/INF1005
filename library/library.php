@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-include "inc/head.inc.php";
+include "../inc/head.inc.php";
 
 $config = parse_ini_file('/var/www/private/db-config-zebra.ini');
 
@@ -19,10 +19,11 @@ if ($conn->connect_error) {
 
 ?>
 
+<?php
+include "../inc/nav.inc.php";
+?>
+
 <body>
-    <?php
-    include "inc/nav.inc.php";
-    ?>
 
     <div class="container my-5">
         <h2>List of Resources</h2>
