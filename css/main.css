@@ -179,10 +179,6 @@ td, th {
   padding: 8px;
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-
 /* services section css */
 .servicesText.card {
   height: 280px;
