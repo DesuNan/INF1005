@@ -16,19 +16,16 @@
     }
 
 ?>
-<head>
-    <?php
-    include "../inc/head.inc.php";
-    ?>
 
-</head>
+<?php
+include "../inc/head.inc.php";
+?>
 
 <body>
 
     <?php
     include "../inc/nav.inc.php";
     ?>
-    <main>
     <div class="container my-5">
         <h2>List of Resources</h2>
         <a class="btn btn-primary" href="create_entry.php" role="button">New Resource</a>
@@ -69,11 +66,10 @@
             </tbody>
         </table>
     </div>
-    </main>
 </body>
-<footer>
-    <?php
-    include "../inc/footer.inc.php" 
-    ?>
-</footer>
+
+<?php
+include "../inc/footer.inc.php" 
+?>
+
 </html>
