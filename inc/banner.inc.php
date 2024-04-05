@@ -1,5 +1,3 @@
-<html lang="en">
-
 <section class="bgimage" id="home" aria-hidden="true">
     <div class="overlay"></div>
     <div class="container-fluid">
@@ -11,6 +9,3 @@
         </div>
     </div>
 </section>
-
-
-</html>
