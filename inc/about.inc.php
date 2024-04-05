@@ -4,7 +4,7 @@
         <h2 class="text-center">About Us</h2>
         <div class="row mt-4">
             <div class="col-lg-4">
-                <img src="/img/teacher.png" class="imageAboutPage" alt="Founder">
+                <img src="/img/teacher.png" class="imageAboutPage" alt="Image of Teacher">
             </div>
             <div class="col-lg-8">
                 <p>

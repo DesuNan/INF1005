@@ -119,11 +119,12 @@
 			</div>
 		</div>
 	</main>
-</body>
-<footer>
+
 	<?php
 	include "inc/footer.inc.php"
 	?>
-</footer>
+
+</body>
+
 
 </html>
