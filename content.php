@@ -120,8 +120,10 @@
 		</div>
 	</main>
 </body>
-<?php
-include "inc/footer.inc.php"
-?>
+<footer>
+	<?php
+	include "inc/footer.inc.php"
+	?>
+</footer>
 
 </html>
