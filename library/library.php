@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-    $config = parse_ini_file('/var/www/private/db-config-zebra.ini'); 
+$config = parse_ini_file('/var/www/private/db-config-zebra.ini');
 
-    $conn = new mysqli(
+$conn = new mysqli(
     $config['servername'],
     $config['username'],
     $config['password'],
-    $config['dbname']  
-    );
+    $config['dbname']
+);
 
-    if ($conn->connect_error) {
-        printf("Connect failed: %s\n", mysqli_connect_error());
-        exit();
-    }
-
+if ($conn->connect_error) {
+    printf("Connect failed: %s\n", mysqli_connect_error());
+    exit();
+}
 ?>
 
-<?php
-include "../inc/head.inc.php";
-?>
+<head>
+    <title>Resource Library</title>
+    <?php
+    include "../inc/head.inc.php";
+    require_once "../zebra_session/session_start.php";
+    ?>
+</head>
 
 <body>
-
     <?php
     include "../inc/nav.inc.php";
     ?>
     <div class="container my-5">
         <h2>List of Resources</h2>
-        <a class="btn btn-primary" href="create_entry.php" role="button">New Resource</a>
+        <?php
+        if ($_SESSION["accType"] == "instructor") : ?>
+            <a class="btn btn-primary" href="create_entry.php" role="button">New Resource</a>
+        <?php endif; ?>
         <br>
-        <table class="table"> 
+        <table class="table">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -38,16 +43,16 @@ include "../inc/head.inc.php";
                     <th>Category</th>
                     <th>Link</th>
                     <th>Last Updated</th>
-                    <th>Actions</th> 
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
-                <?php 
+                <?php
 
                 $sql = "SELECT * FROM Library";
                 $result = $conn->query($sql);
 
-                while($row = $result->fetch_assoc()){
+                while ($row = $result->fetch_assoc()) {
                     echo "
                     <tr>
                         <td>{$row['id']}</td>
@@ -69,7 +74,7 @@ include "../inc/head.inc.php";
 </body>
 
 <?php
-include "../inc/footer.inc.php" 
+include "../inc/footer.inc.php"
 ?>
 
 </html>
