@@ -20,42 +20,5 @@ if (isset($_SESSION['timeout']) && $_SESSION['timeout'] < time()) {
     exit();
 }
 
-// function LoginSession($fname = null, $lname, $email, $admin)
-// {
-//     global $session;
-//     if (!empty($fname)) {
-//         $_SESSION['name'] = $fname . " " . $lname;
-//         $_SESSION['email'] = $email;
-//     } else {
-//         $_SESSION['name'] = $lname;
-//         $_SESSION['email'] = $email;
-//     }
-
-//     $_SESSION["logged_in"] = 1;
-//     $_SESSION["admin"] = $admin;
-// }
-
-
-// // function RetrieveInfo(){
-// //     global $session;
-// //     return $_SESSION['name'];
-// //     if (isset($_SESSION['name'])){
-// //         return $_SESSION['name'];
-// //     }else{
-// //         return "TEST";
-// //     }
-// // }
-
-// function RetrieveMoreInfo()
-// {
-//     global $session;
-//     return $_SESSION['name'];
-//     if (isset($_SESSION['name'])) {
-//         return $_SESSION;
-//     } else {
-//         return "TEST";
-//     }
-// }
-
 ?>
 

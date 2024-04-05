@@ -1,10 +1,3 @@
-// const hamburger = document.querySelector('.hamburger-menu');
-// const navMenu = document.querySelector('.nav-menu');
-
-// hamburger.addEventListener('click', () => {
-//     navMenu.classList.toggle('hide');
-// });
-
 var menu = document.querySelector(".menu");
 var menuBtn = document.querySelector(".menu-btn");
 var closeBtn = document.querySelector(".close-btn");
