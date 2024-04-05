@@ -1,4 +1,5 @@
 <?php
+include "inc/head.inc.php";
 
 $config = parse_ini_file('/var/www/private/db-config-zebra.ini');
 
