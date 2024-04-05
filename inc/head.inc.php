@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!--Main Custom CSS-->
 <link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="../css/main.css">
 <!--Subjects Custom CSS-->
 <link rel="stylesheet" href="css/subject.css">
 <!--Bootsrap JS-->

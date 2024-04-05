@@ -405,11 +405,6 @@ footer .container {
   color: #fff;
 }
 
-.view-disabled {
-  pointer-events: none; /* Prevents clicking */
-  opacity: 1;
-}
-
 @media (max-width:991px) {
   html {
     font-size: 55%;
