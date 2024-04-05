@@ -179,9 +179,9 @@ td, th {
   padding: 8px;
 }
 
-tr:nth-child(even) {
+/* tr:nth-child(even) {
   background-color: #dddddd;
-}
+} */
 
 /* services section css */
 .servicesText.card {
@@ -444,3 +444,4 @@ footer .container {
 .nav-tabs .nav-link:hover::after {
     transform: scaleX(1);
 }
+
