@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-include "../inc/head.inc.php";
+    $config = parse_ini_file('/var/www/private/db-config-zebra.ini'); 
 
-$config = parse_ini_file('/var/www/private/db-config-zebra.ini');
+    $conn = new mysqli(
+    $config['servername'],
+    $config['username'],
+    $config['password'],
+    $config['dbname']  
+    );
 
-$conn = new mysqli(
-  $config['servername'],
-  $config['username'],
-  $config['password'],
-  $config['dbname']
-);
-
-if ($conn->connect_error) {
-    printf("Connect failed: %s\n", mysqli_connect_error());
-    exit();
-}
+    if ($conn->connect_error) {
+        printf("Connect failed: %s\n", mysqli_connect_error());
+        exit();
+    }
 
 ?>
+<head>
+    <?php
+    include "../inc/head.inc.php";
+    ?>
 
-<?php
-include "../inc/nav.inc.php";
-?>
+</head>
 
 <body>
 
+    <?php
+    include "../inc/nav.inc.php";
+    ?>
+    <main>
     <div class="container my-5">
         <h2>List of Resources</h2>
         <a class="btn btn-primary" href="create_entry.php" role="button">New Resource</a>
@@ -65,8 +69,11 @@ include "../inc/nav.inc.php";
             </tbody>
         </table>
     </div>
+    </main>
 </body>
-<?php
-include "../inc/footer.inc.php"
-?>
+<footer>
+    <?php
+    include "../inc/footer.inc.php" 
+    ?>
+</footer>
 </html>
