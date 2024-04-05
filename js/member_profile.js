@@ -42,21 +42,23 @@ function LoginRegister() {
                 <div>
                     <h1>Member Profile</h1>
                     {userData ? (
-                        <table class="user-table">
-                             <tr>
-                                <th>First Name</th>
-                                <td>{userData.fname}</td>
-                            </tr>
-                            <tr>
-                                <th>Last Name</th>
-                                <td>{userData.lname}</td>
-                            </tr>
-                            <tr>
-                                <th>Email</th>
-                                <td>{userData.email}</td>
-                            </tr>
-                        </table>
-                        
+                        <div>
+                            <table class="user-table">
+                                 <tr>
+                                    <th>First Name</th>
+                                    <td>{userData.fname}</td>
+                                </tr>
+                                <tr>
+                                    <th>Last Name</th>
+                                    <td>{userData.lname}</td>
+                                </tr>
+                                <tr>
+                                    <th>Email</th>
+                                    <td>{userData.email}</td>
+                                </tr>
+                            </table>
+                            <div><br /></div>
+                        </div>
                     ) : (
                         <p>Loading user data...</p>
                     )}

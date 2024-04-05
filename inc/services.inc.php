@@ -1,4 +1,3 @@
-<html lang="en">
 <!-- services section-->
 <section id="services" aria-hidden="true">
     <div class="container">
@@ -79,5 +78,3 @@
         </div>
     </div>
 </section>
-
-</html>

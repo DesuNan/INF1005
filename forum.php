@@ -28,7 +28,11 @@ include('inc/nav.inc.php');
 			<br>
 			<div class="form-group">
 				<input type="hidden" name="commentId" id="commentId" value="0"/>
-				<input type="submit" name="submit" id="submit" class="btn btn-primary" value="Post Comment"/>
+				<?php if (!empty($_SESSION["userID"])) : ?>
+					<input type="submit" name="submit" id="submit" class="btn btn-primary" value="Post Comment"/>
+				<?php else : ?>
+					<p>Please login to comment in this forum.</p>
+				<?php endif; ?>
 			</div>
 		</form>	
 		<form method="POST" id="deleteForm">	

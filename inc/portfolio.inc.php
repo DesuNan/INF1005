@@ -1,4 +1,3 @@
-<html lang="en">
 <!-- portfolio section-->
 <section id="portfolio" aria-hidden="true">
     <div class="container mt-3">
@@ -85,5 +84,3 @@
             </div>
         </div>
 </section>
-
-</html>
