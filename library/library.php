@@ -29,7 +29,8 @@ if ($conn->connect_error) {
     include "../inc/nav.inc.php";
     ?>
     <div class="container my-5">
-        <h2>List of Resources</h2>
+        <h2>List of Additional Resources</h2>
+        <br>
         <?php
         if ($_SESSION["accType"] == "instructor") : ?>
             <a class="btn btn-primary" href="create_entry.php" role="button">New Resource</a>
@@ -38,7 +39,6 @@ if ($conn->connect_error) {
         <table class="table">
             <thead>
                 <tr>
-                    <th>ID</th>
                     <th>Name</th>
                     <th>Category</th>
                     <th>Link</th>
@@ -57,10 +57,9 @@ if ($conn->connect_error) {
                 while ($row = $result->fetch_assoc()) {
                     echo "
                     <tr>
-                        <td>{$row['id']}</td>
                         <td>{$row['name']}</td>
                         <td>{$row['category']}</td>
-                        <td><a href='{$row['link']}'>Link</a></td>
+                        <td><a href='{$row['link']}' onclick='return confirm(\"Are you sure you want to navigate to this link?\");'>{$row['link']}</a></td>
                         <td>{$row['last_updated']}</td>";
                     if ($_SESSION["accType"] == "instructor") {
                         echo "
