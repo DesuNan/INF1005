@@ -50,8 +50,8 @@ if ($conn->connect_error) {
                         <td><a href='{$row['link']}'>Link</a></td>
                         <td>{$row['last_updated']}</td>
                         <td>
-                            <a class='btn btn-secondary btn-sm' href='library/edit_entry.php?id={$row['id']}'>Edit</a> 
-                            <a class='btn btn-danger btn-sm' href='library/delete_entry.php?id={$row['id']}' onclick='return confirm(\"Are you sure you want to delete this?\");'>Delete</a> 
+                            <a class='btn btn-secondary btn-sm' href='edit_entry.php?id={$row['id']}'>Edit</a> 
+                            <a class='btn btn-danger btn-sm' href='delete_entry.php?id={$row['id']}' onclick='return confirm(\"Are you sure you want to delete this?\");'>Delete</a> 
                         </td>
                     </tr>
                     ";
