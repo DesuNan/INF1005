@@ -25,18 +25,18 @@ if ($conn->connect_error) {
 </head>
 
 <body>
-    <?php
-    include "../inc/nav.inc.php";
-    ?>
-    <div class="container my-5">
-        <h2>List of Additional Resources</h2>
-        <br>
+    <main>
         <?php
-        if ($_SESSION["accType"] == "instructor") : ?>
-            <a class="btn btn-primary" href="create_entry.php" role="button">New Resource</a>
-        <?php endif; ?>
-        <br>
-        <div class="">
+        include "../inc/nav.inc.php";
+        ?>
+        <div class="container my-5">
+            <h1>List of Additional Resources</h1>
+            <br>
+            <?php
+            if ($_SESSION["accType"] == "instructor") : ?>
+                <a class="btn btn-primary" href="create_entry.php" role="button">New Resource</a>
+            <?php endif; ?>
+            <br>
             <table class="table">
                 <thead>
                     <tr>
@@ -57,18 +57,18 @@ if ($conn->connect_error) {
 
                     while ($row = $result->fetch_assoc()) {
                         echo "
-                        <tr>
-                            <td>{$row['name']}</td>
-                            <td>{$row['category']}</td>
-                            <td><a href='{$row['link']}' onclick='return confirm(\"Are you sure you want to navigate to this link?\");'>{$row['link']}</a></td>
-                            <td>{$row['last_updated']}</td>";
+                    <tr>
+                        <td>{$row['name']}</td>
+                        <td>{$row['category']}</td>
+                        <td><a href='{$row['link']}' onclick='return confirm(\"Are you sure you want to navigate to this link?\");'>{$row['link']}</a></td>
+                        <td>{$row['last_updated']}</td>";
                         if ($_SESSION["accType"] == "instructor") {
                             echo "
-                                <td>
-                                    <a class='btn btn-secondary btn-sm' href='edit_entry.php?id={$row['id']}'>Edit</a> 
-                                    <a class='btn btn-danger btn-sm' href='delete_entry.php?id={$row['id']}' onclick='return confirm(\"Are you sure you want to delete this?\");'>Delete</a> 
-                                </td>
-                            </tr>";
+                            <td>
+                                <a class='btn btn-secondary btn-sm' href='edit_entry.php?id={$row['id']}'>Edit</a> 
+                                <a class='btn btn-danger btn-sm' href='delete_entry.php?id={$row['id']}' onclick='return confirm(\"Are you sure you want to delete this?\");'>Delete</a> 
+                            </td>
+                        </tr>";
                         } else {
                             echo "</tr";
                         }
@@ -77,7 +77,7 @@ if ($conn->connect_error) {
                 </tbody>
             </table>
         </div>
-    </div>
+    </main>
 </body>
 
 <?php
