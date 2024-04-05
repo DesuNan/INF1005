@@ -20,6 +20,10 @@ if ($conn->connect_error) {
 ?>
 
 <body>
+    <?php
+    include "inc/nav.inc.php";
+    ?>
+
     <div class="container my-5">
         <h2>List of Resources</h2>
         <a class="btn btn-primary" href="create_entry.php" role="button">New Resource</a>
