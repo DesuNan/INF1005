@@ -17,7 +17,7 @@
     <main class="login-container">
         <section class="forms">
             <?php
-            $email = $pwd_hashed = $fname = $lname = $accType = $errorMsg = "";
+            $email = $pwd_hashed = $fname = $lname = $accType = $errorMsg = $userID = "";
             $success = true;
 
             if (empty($_POST["email"])) {
@@ -43,6 +43,7 @@
                 $_SESSION['fname'] = $fname;
                 $_SESSION['lname'] = $lname;
                 $_SESSION['accType'] = $accType;
+                $_SESSION['userID'] = $userID;
                 header("Location: /content.php");
                 exit();
             } else {
@@ -67,7 +68,7 @@
                  */
             function authenticateUser()
             {
-                global $fname, $lname, $email, $pwd_hashed, $accType, $errorMsg, $success;
+                global $fname, $lname, $email, $pwd_hashed, $userID, $accType, $errorMsg, $success;
 
                 // Create database connection.
                 $config = parse_ini_file('/var/www/private/db-config-zebra.ini');
@@ -116,8 +117,6 @@
                                 $errorMsg = "Email not found or password does not match.";
                                 $success = false;
                             }
-                            
-                            $_SESSION['userID'] = $userID;
                         } else {
                             $errorMsg = "Email not found or password does not match";
                             $success = false;
