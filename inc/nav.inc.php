@@ -9,6 +9,7 @@
         <a href="/#portfolio">Instructors</a>
         <a href="/content.php">Content</a>
         <a href="/forum.php">Forum</a>
+        <a href="/library/library.php">Library</a>
         <?php
             // Check if the user is logged in
             if (isset($_SESSION['userID']) && $_SESSION['userID'] !== NULL) {
