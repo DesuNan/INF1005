@@ -21,7 +21,7 @@ function LoginRegister() {
                     <h1>Student Registration</h1>
                     <p>
                         To register as student, please go to the 
-                        <button onClick={toggleForm} style={{ marginLeft: '5px' }}>Instructor Registration</button> page.
+                        <span style={{ marginLeft: '5px', cursor: 'pointer', color: 'purple', fontWeight: 'bold', textDecoration: 'none' }} onClick={toggleForm} onMouseEnter={(e) => { e.target.style.textDecoration = 'underline';}} onMouseLeave={(e) => { e.target.style.textDecoration = 'none';}}>Instructor Register</span> page.
                     </p>
                     <form action="process_register.php" method="post">
                         <div class="input-boxes">
@@ -60,7 +60,7 @@ function LoginRegister() {
                     <h1>Instructor Registration</h1>
                     <p>
                         To register as student, please go to the 
-                        <button onClick={toggleForm} style={{ marginLeft: '5px' }}>Student Registration</button> page.
+                        <span style={{ marginLeft: '5px', cursor: 'pointer', color: 'purple', fontWeight: 'bold', textDecoration: 'none' }} onClick={toggleForm} onMouseEnter={(e) => { e.target.style.textDecoration = 'underline';}} onMouseLeave={(e) => { e.target.style.textDecoration = 'none';}}>Student Register</span> page.
                     </p>
                     <form action="process_register.php" method="post">
                         <div class="input-boxes">
