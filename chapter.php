@@ -41,7 +41,7 @@
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
                                 <!-- PDF Reader -->
-                                <iframe src="pdf/intro_to_english.pdf" class="d-block w-100" height="1000px"></iframe>
+                                <iframe src="pdf/intro_to_english.pdf" class="d-block w-100" height="1000px" title="PDF for Intro_to_English"></iframe>
                             </div>
                             <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
                                 <!-- Carousel -->
@@ -68,11 +68,10 @@
         </div>
     </main>
 
-</body>
-<footer>
     <?php
     include "inc/footer.inc.php";
     ?>
-</footer>
+
+</body>
 
 </html>
