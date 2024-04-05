@@ -38,6 +38,7 @@ if ($conn->connect_error) {
             }
             .table-responsive td a {
                 word-break: break-all;
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -50,6 +51,7 @@ if ($conn->connect_error) {
         ?>
         <div class="container my-5">
             <h1>List of Additional Resources</h1>
+            <h2>Need extra help? Browse additional resources here, curated by our Instructors!</h2>
             <br>
             <?php
             if ($_SESSION["accType"] == "instructor") : ?>
