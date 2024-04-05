@@ -2,6 +2,21 @@
 <html lang="en">
 <?php
 include "inc/head.inc.php";
+
+$config = parse_ini_file('/var/www/private/db-config-zebra.ini');
+
+$conn = new mysqli(
+  $config['servername'],
+  $config['username'],
+  $config['password'],
+  $config['dbname']
+);
+
+if ($conn->connect_error) {
+    printf("Connect failed: %s\n", mysqli_connect_error());
+    exit();
+}
+
 ?>
 
 <body>
@@ -21,8 +36,7 @@ include "inc/head.inc.php";
                 </tr>
             </thead>
             <tbody>
-                <?php
-                include_once "db_connect.php"; 
+                <?php 
 
                 $sql = "SELECT * FROM Library";
                 $result = $conn->query($sql);

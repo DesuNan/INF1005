@@ -1,5 +1,18 @@
 <?php
-include "db_connect.php";
+
+$config = parse_ini_file('/var/www/private/db-config-zebra.ini');
+
+$conn = new mysqli(
+  $config['servername'],
+  $config['username'],
+  $config['password'],
+  $config['dbname']
+);
+
+if ($conn->connect_error) {
+    printf("Connect failed: %s\n", mysqli_connect_error());
+    exit();
+}
 
 if (isset($_GET["id"])) {
     // The id should be an integer, so we ensure it is by casting it
