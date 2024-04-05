@@ -1,6 +1,22 @@
 <?php
 include "inc/head.inc.php";
-include "db_connect.php";
+
+$config = parse_ini_file('/var/www/private/db-config-zebra.ini');
+
+$conn = new mysqli(
+  $config['servername'],
+  $config['username'],
+  $config['password'],
+  $config['dbname']
+);
+
+if ($conn->connect_error) {
+    printf("Connect failed: %s\n", mysqli_connect_error());
+    exit();
+}
+
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
 $name = $category = $link = $errorMsg = $successMsg = "";
 
