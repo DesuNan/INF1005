@@ -38,7 +38,7 @@ if ($conn->connect_error) {
             }
             .table-responsive td a {
                 word-break: break-all;
-                font-size: 1.2rem;
+                font-size: 1.5rem;
             }
         }
     </style>
