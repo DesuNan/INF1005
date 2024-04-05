@@ -16,14 +16,14 @@
             <input type="checkbox" id="flip">
             <div class="cover">
                 <div class="front">
-                    <img class="frontImg" src="img/math.jpg" alt="">
+                    <img class="frontImg" src="img/math.jpg" alt="flip_login">
                     <div class="text">
                         <span class="text-1">Every new friend is a <br> new adventure</span>
                         <span class="text-2">Let's get connected</span>
                     </div>
                 </div>
                 <div class="back">
-                    <img class="backImg" src="img/physics.jpg" alt="">
+                    <img class="backImg" src="img/physics.jpg" alt="flip_register">
                     <div class="text">
                         <span class="text-1">Complete miles of journey <br> with one step</span>
                         <span class="text-2">Let's get started</span>
