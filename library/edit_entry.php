@@ -28,7 +28,7 @@ function sanitize_input($data) {
 // Handle GET request to populate form for editing
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     if (!isset($_GET["id"])) {
-        header("Location: library/library.php");
+        header("Location: library.php");
         exit;
     }
 
@@ -74,7 +74,7 @@ else if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if ($stmt->execute()) {
                 $successMsg = "Updated successfully";
                 $stmt->close();
-                header("Location: library/library.php");
+                header("Location: library.php");
                 exit;
             } else {
                 $errorMsg = "Invalid query: " . $stmt->error;
