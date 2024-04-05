@@ -38,7 +38,6 @@ if ($conn->connect_error) {
         <table class="table">
             <thead>
                 <tr>
-                    <th>ID</th>
                     <th>Name</th>
                     <th>Category</th>
                     <th>Link</th>
@@ -55,10 +54,9 @@ if ($conn->connect_error) {
                 while ($row = $result->fetch_assoc()) {
                     echo "
                     <tr>
-                        <td>{$row['id']}</td>
                         <td>{$row['name']}</td>
                         <td>{$row['category']}</td>
-                        <td><a href='{$row['link']}'>Link</a></td>
+                        <td><a href='{$row['link']}' onclick='return confirm(\"Are you sure you want to navigate to this link?\");'>{$row['link']}</a></td>
                         <td>{$row['last_updated']}</td>
                         <td>
                             <a class='btn btn-secondary btn-sm' href='edit_entry.php?id={$row['id']}'>Edit</a> 
