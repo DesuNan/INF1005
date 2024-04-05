@@ -7,23 +7,22 @@ include "db_connect.php";
 ?>
 
 <?php
-    $name = $category = $link = $date = $errorMsg = $successMsg = "";
+    $name = $category = $link = $errorMsg = $successMsg = "";
 
     if($_SERVER['REQUEST METHOD'] == 'POST'){
         $name = $_POST["name"];
         $category = $_POST["category"];
         $link = $_POST["link"];
-        $date = $_POST["date"];
 
         do{
-            if(empty($name) || empty($category) || empty($link) || empty($date)){
+            if(empty($name) || empty($category) || empty($link)){
                 $errorMsg = "Please fill in all fields.";
                 break;
             }
         } while(false);
         
         // Add client to db
-        $sql = "INSERT into Library (name, category, link, date )" . "VALUES ('$name','$category','$link','$date')";
+        $sql = "INSERT into Library (name, category, link)" . "VALUES ('$name','$category','$link')";
         $result = $conn->query($sql);
 
         if (!$result) {
@@ -33,11 +32,11 @@ include "db_connect.php";
 
 
         // Reset fields after adding client to db
-        $name = $category = $link = $date = "";
+        $name = $category = $link = "";
 
         $successMsg = "Entry added successfully";
 
-        header("location: library/library.php");
+        header("location: library.php");
         exit;
     }
 ?>
@@ -78,12 +77,6 @@ include "db_connect.php";
                     <input type="text" class="form-control" name="link" value="<?php echo $link;?>">
                 </div>
             </div>
-            <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Date Updated</label>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" name="date" value="<?php echo $date;?>">
-                </div>
-            </div>
             
             <?php
             if(!empty($errorMsg)){
@@ -105,7 +98,7 @@ include "db_connect.php";
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
                 <div class="col-sm-6 d-grid">
-                    <a class="btn btn-outline-primary" href= "library/library.php" role="button">Cancel</button>
+                    <a class="btn btn-outline-primary" href= "library.php" role="button">Cancel</button>
                 </div>
             </div>
         </form>

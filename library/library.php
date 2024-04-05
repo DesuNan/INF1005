@@ -7,7 +7,7 @@ include "inc/head.inc.php";
 <body>
     <div class="container my-5">
         <h2>List of Resources</h2>
-        <a class="btn btn-primary" href="library/create_entry.php" role="button">New Resource</a>
+        <a class="btn btn-primary" href="create_entry.php" role="button">New Resource</a>
         <br>
         <table class="table"> 
             <thead>
@@ -33,11 +33,11 @@ include "inc/head.inc.php";
                         <td>{$row['id']}</td>
                         <td>{$row['name']}</td>
                         <td>{$row['category']}</td>
-                        <td><a href='{$row['link']}'>Link</a></td> <!-- Made the link clickable -->
+                        <td><a href='{$row['link']}'>Link</a></td>
                         <td>{$row['last_updated']}</td>
                         <td>
-                            <a class='btn btn-secondary btn-sm' href='library/edit_entry.php?id={$row['id']}'>Edit</a> <!-- Corrected the href -->
-                            <a class='btn btn-danger btn-sm' href='library/delete_entry.php?id={$row['id']}' onclick='return confirm(\"Are you sure you want to delete this?\");'>Delete</a> <!-- Corrected the href and added a confirmation dialog -->
+                            <a class='btn btn-secondary btn-sm' href='library/edit_entry.php?id={$row['id']}'>Edit</a> 
+                            <a class='btn btn-danger btn-sm' href='library/delete_entry.php?id={$row['id']}' onclick='return confirm(\"Are you sure you want to delete this?\");'>Delete</a> 
                         </td>
                     </tr>
                     ";

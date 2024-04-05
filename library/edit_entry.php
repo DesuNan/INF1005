@@ -30,8 +30,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $category = $row["category"];
     $link = $row["link"];
 
-    // No need to assign date here since we are not showing it in the form
-    // Close the statement
     $stmt->close();
 }
 
