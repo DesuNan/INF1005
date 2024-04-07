@@ -261,7 +261,7 @@
                     }
                 }
                 function UpdatePWDToDB() {
-                    global $userID, $accType, $errorMsg, $success;
+                    global $userID, $pwd, $accType, $errorMsg, $success;
 
                     // Create database connection.
                     $config = parse_ini_file('/var/www/private/db-config-zebra.ini');
